@@ -6,167 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lybrate.com</title>
-    <style>
-        body {
-            background-color: rgb(221, 220, 220);
-        }
-
-        header {
-            margin-right: 10%;
-
-        }
-
-        header button {
-            border: none;
-            float: right;
-            background-color: rgb(221, 220, 220);
-            color: #6C6A6A;
-            margin-left: 2%;
-            cursor: pointer;
-            font-size: 14px;
-            font-family: "Roboto", Helvetica, sans-serif;
-        }
-
-        .clear {
-            clear: both;
-        }
-
-        #top_div {
-            width: 100%;
-            height: 35rem;
-            margin-top: 2px;
-            background-color: white;
-
-
-        }
-
-        .navbar_container {
-            display: grid;
-            grid-template-columns: 16% 16% 16% 16% 16% 16%;
-            justify-content: center;
-            margin-bottom: 0%;
-            width: 100%;
-            height: 3.7rem;
-            background-color: white;
-        }
-
-        .navbar_container div {
-            height: 100%;
-        }
-
-        .lybrate_logo {
-            width: 45%;
-            height: 50%;
-            margin-left: 25%;
-            margin-top: 5%;
-        }
-
-        #msg_icon {
-            width: 12%;
-            height: 23%;
-            margin-left: 14%;
-            margin-top: 10%;
-        }
-
-        #pill_icon {
-            width: 13%;
-            height: 24%;
-            margin-left: 15%;
-            margin-top: 10%;
-        }
-
-        #lab_icon {
-            width: 15%;
-            height: 25%;
-            margin-left: 15%;
-            margin-top: 10%;
-        }
-
-        #cal_icon {
-            width: 10%;
-            height: 22%;
-            margin-left: 4%;
-            margin-top: 10%;
-        }
-
-        .navbar_div p {
-            font-size: 17px;
-            font-family: "Roboto", Helvetica, sans-serif;
-            color: #444444;
-            font-weight: 600;
-            float: right;
-            margin-top: 9%;
-            margin-right: 19%;
-        }
-
-        #cart_button {
-            padding: 0%;
-            background-color: #C82506;
-            color: black;
-            font-family: "Roboto", Helvetica, sans-serif;
-            width: 50%;
-            height: 57%;
-            border-radius: 20px;
-            margin-top: 4%;
-            margin-left: 0%;
-            border: none;
-            float: left;
-        }
-
-        #cart_button h5 {
-            font-size: 10px;
-            margin: 0%;
-            color: white;
-        }
-
-        #cart_button h3 {
-            font-size: 15px;
-            margin: 0%;
-            color: white;
-        }
-
-        #cart_icon {
-            width: 25%;
-            height: 50%;
-            margin-right: 20%;
-            margin-top: 5%;
-            float: right;
-        }
-
-        #navbar_bottom {
-            width: 70%;
-            margin-left: 15%;
-        }
-
-        #navbar_bottom button {
-            margin-left: 5%;
-            background-color: white;
-            border: none;
-            font-size: 14px;
-            color: #444444;;
-            font-family: "Roboto", Helvetica, sans-serif;
-        }
-
-        #main_image {
-            width: 100%;
-            height: 500px;
-            background-image: url("https://assets.lybrate.com/q_auto,f_auto/imgs/product/Homepage/Web_Home-Page_Banner_03.jpg");
-            background-attachment: fixed;
-            background-size: cover;
-        }
-
-        #main_image h1 {
-            color: white;
-            font-size: 32px;
-            text-align: center;
-            font-weight: normal;
-            opacity: 0.99;
-            margin: 50px 0;
-            font-family: "Roboto", Helvetica, sans-serif;
-            align-items: center;
-            line-height: 1.33;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -230,10 +70,25 @@
         </div>
 
         <!-- putting main image -->
-        <section id="main_image">
+        <div id="main_image">
             <h1>Stay at Home. Consult Doctors Online. #IndiaFightsCorona.</h1>
+            <div class="search_div">
+                <input type="search" placeholder="Search for any health keywords" id="search_input" />
+                <button id="search_button">Search</button>
+            </div>
 
-        </section>
+            <div class="image_links">
+                <button>Trending Topic:</button>
+                <button>Covid-19</button>
+                <button>Black Fungus</button>
+                <button>Dengue Fever</button>
+                <button>Asthma</button>
+                <button>Infertility</button>
+                <button>Diabetes</button>
+                <button>Dehydration</button>
+            </div>
+
+        </div>
     </div>
 
 </body>
