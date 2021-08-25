@@ -1,0 +1,164 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;;
+}
+
+h1{
+    font-size: 24px;
+    text-align: center;
+    color: #9a9b9f;
+    font-weight: 400;
+   
+}
+
+body{
+    background-color: #eee;
+}
+
+
+#mainDiv{
+    margin-top: 60px;
+    max-width: 30%;
+    margin: auto;
+    border: 1px solid #dce0e0 ;
+}
+
+#loginText{
+    display: flex; 
+    background-color: #ffffff;
+   
+}
+
+#loginText>div{
+    width: 25%;
+    padding:0px 10px;
+}
+
+
+
+input[type="text"], input[type='password'], input[type='Email']{
+    width: 80%;
+    margin: 5px 0 0 17px;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid rgb(212, 206, 206);
+    background-color: #eee;
+  }
+  
+a{
+    text-decoration: none;
+    color: #9a9b9f;
+    font-weight: 900;
+    font-size: 12px;
+}
+
+
+
+  #countryCode{
+      width: 24%;
+      height: 28px;
+      margin: 0 5px 10px 17px;
+      border: none;
+      border-bottom: 1px solid rgb(212, 206, 206);
+      list-style: none;
+      background-color: #eee;
+      
+  }
+
+  input[type="number"]{
+      border: none;
+      border-bottom: 1px solid rgb(212, 206, 206);
+      padding: 6px;
+      width: 55%;
+      font-size: 12px;
+      background-color: #eee;
+  }
+  
+  .red{
+      
+      font-size: 12px;
+      color: #c82506;
+  }
+
+  #login-btn{
+      text-align: center;
+      background-color: #c82506;
+       
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      
+  }
+
+  #login-btn a{
+      text-decoration: none;
+      color: #ffffff;
+    
+      font-weight: 400;
+      font-size: 16px;
+  }
+  form p{
+      color: #757575 ;
+      font-size: 12px;
+      margin-left: 10px;
+  }
+
+  #acc-para{
+      color: #757575;
+      text-align: center;
+      font-size: 12px;
+  }
+
+  /* Footer Section */
+
+
+#footer-div{
+    background-color: grey;
+
+}
+
+#footer h5{
+    color: #ccc;
+    font-size: 13px;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+  #footer{
+      width: 90vw;
+        display: flex;
+    
+      margin: auto;
+
+  }
+
+  #footer>div{
+      flex: 1;
+      margin: 10px;
+  }
+
+  #footer li{
+      text-decoration: none;
+      list-style: none;
+      margin: 4px;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 800;
+  }
+
+ .social i{
+     color: #ffffff;
+     margin: 5px;
+     padding: 4px;
+     
+ }
+
+ .social h5{
+    margin-left: 50px;
+ }
+
+ .social img{
+     max-width: 70%;
+     margin: auto
+ }
