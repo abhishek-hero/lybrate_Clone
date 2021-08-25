@@ -1,4 +1,4 @@
-<!DOCTYPE html>>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -6,8 +6,9 @@
     <meta name="viewport" content=" width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <style>
-        #main_container {
+    <link rel="stylesheet" href="../styles/healthFeed.css">
+    <!-- <style>
+        /* #main_container {
             width: 90%;
             margin: auto;
 
@@ -15,30 +16,36 @@
 
         #search_box {
             width: 80%;
-            float: left;
-            padding: 10px;
+            /* padding: 10px; */
+            height: 30px;
 
         }
 
-        #submit {
+        .submit {
             color: white;
             background-color: #c82506;
             width: 15%;
             height: 35px;
-            padding: 5px;
-            display: inline-block;
+            /* padding: 5px; */
+            /* display: inline-block; */
+        }
+        .submit1 {
+            color: white;
+            background-color: #c82506;
         }
 
         .empty_div {
             height: 20px;
-            border: 1px solid black;
-            clear: both;
+            /* border: 1px solid black; */
+            /* clear: both; */
         }
 
         .gold {
             background-color: #C8DF95;
             width: 70%;
             height: 100px;
+            float: left;
+            margin-bottom: -10px;
         }
 
         #gold_img {
@@ -56,11 +63,23 @@
             font-size: 20px;
             font: bold;
         }
+        .question_box{
+            border: 1px solid red;
+            width: 20%;
+            padding: 20px;
+            float: right;
+        }
+        #question{
+            height: 100px;
+            width: 90%;
+        }
 
         .grid-con {
-            background-color: skyblue;
-            margin-top: 10px;
+            background-color:skyblue;
+            /* margin-top: 20px; */
             width: 70%;
+            clear: both;
+            
         }
 
         .health_query {
@@ -68,7 +87,7 @@
             font-size: 20px;
         }
 
-        .drs{
+        .drs {
             margin-left: 10px;
             border-radius: 50%;
             float: left;
@@ -85,15 +104,15 @@
             font-size: 25px;
             margin: 20px;
         }
-        .dr_qua{
+
+        .dr_qua {
             font-size: 12px;
-            margin-left: 20px;
+            margin-left: 30px;
         }
 
         .reviews {
             margin-left: 10px;
         }
-
         .grid-item>button {
             width: 32%;
             padding: 10px;
@@ -102,20 +121,22 @@
         #item2 {
             margin: 30px;
         }
-        .small_fonts{
+
+        .small_fonts {
             font-size: 15px;
+            margin-top: 20px;
             margin-left: 10px;
-        }
-    </style>
+        } */
+    </style> -->
+
 </head>
 
 <body>
     <div id="main_container">
         <div id="search_box">
             <input id="search_box" placeholder="Search for any health Keyword">
-
+            <button class="submit">Submit</button>
         </div>
-        <div> <button id="submit">Submit</button></div>
         <div class="empty_div">
         </div>
 
@@ -137,21 +158,29 @@
                 Become a member today and enjoy limitless health privileges, Good health made easy!
             </div>
         </div>
+
+         <div class="question_box">
+             <label>Ask a FREE Question</label>
+             <input type="text" id="question" placeholder="Enter Questions for you or someone else">
+             <button class="submit1" style="float: right;margin-right: 15px;margin-top: 10px;">Submit</button>
+         </div>
+
         <div class="grid-con">
             <div class="grid-item">
                 <div class="small_fonts">Health Query</div>
                 <div class="health_query">
-                   
+
                     Female, 62 with hyperthyroidism and taking thyronorm 75 mg. Advise how can I pair thyronorm with
                     zentel (doc asked to take on empty stomach)
 
                 </div>
-                <div id="dr1">
+                <div>
                     <img class="drs"
                         src="https://assets.lybrate.com/q_auto:low,f_auto,h_80,w_80,c_fill,g_auto:face/img/documents/doctor/dp/2dab3f5c2b37df4c855e8b530268b77b/Endocrinology-PrabhakarLaxmanJatharJathar-vharwad-40bb88.JPG">
                 </div>
                 <a class="dr_names" href="">Dr. Prabhakar Laxman Jathar</a>
-                <div class="dr_qua">MBBS, CCEBDM, Diploma in Diabetology, Diploma in Clinical Nutrition & Dietetics, Cetificate Course
+                <div class="dr_qua">MBBS, CCEBDM, Diploma in Diabetology, Diploma in Clinical Nutrition & Dietetics,
+                    Cetificate Course
                     In Thyroid Disorders Management (CCMTD) Endocrinologist, Dharwad • 50yrs exp</div>
 
                 <div><img class="big_img"
@@ -169,34 +198,171 @@
             </div>
             <div class="grid-item" id="item2">
                 <div>Suggested</div>
-                <div> Pure Nutrition Women’s Multi Vitamin</div>
+                <div> Pure Nutrition Men’s Multi Vitamin</div>
                 <div><img class="big_img"
-                        src="https://assets.lybrate.com/q_auto:eco,f_auto,w_850/swan/hnpn/Womens_1200x800.jpg"></div>
-                        <div>Be At Your Best with Women’s Multi Vitamin
-                            <button>Buy Now</button>
-                        </div>
+                        src="https://assets.lybrate.com/q_auto:eco,f_auto,w_850/swan/hnpn/menmulti50_banner.jpg"></div>
+                <div>Be At Your Best with men’s Multi Vitamin
+                    <button style="float: right;padding: 10px;margin-right: 30px;">Buy Now</button>
+                </div>
             </div>
             <div class="grid-item">
-              
+
                 <div class="small_fonts">
                     Asked for male, 28years old from Bangalore Rural
                 </div>
                 <div class="health_query">
-                  I have taken yasmin 21 day tablets for 21 days after stopping this tablet i'm experiencing spotting but not the true periods and I have start my tablet again on first day of period. When will I get exact period do it need to wait for that to start my set of tablet.
+                    I have taken yasmin 21 day tablets for 21 days after stopping this tablet i'm experiencing spotting
+                    but not the true periods and I have start my tablet again on first day of period. When will I get
+                    exact period do it need to wait for that to start my set of tablet.
                 </div>
                 <div>
-                    <img class="drs" src="https://assets.lybrate.com/q_auto:low,f_auto,h_80,w_80,c_fill,g_auto:face/img/documents/doctor/dp/a89760b24fda906dc07107087efc9d53/Gynaecology-GirishDani-Mumbai-052fa8.jpg">
+                    <img class="drs"
+                        src="https://assets.lybrate.com/q_auto:low,f_auto,h_80,w_80,c_fill,g_auto:face/img/documents/doctor/dp/a89760b24fda906dc07107087efc9d53/Gynaecology-GirishDani-Mumbai-052fa8.jpg">
                 </div>
                 <a class="dr_names" href="">Dr. Girish Dani</a>
-                <div class="dr_qua">MD - Obstetrtics & Gynaecology, FCPS, DGO, Diploma of the Faculty of Family Planning (DFFP)<br> Gynaecologist, Mumbai  •  49yrs exp</div>
-              
+                <div class="dr_qua">MD - Obstetrtics & Gynaecology, FCPS, DGO, Diploma of the Faculty of Family Planning
+                    (DFFP)<br> Gynaecologist, Mumbai • 49yrs exp</div>
+
                 <div>
-                    <img class="big_img" src="https://assets.lybrate.com/q_auto:eco,f_auto,w_850/imgs/tic/managing-periods/female/managing-periods-09094.jpg">
+                    <img class="big_img"
+                        src="https://assets.lybrate.com/q_auto:eco,f_auto,w_850/imgs/tic/managing-periods/female/managing-periods-09094.jpg">
+                </div>
+                <div class="reviews">Depends on why it is advised. How long to be continued, if reports were done what
+                    were the reports.
+                    So ask treating gynecologist.</div>
+            </div>
+            <div class="grid-item">
+                <button>Submit Feedback</button>
+                <button>Consult Online</button>
+                <button>Book Appointment</button>
+            </div>
+            <div class="grid-item">
+                <div class="small_fonts">
+                    Asked for female, 24years old from Visakhapatnam
+                </div>
+                <div class="health_query">
+                    I was bleeding with clots after 7 days of taking unwanted 72. Can it be implantation bleeding or
+                    decidual bleeding in early pregnancy?
                 </div>
             </div>
-            <div class="grid-item">5</div>
-            <div class="grid-item">6</div>
+            <div>
+                <img  class="drs"
+                    src="https://assets.lybrate.com/q_auto:low,f_auto,h_80,w_80,c_fill,g_auto:face/img/documents/doctor/dp/06dba1f9cb563ebd8e679b8950342df1/Pediatrics-SajeevKumar-CHENGANNUR-eaeebf.JPG">
+            </div>
+            <a  class="dr_names" href=""> Dr. Sanjeev Kumar</a>
+            <div class="dr_qua">
+            C.S.C, D.C.H, M.B.B.S General Physician, Alappuzha  •  36yrs exp</div>
+            
+            <div>
+                <img class="big_img"
+                    src="https://assets.lybrate.com/q_auto:eco,f_auto,w_850/imgs/tic/preventing-pregnancy/female/preventing-pregnancy-01.jpg">
+            </div>
+            <div class="reviews">You were bleeding the foetus or the products of conception (the baby that was forming after you had sex). When you take unwanted the uterine lining along with any foetus that started to form because you had sex will shed out terminating the pregnancy if any was forming.</div>
+          
+            <div class="grid-item">
+                <button>Submit Feedback</button>
+                <button>Consult Online</button>
+                <button>Book Appointment</button>
+            </div>
+
+
+
+            <div class="grid-item">
+                <div class="small_fonts">
+                    Asked for male, 25years old from Hyderabad
+                </div>
+                <div class="health_query">
+                    Gap between upper and lower teeth how it can be threaten? And a black gum line in canine right lower tooth. please tell me the treatment it can be covered in insurance? I'm getting excess saliva which leads to difficult in talking. Thank you.
+                </div>
+            </div>
+            <div>
+                <img  class="drs"
+                    src="https://assets.lybrate.com/q_auto:low,f_auto,h_80,w_80,c_fill,g_auto:face/img/documents/doctor/dp/d560175ec52a981d88f6eabe4f716e42/Dentistry-YasminAsmaZohara-Chennai-456afe.jpg">
+            </div>
+            <a  class="dr_names" href="">Dr.Yasmin Asma Zohara</a>
+            <div class="dr_qua">
+               MDS - Oral & Maxillofacial Surgery Dentist, Chennai  •  27yrs exp
+           </div>
+            
+            <div>
+                <img class="big_img"
+                    src="https://assets.lybrate.com/q_auto:eco,f_auto,w_850/imgs/tic/improving-oral-and-dental-health/male/Improving-Oral-Dental-Health-male-01.jpg">
+            </div>
+            <div class="reviews">Kindly share x ray (opg or picture or iopa) if possible to suggest best treatment. Advice fixed appliances for gap between upper and lower teeth. Black gum line in canine right lower tooth- kindly share x ray (opg or picture or iopa) if possible to suggest best treatment. This treatment cannot be covered in insurance.
+                Although excessive saliva is not too common, there are a number of conditions th...more</div>
+          
+            <div class="grid-item">
+                <button>Submit Feedback</button>
+                <button>Consult Online</button>
+                <button>Book Appointment</button>
+            </div>
+            
+            <div class="grid-item">
+                <div class="small_fonts">
+                    Asked for male, 51years
+                </div>
+                <div class="health_query">
+                  Dear sir, one day night fully I can't sleep, due to negative thinking still I have the same issue thinking and sometimes I feel very mood off. I am a sugar patient and 51 years completed. I have two daughters and an elder 18 and a younger 9 I love them too much. I am thinking about them and something happens to them. This is a negative issue. How can I remove my negative thinking from my mind. Any medicine.
+                </div>
+            </div>
+            <div>
+                <img  class="drs"
+                    src="https://assets.lybrate.com/q_auto:low,f_auto,h_80,w_80,c_fill,g_auto:face/img/documents/doctor/dp/2554939ea6900591b41869e63253550a/Homeopathy-SreepadaKameswaraRao-Hyderabad-20f4d5">
+            </div>
+            <a  class="dr_names" href="">  Dr.Sreepada Kameswara Rao</a>
+            <div class="dr_qua">
+                DHMS (Diploma in Homeopathic Medicine and Surgery) Homeopathy Doctor, Hyderabad  •  34yrs exp
+                
+           </div>
+            
+            <div>
+                <img class="big_img"
+                    src="https://assets.lybrate.com/q_auto:eco,f_auto,w_850/imgs/tic/sleeping-well/male/sleeping-well-male-09092.jpg">
+            </div>
+            <div class="reviews">Your negative thinking and sleeplessness. Very effective treatment is available in homoeopathy for this kind of problems. Homeopathic treatment is painless and safe. No side effects. You need comprehensive treatment and it takes some time. Please start taking homeopathic medicine, preliminary dose arsenicum album 200-once daily in the evening for 5 days. Book online appointment/consultation with m...more</div>
+          
+            <div class="grid-item">
+                <button>Submit Feedback</button>
+                <button>Consult Online</button>
+                <button>Book Appointment</button>
+            </div>
+         
+         
+            <div class="grid-item">
+                <div class="small_fonts">
+                    Asked for female, 37years old from Moradabad
+                </div>
+                <div class="health_query">
+                    I have uneven skin tone on. My face or I can say pigmentation. Which cream or medicine is suitable for me .my age is 37.
+                </div>
+            </div>
+            <div>
+                <img  class="drs"
+                    src="https://assets.lybrate.com/q_auto:low,f_auto,h_80,w_80,c_fill,g_auto:face/img/documents/doctor/dp/359daea09244704aeedbf4ce2c0445bf/Homeopathy-KarunaChawla-75ed92">
+            </div>
+            <a  class="dr_names" href="">Dr.Karuna Chawla</a>
+            <div class="dr_qua">
+                BHMS Homeopathy Doctor, Noida  •  25yrs exp
+           </div>
+            
+            <div>
+                <img class="big_img"
+                    src="https://assets.lybrate.com/q_auto:eco,f_auto,w_850/imgs/tic/improving-skin-health/female/improving-skin-health-female-110.jpg">
+            </div>
+            <div class="reviews">Apply aloe vera juice/gel from its leaf (fresh), not from readymade gels available in market. Remove skin of an aloe vera leaf. Take /scoop out gel. Apply this gel to your face skin. Wash with plain water after an hour.</div>
+          
+            <div class="grid-item">
+                <button>Submit Feedback</button>
+                <button>Consult Online</button>
+                <button>Book Appointment</button>
+            </div>
+         
         </div>
+
+      
+    </div>
+
+
     </div>
 </body>
 
