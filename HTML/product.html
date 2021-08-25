@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/productStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+        <div id="nav_bar">
+            <a href=""><img src="../image/Lybrate-Goodkart-Logo.png" alt=""></a>
+            <div class="search_bar">
+                <input type="text" class="search_product" >
+                <a href=""><button class="search_btn">search</button></a>
+            </div>
+            <select name="" class="select">
+                <option value="">Hello, Signin</option>
+                <option value="">Orders</option>
+                <option value="">Buy Again</option>
+                <option value="">Login/Signin</option>
+            </select>
+            <a href="" class="lybrate_cash">LybrateCash</a>
+            <a href="" class="home_btn"> Home</a>
+            <a href="" class="cart_logo">cart</a>
+        </div>
+    </div>
+    <div id="diff_container">
+        <div class="nav_category">
+            <select name="" class="categories">
+                <option value="">Shop By Category</option>
+            </select>
+            <button class="categories">Redeem LybrateCash</button>
+            <select name="" class="categories">
+                <option value="">Sexual Wellness</option>
+            </select>
+            <select name="" class="categories">
+                <option value="">Food & Drink</option>
+            </select>
+            <select name="" class="categories">
+                <option value="">Weight Managementk</option>
+            </select>
+            <select name="" class="categories">
+                <option value="">Child Care</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="container">
+        <div id="product_div">
+            <div class="product_heading">
+                <p class="prduct_heading_p">Exclusively for gold Members</p>
+                <a class="viewAll_btn" href="">view ALL</a>
+                <div id="show1">
+                </div>
+            </div>
+
+            <div class="product_heading2">
+                <p class="heading2">Best In Protein & Fitness - Your Workout Buddies</p>
+                <div id="show2"></div>
+            </div>
+        </div>
+
+        <div id="banner"></div>
+
+        <div id="product_div2">
+            <div class="product_heading4">
+                <p class="heading4">New Arrival in Kart | Check Now</p>
+                <div id="show4"></div>
+            </div>
+
+            <div class="product_heading5">
+                <p class="heading5">Money Saving Deals</p>
+                <div id="show5"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script>
+
+    let productShow1_arr = [{ "name": "Namyaa Intimate Hygiene Wash", "price": `₹244.00`, "image": "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white//rio/800x800/Namyaa-Intimate-Wash1_v10.jpg" },
+    { "name": "Diabex: Ayurvedic Diabetes Medicine", "price": 600, "image": "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/drvaidyas/dvmp/drvaidyas1/diabe1.jpg" }];
+
+    var productShow2_arr = [{ "name": "Onelife BCAA – Green Apple", "price": `₹875.00`, "image": "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/onelife/olmp_bcaa_ga.jpg" },
+    { "name": "RHP Vanilla 400g", "price": `₹675.00`, "image": "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/resized/nestleresourcevanilla/Nestle1.jpg" },
+    { "name": "Proburst Powerus Mass Gainer Powder", "price": `₹1349.00`, "image": "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white//rio/800x800/PowerusMassGainerPowder(1kgChocolateFlavour)1_v10.jpg" },
+    { "name": "Onelife Mass Gainer – Chocolate", "price": `₹2099.00`, "image": "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/onelife/massgainer/massgainer1.jpg" }];
+
+    var Product_banner = [{ "image": "https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/product_banner_01.jpg" }, { "image": "https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/banner-COVID-19-Protection-Kit_01.jpg" }, { "image": "https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/banner_Fitness-Supplement-Products_02.jpg" }];
+
+    var productShow4_arr = [{ "name": "Wel Ark Preworkout (Pineapple Flavor)", "price": `₹2199.00`, "image": "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/welark/product_2021-07-14/preworkout_pineapple_v1.png" },
+    { "name": "Healthvit Fitness Testosterone", "price": `₹1100.00`, "image": "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white//rio/800x800/Testestrone_Pack_2.jpg" },
+    { "name": "Good Lyfe Lakadong Turmeric", "price": `₹749.00`, "image": "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/GoodLyfeProject/prod_2021-04-09/turmeric-pack.webp" },
+    { "name": "Healtherio Ginger Honey", "price": `₹600.00`, "image": "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/healtherio/ginger1.jpg" }];
+
+    var productShow5_arr = [{ "name": "Corcal (10 Tablets)", "price": `₹549.00`, "image": "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/lupin/corcal(p6).jpg" },
+    { "name": "Pirant Oil For Joint Pain 50ml", "price": `₹549.00`, "image": "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/maharishiayurveda/2021-03-03/pirant_oil_pack.jpg" },
+    { "name": "Immunity Booster Juice 500ml", "price": `₹549.00`, "image": "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/nutriorg/immunityBooster_pack.jpg" },
+    { "name": "Butterfly Ayurveda Ratri Chai", "price": `₹600.00`, "image": "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white//rio/800x800/ratri_200gms1_v10.jpg" }];
+
+
+    //Show1
+    function show1() {
+        var data_div = document.getElementById("product_div");
+        productShow1_arr.forEach(function (product) {
+
+            //let heading=document.getElementsByClassName("product_heading")
+
+            let show1 = document.getElementById("show1");
+
+            let div = document.createElement("div")
+            div.style.border = "2px solid #E8C9BE"
+            // div.style.margin="0px"
+            div.style.paddingTop = "33%"
+            let p_name = document.createElement("p")
+            p_name.innerText = product.name
+
+            let p_price = document.createElement("p")
+            p_price.innerText = product.price
+
+
+            let p_image = document.createElement("img");
+            p_image.src = product.image
+
+
+
+            div.onclick = function () {
+                details(product.name);
+            };
+
+            div.append(p_image, p_name, p_price)
+            show1.append(div)
+
+            data_div.append(show1)
+
+
+        });
+    }
+    show1();
+
+
+    //show2
+    function show2() {
+        var data_div = document.getElementById("product_div");
+        productShow2_arr.forEach(function (product) {
+
+            let show2 = document.getElementById("show2");
+
+            let div = document.createElement("div")
+            div.style.border = "1px solid #eeee"
+            div.style.backgroundColor="white"
+            let p_name = document.createElement("p")
+            p_name.innerText = product.name
+
+            let p_price = document.createElement("p")
+            p_price.innerText = product.price
+
+
+            let p_image = document.createElement("img");
+            p_image.src = product.image
+
+            div.onclick = function () {
+                details(product);
+            };
+
+            div.append(p_image, p_name, p_price)
+            show2.append(div)
+
+            data_div.append(show2)
+
+
+        });
+    }
+    show2();
+
+    //Show the bannner
+
+    function banner() {
+        Product_banner.forEach(function (product) {
+
+            let banner_body = document.getElementById("banner");
+            let div = document.createElement("div")
+            
+            div.style.width = "100%"
+
+
+            let p_image = document.createElement("img");
+            p_image.src = product.image;
+            p_image.style.width = "100%"
+
+            div.append(p_image);
+            banner_body.append(div)
+
+        });
+    }
+    banner();
+
+
+    //product after Banner  column 1
+    function show4() {
+        var data_div = document.getElementById("product_div2");
+        productShow4_arr.forEach(function (product) {
+
+            let show4 = document.getElementById("show4");
+
+            let div = document.createElement("div")
+            div.style.border = "2px solid #eeee"
+            div.style.backgroundColor="white"
+            let p_name = document.createElement("p")
+            p_name.innerText = product.name
+
+            let p_price = document.createElement("p")
+            p_price.innerText = product.price
+
+
+            let p_image = document.createElement("img");
+            p_image.src = product.image
+
+
+
+            div.onclick = function () {
+                details(product.name);
+            };
+
+            div.append(p_image, p_name, p_price)
+            show4.append(div)
+
+            data_div.append(show4)
+
+
+        });
+    }
+    show4();
+
+    // column2
+    function show5() {
+        var data_div = document.getElementById("product_div2");
+        productShow5_arr.forEach(function (product) {
+
+            let show5 = document.getElementById("show5");
+
+            let div = document.createElement("div")
+            div.style.border = "2px solid #eeee"
+            div.style.backgroundColor="white"
+            let p_name = document.createElement("p")
+            p_name.innerText = product.name
+
+            let p_price = document.createElement("p")
+            p_price.innerText = product.price
+
+
+            let p_image = document.createElement("img");
+            p_image.src = product.image
+
+            div.onclick = function () {
+                details(product.name);
+            };
+
+            div.append(p_image, p_name, p_price)
+            show5.append(div)
+
+            data_div.append(show5)
+
+
+        });
+    }
+    show5();
+
+
+    //Go to detail page of that product
+
+    function details(product) {
+    
+        localStorage.setItem("myProducts",JSON.stringify(product));
+        // console.log(product);
+        var p=product.name
+        switch (p) {
+            case "Onelife BCAA – Green Apple":
+                window.location.href = "detail.html"
+                break;
+            case "RHP Vanilla 400g":
+                window.location.href = "detail2.html"
+            default:
+                break;
+        }
+        // console.log(p);
+        // 
+    }
+
+
+
+
+</script>
+
+</html>
