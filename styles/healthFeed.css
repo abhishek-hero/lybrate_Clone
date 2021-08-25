@@ -1,0 +1,16 @@
+#main_container{
+    width: 80%;
+    margin: auto;
+    background-color: black;
+
+}
+#search_box{
+    width: 70%;
+    height: 30px;
+    
+}
+.empty_div{
+    height: 30px;
+    border: 1px solid black;
+}
+
