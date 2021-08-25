@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(221, 220, 220);
+    background-color: #eee;
 }
 
 header {
@@ -342,6 +342,7 @@ header button {
     width: 70%;
     margin-left: 2%;
     float: left;
+    color: #222222;
     font-family: "Roboto", Helvetica, sans-serif;
 }
 
@@ -367,6 +368,20 @@ header button {
     justify-content: center;
 }
 
+.more_Questions_div {
+    width: 98%;
+    margin: 1%;
+    border: 1px solid #6C6A6A;
+    height: 54px;
+    margin-top: 7%;
+    background-color: white;
+    color: #C82506;
+    font-weight: 600;
+    font-size: 16.5px;
+    font-family: "Roboto", Helvetica, sans-serif;
+    
+}
+
 #last_div2 {
     width: 100%;
     height: 330px;
@@ -384,10 +399,9 @@ header button {
 }
 
 #last_div2 div {
-    height: 45px;
-    margin-top: 0%;
+    margin-top: -7%;
     width: 93%;
-    background-color: rgb(226, 222, 222);
+    background-color: #F7F7F7;
     margin: auto;
 }
 
@@ -395,18 +409,301 @@ header button {
     font-size: 12px;
     font-family: "Roboto", Helvetica, sans-serif;
     margin-left: 10%;
-    margin-top: 1.5%;
+    color: #6C6A6A;
+    margin-top: 1%;
 
 }
 
 #last_div2 button {
-    width: 20%;
-    height: 30px;
+    width: 18%;
+    height: 32px;
+    border: none;
     background-color: #C82506;
     margin-left: 55%;
-    margin-top: 1.5%;
+    margin-top: 0.5%;
+    padding: 0px 8px;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: white;
+    border-radius: 2px;
 
 }
 
+#profile_div {
+    width: 50%;
+    height: 20%;
+}
 
+#profile_div2 {
+    width: 50%;
+    height: 15%;
+    margin-top: -4%;
+}
 
+#profile_image {
+    width: 42px;
+    height: 42px;
+    border-radius: 21px;
+    margin-left: 4%;
+    margin-top: 0%;
+    float: left;
+}
+
+#profile_image2 {
+    width: 42px;
+    height: 42px;
+    border-radius: 21px;
+    margin-left: 4%;
+    margin-top: 0%;
+    float: left;
+}
+
+.main_grid_div a {
+    color: #C82506;
+    text-decoration: none;
+    font-size: 14.5px;
+    font-weight: 600;
+    font-family: "Roboto", Helvetica, sans-serif;
+    margin-left: 4%;
+}
+
+.main_grid_div p {
+    font-size: 16.5px;
+    margin-top: 2%;
+    margin-left: 3%;
+    margin-right: 4%;
+    font-family: "Roboto", Helvetica, sans-serif;
+}
+
+.main_grid_div h6 {
+    margin-left: 22%;
+    margin-top: 0%;
+    font-size: 11px;
+    color: #6C6A6A;
+    font-family: "Roboto", Helvetica, sans-serif;
+}
+
+#middle_container {
+    width: 100%;
+    height: 740px;
+    margin-top: 90px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.middle_top {
+    width: 80%;
+    margin: auto;
+}
+
+.middle_top h2 {
+    font-family: "Roboto", Helvetica, sans-serif;
+    color: #222222;
+    margin-top: 3.3%;
+}
+
+.middle_top h6 {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "Roboto", Helvetica, sans-serif;
+    color: #6C6A6A;
+    margin-top: -1.2%;
+    margin-left: 3%;
+    margin-bottom: 1.5%;
+}
+
+.middle_image {
+    display: grid;
+    grid-template-columns: 53% 1% 46%;
+    width: 80%;
+    height: 77%;
+    margin: auto;
+}
+
+.second_half {
+    background-color: white;
+}
+
+.third_half {
+    border: 1px solid yellow;
+}
+
+.first_top {
+    width: 100%;
+    height: 70%;
+}
+
+.first_top img {
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.first_bottom {
+    margin-top: 1.6%;
+    width: 100%;
+    height: 25.1%;
+    background-color: #444444;
+    padding: 1%;
+}
+
+.first_bottom h3 {
+    font-family: "Roboto", Helvetica, sans-serif;
+    color: white;
+    font-size: 22px;
+    margin-left: 2%;
+    margin-bottom: 1%;
+}
+
+.first_bottom a {
+    font-family: "Roboto", Helvetica, sans-serif;
+    color: #EEEEEE;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 2%;
+}
+
+.first_bottom button {
+    height: 35px;
+    background-color: transparent;
+    border: 1px solid white;
+    margin-top: 2%;
+    border-radius: 3px;
+    margin-left: 2%;
+    color: white;
+}
+
+#videos {
+    width: 100%;
+    border: 1px solid red;
+    height: 850px;
+}
+
+.video_top {
+    width: 80%;
+    margin: auto;
+}
+
+.video_top h2 {
+    font-size: 28px;
+    font-family: "Roboto", Helvetica, sans-serif;
+    color: #222222;
+    margin-top: 3.3%;
+}
+
+.video_top h6 {
+    font-size: 19px;
+    font-weight: normal;
+    font-family: "Roboto", Helvetica, sans-serif;
+    color: #6C6A6A;
+    margin-top: -1.5%;
+    margin-left: 2%;
+    margin-bottom: 1.5%;
+}
+
+.video_frames {
+    display: grid;
+    grid-template-columns: 24.5% 24.7% 24.7% 24.7% 24.7%;
+    grid-gap: 0.5%;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    border: 1px solid green;
+}
+
+.video_frames div {
+    height: 300px;
+    border: 1px solid red;
+}
+
+#details {
+    width: 100%;
+    height: 350px;
+    background-color: white;
+}
+
+.details_top {
+    width: 70%;
+    margin: auto;
+}
+
+.details_top h2 {
+    font-size: 28px;
+    font-family: "Roboto", Helvetica, sans-serif;
+    color: #222222;
+    text-align: center;
+    line-height: 5;
+}
+
+.details_top h6 {
+    font-size: 19px;
+    font-weight: normal;
+    font-family: "Roboto", Helvetica, sans-serif;
+    color: #222222;
+    text-align: center;
+    margin-top: -4%;
+}
+
+.details_top button {
+    width: 14%;
+    height: 38px;
+    font-size: 16.5px;
+    color: white;
+    background-color: #C82506;
+    border: none;
+    margin-left: 43%;
+    border-radius: 2px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.categories {
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    background-color: transparent;
+}
+
+.categories h2 {
+    font-size: 28px;
+    font-family: "Roboto", Helvetica, sans-serif;
+    color: #222222;
+    margin-bottom: 0%;
+}
+
+.slider_diet {
+    width: 100%;
+    height: 38%;
+    border: 1px solid black;
+}
+
+.slider_city {
+    width: 100%;
+    height: 38%;
+    border: 1px solid black;
+}
+
+.about_lybrate {
+    width: 100%;
+    height: 500px;
+    margin-top: 50px;
+}
+
+.about_lybrate h3 {
+    width: 80%;
+    font-size: 25px;
+    font-family: "Roboto", Helvetica, sans-serif;
+    margin: auto;
+    line-height: 2;
+    color: #6C6A6A;
+}
+
+.about_lybrate p {
+    width: 80%;
+    font-size: 16px;
+    font-family: "Roboto", Helvetica, sans-serif;
+    margin: auto;
+    margin-bottom: 10px;
+    color: #6C6A6A;
+}
