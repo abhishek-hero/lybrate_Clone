@@ -319,14 +319,16 @@ header button {
     margin: auto;
     display: grid;
     grid-template-columns: 49% 49%;
-    grid-gap: 2%;
+    grid-gap: 1.5%;
     justify-content: center;
 }
 
 .main_grid_div > div {
-    height: 250px;
+    height: 290px;
     background-color: white;
     margin-bottom: 0%;
+    border: 0.2px solid #d8d5d5;
+    border-radius: 2px;
 }
 
 .main_grid_div img {
@@ -371,13 +373,14 @@ header button {
 .more_Questions_div {
     width: 98%;
     margin: 1%;
-    border: 1px solid #6C6A6A;
+    border: 1px solid #c9c7c7;
     height: 54px;
-    margin-top: 7%;
+    margin-top: 10.5%;
     background-color: white;
     color: #C82506;
     font-weight: 600;
     font-size: 16.5px;
+    border-radius: 2px;
     font-family: "Roboto", Helvetica, sans-serif;
     
 }
@@ -388,10 +391,12 @@ header button {
     margin: auto;
     grid-gap: 2%;
     justify-content: center;
+    border: 0.5px solid #C82506;
 }
 
 #last_div2 input {
     margin: auto;
+    border: 0.5px solid #c9c7c7;
     width: 92%;
     height: 180px;
     margin-left: 3%;
@@ -488,7 +493,7 @@ header button {
     height: 740px;
     margin-top: 90px;
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid white;
 }
 
 .middle_top {
@@ -514,7 +519,7 @@ header button {
 
 .middle_image {
     display: grid;
-    grid-template-columns: 53% 1% 46%;
+    grid-template-columns: 55% 1% 44%;
     width: 80%;
     height: 77%;
     margin: auto;
@@ -525,7 +530,38 @@ header button {
 }
 
 .third_half {
-    border: 1px solid yellow;
+    height: 87%;
+}
+
+#third_half_slider {
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+    overflow-x: hidden;
+}
+
+#third_half_slider div {
+    height: 25%;
+    width: 100%;
+    border: 1px solid black;
+}
+
+#third_half_button {
+    width: 100%;
+    height: 12%;
+    margin-top: 1.7%;
+}
+
+#third_half_button button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 2px;
+    background-color: #333333;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .first_top {
@@ -541,9 +577,9 @@ header button {
 }
 
 .first_bottom {
-    margin-top: 1.6%;
+    margin-top: 0.8%;
     width: 100%;
-    height: 25.1%;
+    height: 25.9%;
     background-color: #444444;
     padding: 1%;
 }
@@ -603,9 +639,12 @@ header button {
 }
 
 .video_frames {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 24.5% 24.7% 24.7% 24.7% 24.7%;
-    grid-gap: 0.5%;
+    grid-gap: 0.5%; */
+    display: flex;
+    /* flex-direction: row; */
+    overflow-x: hidden;
     width: 80%;
     height: 80%;
     margin: auto;
@@ -613,6 +652,7 @@ header button {
 }
 
 .video_frames div {
+    width: 300px;
     height: 300px;
     border: 1px solid red;
 }
@@ -673,9 +713,26 @@ header button {
 }
 
 .slider_diet {
+    display: flex;
+    overflow-y: hidden;
     width: 100%;
     height: 38%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+
+.slider_diet div {
+    width: 325px;
+    height: 80%;
+    margin: 0 5px;
+}
+
+.slider_diet img {
+    display: block;
+    width: 325px;
+    height: 100%;
+    border: 1px solid white;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .slider_city {
