@@ -7,10 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lybrate.com</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <script src="./scripts/main.js"></script>
 </head>
 
-<body>
+<body onload="show()">
     <!-- creating header buttons -->
 
     <header id="header">
@@ -30,11 +34,14 @@
             <div>
                 <img src="https://assets.lybrate.com/q_auto,f_auto//imgs/product/logos/Lybrate-Logo.png"
                     alt="Lybrate-logo" class="lybrate_logo">
+
             </div>
 
             <div class="navbar_div">
                 <img src="https://image.flaticon.com/icons/png/128/3721/3721775.png" alt="msg" id="msg_icon">
+
                 <h4>Ask A Question</h4>
+
             </div>
             <div class="navbar_div">
                 <img src="https://image.flaticon.com/icons/png/128/5431/5431603.png" alt="cal" id="cal_icon">
@@ -54,6 +61,8 @@
                     <h3>goodkart</h3>
                 </button>
                 <img src="https://image.flaticon.com/icons/png/128/4290/4290854.png" alt="cart" id="cart_icon">
+                <!-- <i class="fas fa-shopping-cart fa-2x" id="cart_icon"></i> -->
+
             </div>
         </div>
         <hr />
@@ -126,10 +135,11 @@
 
         <div class="main_grid">
             <h2>QUETIONS & ANSWERS</h2>
-            <h4>10 million+ <span>
-                    <p>questions answered by doctors</p>
-                </span>
-            </h4>
+            <div>
+                <h4>10 million+ <span>
+                        <p>questions answered by doctors</p>
+                    </span></h4>
+            </div>
         </div>
 
         <div class="main_grid_div">
@@ -230,17 +240,56 @@
             <div class="middle_image">
                 <div class="first_half">
                     <div class="first_top">
-                        <img src="https://assets.lybrate.com/q_auto,f_auto,h_400,w_700,g_auto,c_fill/eagle/uploads/cca97c80d89ae5468547088748abbee7/b8559b.jpg" alt="">
+                        <img src="https://assets.lybrate.com/q_auto,f_auto,h_400,w_700,g_auto,c_fill/eagle/uploads/cca97c80d89ae5468547088748abbee7/b8559b.jpg"
+                            alt="">
                     </div>
                     <div class="first_bottom">
                         <h3>Breast Cancer - Risk Factors Associated With It!</h3>
-                        <a href="">Detecting a lump on your breasts can be stressful for any women. Breast cancer is a common type of cancer and is said to affect primarily affect women though 1% of breast cancer cases affect</a>
+                        <a href="">Detecting a lump on your breasts can be stressful for any women. Breast cancer is a
+                            common type of cancer and is said to affect primarily affect women though 1% of breast
+                            cancer cases affect</a>
                         <button>READ MORE</button>
 
                     </div>
                 </div>
                 <div class="second_half"></div>
-                <div class="third_half"></div>
+                <div class="third_half">
+                    <div id="third_half_slider">
+                        <div id="third_slides_1">
+                            <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/f2340480f9894daaba13b44bab221c14/Endocrinology-MuditSabharwal-c579d4.jpg"
+                                alt="">
+                            <h3>Risk Factors and Symptoms of Oral Cancer</h3>
+                            <p>Dr.Sanjaya Mishra, Oncologist</p>
+                        </div>
+                        <div id="third_slides_2">
+                            <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/3f5999b41c5c32c2e44a5ec1c089a070/Ophthalmology-AmitSolanki-Indore-f6c03e"
+                                alt="">
+                            <h3>Is Dandruff the Cause of Your Skin Problems?</h3>
+                            <p>Dr.Pankaj Tiwary, Dermatologist</p>
+                        </div>
+                        <div id="third_slides_3">
+                            <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/358da522336a29e9f7e5444ec4306ff0/Neurosurgery-PradyotKumarGovil-Ghaziabad-7cea47"
+                                alt="">
+                            <h3>What Is Hair Prosthesis And How It Is Done?</h3>
+                            <p>Dr.Venu Kumar, Dermatologist</p>
+                        </div>
+                        <div id="third_slides_4">
+                            <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/75f852bb53cce4768a9f9fe6337f2dc8/Pediatrics-JPSingh-new-delhi-56546f.jpg"
+                                alt="">
+                            <h3>Rules for Successful Living</h3>
+                            <p>Dr.Rajpal Kaushik, Psychologist</p>
+                        </div>
+                        <div id="third_slides_5">
+                            <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/da25d235a913aff5f5b914bcf8f6fe1a/Dermatology-PankajTiwary-92ad30.jpg"
+                                alt="">
+                            <h3>Ovarian Cysts - How Different Type of Cysts Can Affect Fertility?</h3>
+                            <p>Dr.Prabha Singla, Gynaecologist</p>
+                        </div>
+                    </div>
+                    <div id="third_half_button">
+                        <button>View More Health Tips</button>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -252,17 +301,192 @@
             </div>
 
             <div class="video_frames">
-                <div>
-                    <!-- <iframe src="https://youtu.be/4r26c6Ch2ow" frameborder="0"></iframe> -->
+
+                <div id="video_previous">
+                    <button onclick="video_previous()">&lt;</button>
                 </div>
-                <div></div>
-                <div></div>
-                <div></div>
+
+                <div class="slider-video" id="video1">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,w_300,h_300,c_fill,g_auto/eagle/uploads/b0bd7ee92bd699324916ff8041c8ef95/811539.png"
+                        alt="">
+                </div>
+                <div class="slider-video" id="video2">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,w_300,h_300,c_fill,g_auto/eagle/uploads/af6adc78786f5296fd61a27d094c3ede/197b53.png"
+                        alt="">
+                </div>
+                <div class="slider-video" id="video3">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,w_300,h_300,c_fill,g_auto/eagle/uploads/d615954c0ef61a584bbe095ad2428c97/61bf91.png"
+                        alt="">
+                </div>
+                <div class="slider-video" id="video4">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,w_300,h_300,c_fill,g_auto/eagle/uploads/ffedd3d77afdfc14bb99b1ae322a559e/e45525.png"
+                        alt="">
+                </div>
+                <div class="slider-video" id="video5">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,w_300,h_300,c_fill,g_auto/eagle/uploads/b0bd7ee92bd699324916ff8041c8ef95/c6012d.png"
+                        alt="">
+                </div>
+                <div class="slider-video" id="video6"></div>
+
+                <div id="video_next">
+                    <button onclick="video_next()">&gt;</button>
+                </div>
 
             </div>
-            <!-- <div>
-                <h2>QUIZZES</h2>
+            <div class="quiz">
+                <h2>QUIZES</h2>
                 <h6>18 million+ times people busted their healthcare myths</h6>
+            </div>
+
+            <div class="bottom_frames">
+                <div id="bottom_previous">
+                    <button onclick="bottom_previous()">&lt;</button>
+                </div>
+
+                <div class="bottom_pic" id="bottom1">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,w_300,h_300,c_fill,g_auto/eagle/uploads/b0bd7ee92bd699324916ff8041c8ef95/811539.png"
+                        alt="">
+
+                    <div class="page">
+
+                        <div class="page_top">
+                            <h3>
+                                Piles - What Are The Treatments Available?
+                            </h3>
+                        </div>
+
+                        <div class="page_bottom">
+                            <div id="page_profile">
+                                <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/da25d235a913aff5f5b914bcf8f6fe1a/Dermatology-PankajTiwary-92ad30.jpg"
+                                    alt="">
+                            </div>
+
+                            <div id="page_details">
+                                <h3>Dr. Prabhjyot Machanda</h3>
+                                <p>Gastroenterologist, Mumbai</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="bottom_pic" id="bottom2">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,w_300,h_300,c_fill,g_auto/eagle/uploads/af6adc78786f5296fd61a27d094c3ede/197b53.png"
+                        alt="">
+
+                    <div class="page">
+                        <div class="page_top">
+                            <h3>
+                                Piles - What Are The Treatments Available?
+                            </h3>
+                        </div>
+                        <div class="page_bottom">
+                            <div id="page_profile">
+                                <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/da25d235a913aff5f5b914bcf8f6fe1a/Dermatology-PankajTiwary-92ad30.jpg"
+                                    alt="">
+                            </div>
+
+                            <div id="page_details">
+                                <h3>Dr. Prabhjyot Machanda</h3>
+                                <p>Gastroenterologist, Mumbai</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bottom_pic" id="bottom3">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,w_300,h_300,c_fill,g_auto/eagle/uploads/d615954c0ef61a584bbe095ad2428c97/61bf91.png"
+                        alt="">
+
+                    <div class="page">
+
+                        <div class="page_top">
+                            <h3>
+                                Piles - What Are The Treatments Available?
+                            </h3>
+                        </div>
+
+                        <div class="page_bottom">
+                            <div id="page_profile">
+                                <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/da25d235a913aff5f5b914bcf8f6fe1a/Dermatology-PankajTiwary-92ad30.jpg"
+                                    alt="">
+                            </div>
+
+                            <div id="page_details">
+                                <h3>Dr. Prabhjyot Machanda</h3>
+                                <p>Gastroenterologist, Mumbai</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bottom_pic" id="bottom4">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,w_300,h_300,c_fill,g_auto/eagle/uploads/ffedd3d77afdfc14bb99b1ae322a559e/e45525.png"
+                        alt="">
+
+                    <div class="page">
+
+                        <div class="page_top">
+                            <h3>
+                                Piles - What Are The Treatments Available?
+                            </h3>
+                        </div>
+
+                        <div class="page_bottom">
+                            <div id="page_profile">
+                                <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/da25d235a913aff5f5b914bcf8f6fe1a/Dermatology-PankajTiwary-92ad30.jpg"
+                                    alt="">
+                            </div>
+
+                            <div id="page_details">
+                                <h3>Dr. Prabhjyot Machanda</h3>
+                                <p>Gastroenterologist, Mumbai</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_pic" id="bottom5">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,w_300,h_300,c_fill,g_auto/eagle/uploads/b0bd7ee92bd699324916ff8041c8ef95/c6012d.png"
+                        alt="">
+
+                    <div class="page">
+
+                        <div class="page_top">
+                            <h3>
+                                Piles - What Are The Treatments Available?
+                            </h3>
+                        </div>
+
+                        <div class="page_bottom">
+                            <div id="page_profile">
+                                <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/da25d235a913aff5f5b914bcf8f6fe1a/Dermatology-PankajTiwary-92ad30.jpg"
+                                    alt="">
+                            </div>
+
+                            <div id="page_details">
+                                <h3>Dr. Prabhjyot Machanda</h3>
+                                <p>Gastroenterologist, Mumbai</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_pic" id="bottom6"></div>
+
+                <div id="bottom_next">
+                    <button onclick="bottom_next()">&gt;</button>
+                </div>
+
+                <br />
+
+            </div>
+            <!-- <div class="relative">
+                <div>
+
+                </div>
             </div> -->
 
         </div>
@@ -270,8 +494,9 @@
         <div id="details">
             <div class="details_top">
                 <h2>Are you a Doctor?</h2>
-            <h6>Be a part of the next big thing in healthcare. Join us in our journey of revolutionizing healthcare delivery by harnessing technology to help millions lead healthier lives.</h6>
-            <button>Know More</button>
+                <h6>Be a part of the next big thing in healthcare. Join us in our journey of revolutionizing healthcare
+                    delivery by harnessing technology to help millions lead healthier lives.</h6>
+                <button>Know More</button>
             </div>
         </div>
 
@@ -279,18 +504,92 @@
             <div>
                 <h2>TOP CATEGORIES</h2>
             </div>
-            <div class="slider_diet"></div>
+            <div class="slider_diet">
+
+                <div id="diet_previous">
+                    <button onclick="previous()">&lt;</button>
+                </div>
+
+                <div class="slider_child" id="c1">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/dietitian-nutritionist.jpg" alt="">
+                </div>
+                <div class="slider_child" id="c2">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/gynaecologist.jpg" alt="">
+                </div>
+                <div class="slider_child" id="c3">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/psychologist.jpg" alt="">
+                </div>
+                <div class="slider_child" id="c4">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/dermatologist.jpg" alt="">
+                </div>
+                <div class="slider_child" id="c5">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/sexologist.jpg" alt="">
+                </div>
+                <div class="slider_child" id="c6">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/ayurveda.jpg" alt="">
+                </div>
+                <div class="slider_child" id="c7">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/homeopath.jpg" alt="">
+                </div>
+
+                <div id="diet_next">
+                    <button onclick="next()">&gt;</button>
+                </div>
+
+            </div>
             <div>
                 <h2>TOP CITIES</h2>
             </div>
-            <div class="slider_city"></div>
+            <div class="slider_city">
+
+                <div id="city_previous">
+                    <button onclick="city_previous()">&lt;</button>
+                </div>
+
+                <div class="city_child" id="d1">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/cities/delhi_city.jpg" alt="">
+                </div>
+                <div class="city_child" id="d2">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/cities/bangalore_city.jpg" alt="">
+                </div>
+                <div class="city_child" id="d3">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/cities/mumbai_city.jpg" alt="">
+                </div>
+                <div class="city_child" id="d4">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/cities/kolkata_city.jpg" alt="">
+                </div>
+                <div class="city_child" id="d5">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/cities/chennai_city.jpg" alt="">
+                </div>
+
+                <div id="city_next">
+                    <button onclick="city_next()">&gt;</button>
+                </div>
+
+            </div>
         </div>
 
         <div class="about_lybrate">
             <h3>About Lybrate</h3>
-            <p>Are you looking for a simple way to get the best medical care available? Lybrate.com innovative online doctor database gives you access to over 150,000 highly trained medical experts. So you can ask a doctor anything you want, simple with a touch of a finger. You can save as much as 70% of your time and money at your next visit to the doctor and with the assurance that the medical professional you are seeing is highly trained and experienced. We use a stringent verification process to ensure you are 100% satisfied every time. Subscribe to the Lybrate Online Doctor network today to get the very best access to free questions, consultations and easy appointments. Join today!</p>
-            <p>Looking to ask a doctor questions about your health online? Lybrate offers a fast, easy and friendly way to gain access to general practitioners, dieticians, nutritionists, gynaecologists, psychologist, dermatologist, sexologist, ayurveda, homeopathy and more. You can get in touch with online doctors 24 hours a day, 7 days a week with this simple application. No matter what your condition, Lybrate can get you in touch with a doctor online straight away. To find out more, subscribe to our ask a doctor service online or download the app and get access to doctors on the go!</p>
-            <p>Not only does Lybrate give you access to online medical professionals, we also have regular blogs from respected experts that give you tips and advice on health and well being. Our doctors discuss a range of topics from everyday living, parenting, pregnancy and how to manage your conditions, all online and accessible from your computer, phone or tablet. Simply download the app and get access to free questions, consultations and easy appointments. Get your health feed now with Lybrate and ask a doctor what you've always wanted to know!</p>
+            <p>Are you looking for a simple way to get the best medical care available? Lybrate.com innovative online
+                doctor database gives you access to over 150,000 highly trained medical experts. So you can ask a doctor
+                anything you want, simple with a touch of a finger. You can save as much as 70% of your time and money
+                at your next visit to the doctor and with the assurance that the medical professional you are seeing is
+                highly trained and experienced. We use a stringent verification process to ensure you are 100% satisfied
+                every time. Subscribe to the Lybrate Online Doctor network today to get the very best access to free
+                questions, consultations and easy appointments. Join today!</p>
+            <p>Looking to ask a doctor questions about your health online? Lybrate offers a fast, easy and friendly way
+                to gain access to general practitioners, dieticians, nutritionists, gynaecologists, psychologist,
+                dermatologist, sexologist, ayurveda, homeopathy and more. You can get in touch with online doctors 24
+                hours a day, 7 days a week with this simple application. No matter what your condition, Lybrate can get
+                you in touch with a doctor online straight away. To find out more, subscribe to our ask a doctor service
+                online or download the app and get access to doctors on the go!</p>
+            <p>Not only does Lybrate give you access to online medical professionals, we also have regular blogs from
+                respected experts that give you tips and advice on health and well being. Our doctors discuss a range of
+                topics from everyday living, parenting, pregnancy and how to manage your conditions, all online and
+                accessible from your computer, phone or tablet. Simply download the app and get access to free
+                questions, consultations and easy appointments. Get your health feed now with Lybrate and ask a doctor
+                what you've always wanted to know!</p>
 
         </div>
 
