@@ -2,8 +2,15 @@
         body{
             font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
             background-color: #eee;
+            margin: 0px;
         }
-        
+
+        #navContainer
+        {
+            width: 100%;
+            background-color: white;
+            margin-top: 0px;
+        }
         #container{
             width: 80%;
             margin: auto;
@@ -26,13 +33,16 @@
         .search_bar  {
             flex-grow: 1;
             margin: 0vh 5vh;
+            height: 32px;
             background-color: #DEDEDE;
         }
         .search_bar input{
             flex-grow: 1;
-            margin: 0vh;
-            width: 87%;
-            height: 30px;
+            outline: none;
+            border: none;
+            margin:0px;
+            width: 85%;
+            height: 26px;
             background-color: #DEDEDE;
             
         }
@@ -45,32 +55,54 @@
             float: right;
             padding: 0px;
             padding: 4px;
+            font-weight: lighter;
+            font-size: 20px;
             border: white;
             background-color: #DEDEDE;
         }
 
         #nav_bar>.select {
-            margin: 0vh 5vh;
             border: none;
             font-size: 14px;
         }
+         select :hover{
+             background-color: #ffffff;
+             color: green;
+         }
+        
         .lybrate_cash{
             text-decoration: none;
             font-size: 14px;
             color: #222222;
-            margin: 0vh 5vh;
+            border: none;
+            background-color: white;
+            padding-left:5px;
+            padding-bottom: 5px;
+        }
+        #pluslogo{
+            color: #C82506;
+            font-size: 20px;
         }
         .home_btn{
             text-decoration: none;
             font-size: 14px;
             color: #222222;
-            margin: 0vh 5vh;
+            margin: 0vh 2vh;
+            background-color: #ffffff;
+        }
+        .home_btn button{
+            background-color: #ffffff;
+            border-color: rgba(189, 185, 185, 0.933);
+            padding: 3px 8px;
+            border-radius: 6px;
+            margin-top: 5px;
         }
         .cart_logo{
             text-decoration: none;
-            font-size: 14px;
-            color: #222222;
-            margin: 0vh 5vh;
+            font-size: 25px;
+            color: #C82506;
+            margin: 0vh 2vh;
+            margin-top: 5px;
         }
         
 
@@ -114,32 +146,36 @@
             grid-template-columns: 50% 50%;
 
         }
-        .product_heading{
+        /* .product_heading{
             border-left: 1px solid #E8C9BE;
             background-color: #E8C9BE;
             margin-bottom: 0px;
-        }
+            font-size: 18px;
+        } */
         .prduct_heading_p{
             font-size: 18px;
+            background-color:#E8C9BE ;
             color: #222222;
             float: left;
+            padding: 12px 0px 12px 4px;
+            font-weight: bold;
             margin-bottom: 0px;
-            padding: 0px 0px 4px;
         }
         .viewAll_btn{
-            clear: left;
-            float: right;
-            font-size: 18px;
+            text-decoration: none;
+            border-bottom: dotted;
+            font-size: 14px;
+            margin-left: 270px;
+            margin-right: 8px;
             color: #222222;
-            padding: 0px 0px 4px;
-            /* margin-top: 50px; */
         }
         .heading2{
             font-size: 18px;
             color: #222222;
             float: left;
             background-color: white;
-            padding: 12px 178px 12px 0px;
+            padding: 12px 180px 12px 4px;
+            font-weight: bold;
             margin-bottom: 0px;
         }
         .heading4{
@@ -147,7 +183,8 @@
             color: #222222;
             float: left;
             background-color: white;
-            padding: 12px 308px 12px 0px;
+            font-weight: bold;
+            padding: 12px 312px 12px 4px;
             margin-bottom: 0px;
         }
         .heading5{
@@ -155,7 +192,8 @@
             color: #222222;
             float: left;
             background-color: white;
-            padding: 12px 398px 12px 0px;
+            padding: 12px 402px 12px 4px;
+            font-weight: bold;
             margin-bottom: 0px;
         }
 
