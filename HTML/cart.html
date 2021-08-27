@@ -298,13 +298,13 @@ function CartShow() {
     let img3 = document.createElement('img');
     let img4 = document.createElement('img');
     head2.textContent = cart_obj.name;
-    price.textContent = cart_obj.price;
+    price.textContent = `₹ ${cart_obj.price}`;
     details.textContent = cart_obj.details;
     date.textContent = cart_obj.expiery;
     prod_desc_1.textContent=`What is ${cart_obj.name}`
     prod_desc_2.textContent=`Why Choose ${cart_obj.name}`
     prod_desc_3.textContent=`What are key benefits of ${cart_obj.name}?`;
-    act_price.textContent=cart_obj.actualPrice;
+    act_price.textContent=`₹ ${cart_obj.actualPrice}`;
     off_price.textContent=cart_obj.off
     h_1.textContent= cart_obj.brand
    

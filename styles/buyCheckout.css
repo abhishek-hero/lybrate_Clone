@@ -1,5 +1,7 @@
 body{
     background-color: #eee;
+    margin: 0px;
+    padding: 0px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -191,11 +193,11 @@ body{
  #pay_price{
      float: left;
      font-size: 14px;
-     font-weight: 600;
+     font-weight: 700;
  }
   #pay_disct{
       float: left;
-      font-size: 12px;
+      font-size: 11px;
       margin-top: 18px;
       font-weight: 400;
   }
@@ -216,6 +218,11 @@ body{
  #addminus_icon{
      width: 10%;
    
+ }
+
+ 
+ #plus_icon:hover{
+     color: black;
  }
 
  #number{
@@ -287,6 +294,26 @@ body{
  #checkout_btn{
   width: 90%;
  margin-left: 800px;
+ margin-top: 0px;
+ }
+
+#row_3_cont p{
+     width: 90%;
+     margin-left: 970px;
+     color: #c82506 ;
+     font-size: 14px;
+     margin-top: 0px;
+     padding-top: 0px;
+     margin-bottom: 0px;
+ }
+
+ #char_length{
+     color:grey ;
+     font-size: 14px;
+ }
+ #address{
+     margin-bottom: 0px;
+
  }
 
  #checkout_btn button{
@@ -333,7 +360,7 @@ body{
       margin: 4px;
       color: #ffffff;
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 000;
   }
 
  .social i{
