@@ -1,0 +1,130 @@
+body{
+    background-color: #eee;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#row_1_cont{
+    max-width: 90%;
+     margin: 55px auto 5px;
+     background-color: #ffffff;
+     display: flex;
+     padding: 15px;
+     border: 1px solid #eee;
+     
+ }
+
+ #row_1_cont h1{
+     color: black;
+     font-size: 20px;
+     padding-top: 0px;
+ }
+
+ #paras{
+     width: 96%;
+ }
+ #row_1_cont i{
+     color: #cfc9c9;
+     margin: 10px;
+ }
+
+ #paras p{
+     font-size: 14px;
+     margin: 4px;
+     font-weight: 500;
+ }
+
+ #pay_price{
+     float: left;
+     font-size: 14px;
+     font-weight: 600;
+ }
+  #pay_disct{
+      float: left;
+      font-size: 12px;
+      margin-top: 18px;
+      font-weight: 400;
+  }
+
+ #pay_price{
+     margin-right: 10px;
+ }
+
+ #disct_info{
+     width: 100%;
+     display: flex;
+ }
+
+ #disct_para{
+     width: 95%;
+ }
+
+ #addminus_icon{
+     width: 10%;
+    
+    
+ }
+
+ #disct_para p{
+     margin-top: 15px;
+     color: #259b24;
+     font-weight: bold;
+ }
+
+
+ #row_2_cont{
+     display: flex;
+     width: 92%;
+     margin: auto;
+     background-color: #c82506;
+     margin-top: 8px;
+     border: 1px solid #eee;
+     padding: 3px;
+ }
+
+ #row_2_cont p{
+     width: 12px;
+     height: 12px;
+     margin: 10px 20px;
+     padding: 6px;
+     background-color: #ffffff;
+     text-align: center;
+     border-radius: 3px;
+     color: #c82506;
+ }
+
+ #row_2_cont h3{
+     margin-top: 14px;
+     color: #ffffff;
+     font-size: 14px;
+ }
+
+
+ #row_3_cont{
+     width: 92.5%;
+     margin: auto;
+     border: 1px solid #eee;
+     background-color: #ffffff;
+ }
+
+ #row_3_cont_1{
+     width: 97%;
+     margin: 10px auto;
+     border: 1px solid #eee;
+     background-color: #ffffff;
+ }
+
+ #row_3_cont_1 input{
+     width: 25%;
+     border: none;
+     border-bottom: 1px solid #eee;
+     margin: 30px 40px;
+     padding: 5px;
+
+ }
+
+
+ #checkout_btn{
+     float: right;
+     
+ }

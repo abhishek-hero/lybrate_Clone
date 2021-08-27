@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b2700ae26b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/buyCheckout.css">
+</head>
+<body>
+    <div id="row_1_cont">
+        <div id="checkout_img_1">
+            <i class="fas fa-2x fa-prescription-bottle"></i>
+        </div>
+        <div id="paras">
+            <h1 id="pay_heading"></h1>
+            <p id="pay_brand"></p>
+            <p id="pay_descr"></p>
+           <p id="pay_price"></p>
+           <p id="pay_disct"></p>
+           <br>
+
+           <div id="disct_info">
+            <div id="disct_para">
+                <p>₹71 cashback would be credited to your account after delivery</p>
+            </div>
+            <div id="addminus_icon">
+                <i class="fas fa-plus-circle"></i><span id="number">1</span>
+                <i class="fas fa-minus-circle"></i>
+            </div>
+           </div>
+           
+        </div>
+    </div>
+    
+
+    <div id="row_2_cont">
+        <p>1</p>
+        <h3>Express Checkout</h3>
+        
+    </div>
+   
+        <div id="row_3_cont">
+            <div id="row_3_cont_1">
+                <input type="text" name="" id="" placeholder="Name*">
+                <input type="number" name="" id="" placeholder="Mobile*">
+                <input type="email" name="" id="" placeholder="Email*">
+                <br>
+                <input type="text" name="" id="" placeholder="City*">
+                <input type="text" name="" id="" placeholder="Pincode*">
+                <input type="text" name="" id="" placeholder="Complete-Address">
+                <div>
+                    <button id="checkout_btn">Checkout</button>
+                </div>
+            </div>
+        </div>
+    <script>
+        var checkout_obj = JSON.parse(localStorage.getItem('Direct_Buy'));
+       
+
+        function showProduct(){
+            let heading = document.getElementById('pay_heading');
+            let brand = document.getElementById('pay_brand');
+            let para = document.getElementById('pay_descr');
+            let price = document.getElementById('pay_price');
+            let disct = document.getElementById('pay_disct');
+
+           
+            
+            heading.textContent=checkout_obj.name;
+            para.textContent=checkout_obj.details;
+            brand.textContent=checkout_obj.brand;
+            price.textContent=checkout_obj.price
+            disct.textContent=checkout_obj.actualPrice;
+        }
+
+
+        showProduct()
+
+
+    </script>
+</body>
+</html>
