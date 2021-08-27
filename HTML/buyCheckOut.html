@@ -193,6 +193,10 @@
         var checkout_obj = JSON.parse(localStorage.getItem('Direct_Buy'));
        
         var counter=1;
+        var total_price=0;
+        var totak_disct=0;
+
+
         function showProduct(){
             let heading = document.getElementById('pay_heading');
             let brand = document.getElementById('pay_brand');
@@ -228,34 +232,63 @@
             let number = document.getElementById('number');
             let price = document.getElementById('pay_price');
             let disct = document.getElementById('pay_disct');
-            price.textContent=`₹ ${Number(checkout_obj.price)*counter}`;
-            disct.textContent= `₹ ${Number(checkout_obj.actualPrice)*counter}`
+            total_price=Number(checkout_obj.price)*counter;
+            totak_disct=Number(checkout_obj.actualPrice)*counter;
+            price.textContent=`₹ ${total_price}`;
+            disct.textContent= `₹ ${totak_disct}`
+            localStorage.setItem('totalPrice',(total_price))
 
             number.textContent=counter;
+
+            let totalobj={
+                totalPrice:total_price,
+                totalDiscount:totak_disct,
+            }
+
+            localStorage.setItem('totalPrice',JSON.stringify(totalobj))
             
         }
 
-     
-
+   
         function subtraction(){
             counter--;
             let number = document.getElementById('number');
             let price = document.getElementById('pay_price');
             let disct = document.getElementById('pay_disct');
-            price.textContent=`₹ ${Number(checkout_obj.price)*counter}`;
-            disct.textContent= `₹ ${Number(checkout_obj.actualPrice)*counter}`
-            minus.style.color='black'
+            total_price=Number(checkout_obj.price)*counter;
+            totak_disct=Number(checkout_obj.actualPrice)*counter;
+            price.textContent=`₹ ${total_price}`;
+            disct.textContent= `₹ ${totak_disct}`
+            minus.style.color='black';
+            number.textContent=counter;
+            let totalobj={
+                totalPrice:total_price,
+                totalDiscount:totak_disct,
+            }
+
+            localStorage.setItem('totalPrice',JSON.stringify(totalobj))
             
-            number.textContent=counter
+           
             if(counter==0){
                 counter=1;
-                price.textContent=`₹ ${Number(checkout_obj.price)*counter}`;
-                disct.textContent= `₹ ${Number(checkout_obj.actualPrice)*counter}`
+                total_price=Number(checkout_obj.price)*counter;
+                totak_disct=Number(checkout_obj.actualPrice)*counter;
+                price.textContent=`₹ ${total_price}`;
+                disct.textContent= `₹ ${totak_disct}`;
+            
+                let totalobj={
+                totalPrice:total_price,
+                totalDiscount:totak_disct,
+                    }
+                    number.textContent=counter;
+            localStorage.setItem('totalPrice',JSON.stringify(totalobj))
                 minus.style.color='grey'
             }
 
-            number.textContent=counter;
+            
         }
+
+       
 
         add.addEventListener('click',addtion);
         minus.addEventListener('click',subtraction);
@@ -272,24 +305,38 @@
 
 
         function chechoutClick(){
-            let name = document.getElementById('name').value;
+            let Name = document.getElementById('name').value;
             let phone = document.getElementById('phone').value;
-            let city = document.getElementById('city').value;
+            let City = document.getElementById('city').value;
             let code = document.getElementById('code').value;
             let adr = document.getElementById('address').value;
 
 
-            if(name==="" || phone==="" ||  phone.length!==10 || code ==="" || code.length!==6 || adr==="" || adr.length<20){
+            if(Name==="" || phone==="" || City==="" || phone.length!==10 || code ==="" || code.length!==6 || adr==="" || adr.length<20){
                 alert('Please fill The Required Fields')
+                
             }
             else{
-                localStorage.setItem('directBuyItem',JSON.stringify(checkout_obj));
+                let cust_detail={
+                    name:Name,
+                    number:phone,
+                    city:City,
+                    pincode:code,
+                    adress:adr
+                }
+
+                localStorage.setItem('cust_details',JSON.stringify(cust_detail))
                 window.location.href='payment.html'
             }
+            
         }
+
+
         let btn = document.getElementById('check_btn');
         btn.addEventListener('click',chechoutClick)
 
+        
+        
     </script>
 </body>
 </html>
