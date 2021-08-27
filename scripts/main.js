@@ -25,6 +25,8 @@ function show() {
     for (let i = bottom_P; i <= bottom_N; i++) {
         document.getElementById("bottom" + i).style.display = "inline-block"
     }
+
+    card1.style.display = "none"
 }
 
 

@@ -285,18 +285,40 @@ header button {
     border-radius: 5px;
     font-family: "Roboto", Helvetica, sans-serif;
     font-weight: 600;
-    padding: 3px 9px;
+    /* padding: 3px 9px; */
 }
 
-.dropdown {
+.dropdown_div {
+    background-color: white;
     margin: auto;
     margin-top: 0.6%;
     width: 99.9%;
     height: 40px;
-    background-color: white;
-    display: grid;
-    grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
-    border: 1px solid black;
+}
+
+.dropdown {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    height: 40px;
+}
+
+.dropdown > div {
+    width: 50%;
+    text-align: left;
+}
+
+.dropdown h4 {
+    cursor: pointer;
+    font-size: 14px;
+    color: #6C6A6A;
+    font-weight: normal;
+    font-family: "Roboto", Helvetica, sans-serif;
+    margin-top: -9%;
+}
+
+#card1 {
+    display: none;
 }
 
 .main_grid {
@@ -397,13 +419,14 @@ header button {
     margin: 1%;
     border: 1px solid #c9c7c7;
     height: 54px;
-    margin-top: 10.5%;
+    margin-top: 9%;
     background-color: white;
     color: #C82506;
     font-weight: 600;
     font-size: 16.5px;
     border-radius: 2px;
     font-family: "Roboto", Helvetica, sans-serif;
+    cursor: pointer;
     
 }
 
@@ -426,7 +449,7 @@ header button {
 }
 
 #last_div2 input::placeholder {
-    transform: translateY(-60px);
+    transform: translateY(-70px);
 }
 
 #last_div2 div {
