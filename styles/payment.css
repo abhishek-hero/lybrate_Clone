@@ -4,18 +4,27 @@ body {
     font-family: robotoRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+#clear {
+    clear: both;
+}
+
 .top {
     width: 100%;
     height: 45px;
     background-color: #C82506;
 }
 
+.top img {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 100px;
+    height: 26px;
+}
 
 .warning {
     width: 55%;
     height: 54px;
     margin: 8px auto;
-    /* padding-bottom: 10px; */
     text-align: left;
     align-items: center;
     border: 0.5px solid black;
@@ -25,7 +34,7 @@ body {
 .warning p {
     margin-top: 1%;
     margin-left: 1%;
-    font-size: 16px;
+    font-size: 1vw;
 }
 
 .details {
@@ -110,6 +119,23 @@ body {
     box-shadow: 0 0 2px grey;
 }
 
+#lybrate_cash {
+    margin-left: 0px;
+    color: #C82506;
+}
+
+#lybrate_cash img {
+    width: 17px;
+    height: 17px;
+    margin-right: 5px;
+    float: left;
+}
+
+#note {
+    color: #6C6A6A;
+    line-height: 25px;
+}
+
 .promo input {
     width: 70%;
     height: 35px;
@@ -181,7 +207,6 @@ body {
     width: 15px;
     height: 15px;
     margin-left: 28px;
-    transform: rotate(-45deg);
 }
 
 #second img {
@@ -219,4 +244,33 @@ body {
     border-radius: 3px;
     background-color: #C82506;
     color: white;
+}
+
+.contact {
+    width: 38%;
+    margin: auto;
+    margin-left: 520px;
+    height: 20px;
+}
+
+.contact p {
+    font-size: 14.5px;
+    float: left;
+    margin-top: 0%;
+    margin-right: 5px;
+}
+
+#red {
+    color: #C82506;
+}
+
+.sec_image {
+    width: 18%;
+    margin: auto;
+    height: 40px;
+}
+
+.sec_image img {
+    margin: 0px 3px;
+    margin-bottom: 10px;
 }

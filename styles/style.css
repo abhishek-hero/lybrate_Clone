@@ -714,9 +714,9 @@ header button {
 
 .video_frames {
     display: flex;
-    width: 80%;
+    width: 82.5%;
     margin: auto;
-    height: 38%;
+    height: 35%;
     margin-top: 3%;
     justify-content: center;
     align-items: center;
@@ -724,7 +724,7 @@ header button {
 
 .slider-video {
     width: 25%;
-    height: 90%;
+    height: 86%;
     margin: 0 3px;
     display: none;
 }
@@ -732,6 +732,7 @@ header button {
 .slider-video img {
     width: 100%;
     height: 100%;
+    border-radius: 3px;
 }
 
 #video_previous, #video_next {
@@ -740,9 +741,9 @@ header button {
 }
 
 #video_previous button, #video_next button {
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
+    width: 46px;
+    height: 46px;
+    border-radius: 23px;
     font-size: 35px;
     color: #6C6A6A;
     border: 1px solid white;
@@ -752,21 +753,33 @@ header button {
 
 #video_previous button {
     position: absolute;
-    left: 14%;
+    left: 13%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
 #video_next button {
     position: absolute;
-    right: 11%;
+    right: 10%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
+#video6 {
+    background-color: #C82506;
+}
+
+#video6 h3 {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40%;
+}
+
 .bottom_frames {
     display: flex;
-    width: 84%;
+    width: 82.5%;
     margin: auto;
     height: 38%;
     justify-content: center;
@@ -792,9 +805,9 @@ header button {
 }
 
 #bottom_previous button, #bottom_next button {
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
     font-size: 35px;
     color: #6C6A6A;
     border: 1px solid white;
@@ -805,17 +818,30 @@ header button {
 #bottom_previous button {
     position: absolute;
     left: 13%;
-    top: 459%;
+    top: 455%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
 #bottom_next button {
     position: absolute;
-    top: 459%;
-    right: 9.7%;
+    top: 455%;
+    right: 10.5%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
+}
+
+#bottom6 {
+    height: 83%;
+    background-color: #C82506;
+}
+
+#bottom6 h3 {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40%;
 }
 
 .page {
@@ -951,7 +977,7 @@ header button {
 }
 
 .categories {
-    width: 80%;
+    width: 82.5%;
     height: 500px;
     margin: auto;
     background-color: transparent;
@@ -962,6 +988,7 @@ header button {
     font-family: "Roboto", Helvetica, sans-serif;
     color: #222222;
     margin-bottom: 0%;
+    margin-left: 25px;
 }
 
 .slider_diet {
