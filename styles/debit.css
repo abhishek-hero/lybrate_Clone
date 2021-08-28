@@ -1,0 +1,153 @@
+body {
+    margin: 0%;
+    background-image: url("https://api.payu.in/public/7166f16967f108fc4c151975a6ef14d7.png");
+    font-family: "robotoRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.main_container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 750px;
+    margin: auto;
+    height: 600px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+#div1 {
+    height: 100%;
+    width: 1.5%;
+    background-color: #2c7bd6;
+    border-radius: 5px;
+
+}
+
+#div2 {
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 2px grey;
+
+}
+
+#div3 {
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 3px grey;
+}
+
+.top {
+    width: 80%;
+    height: 25px;
+    margin: 10px auto;
+    margin-top: -185%;
+}
+
+.arrow {
+    width: 20px;
+    height: 99%;
+    float: left;
+    margin-right: 16px;
+    margin-top: -5px;
+}
+
+.arrow img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+#back p {
+    font-size: 13px;
+    margin-top: 0px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#lybrate p {
+    font-size: 13px;
+    margin-top: -30px;
+    font-weight: 600;
+    color: #6C6A6A;
+    float: right;
+}
+
+.new {
+    width: 90%;
+    margin-left: 35px;
+}
+
+.new h3 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    word-spacing: 7px;
+}
+
+.total {
+    width: 90%;
+    margin-left: 35px;
+}
+
+.total h4 {
+    font-size: 14.5px;
+    font-weight: lighter;
+}
+
+.card {
+    margin-left: 40px;
+    margin-top: 40px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #6C6A6A;
+}
+
+.details {
+    width: 80%;
+    height: 400px;
+    margin: auto;
+}
+
+.details form {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.details form label {
+    font-size: 12px;
+    color: #6C6A6A;
+}
+
+.details form input {
+    width: 85%;
+    height: 35px;
+    border: 1px solid #dad1d1;
+    border-radius: 5px;
+}
+
+.details form input::placeholder {
+    font-size: 12px;
+    font-weight: 600;
+    color: #c9c3c3;
+}
+
+.input_div {
+    margin-top: 10px;
+}
+
+#checkbox {
+    width: 15px;
+    height: 15px;
+    margin-top: 5px;
+}
+
+#submit {
+    width: 88%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #2c7bd6;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,13 @@
+body {
+    background-color: white;
+    margin: 0%;
+    font-family: "robotoRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.main {
+    width: 70%;
+    height: 330px;
+    margin: auto;
+    margin-top: 100px;
+    background-color: white;
+    text-align: center;
+}
