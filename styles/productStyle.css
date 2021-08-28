@@ -382,3 +382,55 @@
             color: #9B9A9F;
             font-size: 12px;
         }
+
+
+        /* footer  */
+
+#footer-div{
+    background-color: grey;
+
+}
+
+#footer h5{
+    color: #ccc;
+    font-size: 13px;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+  #footer{
+      width: 90vw;
+        display: flex;
+    
+      margin: auto;
+
+  }
+
+  #footer> .foot_div{
+      flex: 1;
+      margin: 10px;
+  }
+
+  #footer .foot_li{
+      text-decoration: none;
+      list-style: none;
+      margin: 4px;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 800;
+  }
+
+ .social #social_logo{
+     color: #ffffff;
+     margin: 5px;
+     padding: 4px;
+     
+ }
+
+ .social h5{
+    margin-left: 50px;
+ }
+
+ .social img{
+     max-width: 70%;
+     margin: auto
+ }
