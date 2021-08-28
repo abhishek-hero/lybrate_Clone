@@ -240,8 +240,9 @@
             var showcol1 = document.getElementById("detais_of_product")
 
             var div = document.createElement("div")
-            div.style.display = "flex";
-            div.style.columnGap = `6%`
+            div.style.display = "grid";
+            div.style.gridTemplateColumns=`12% 30% 20% 19% 10%`
+            div.style.gridGap=`2%`
             div.style.width = `100%`;
             div.style.height = `80px`
             div.style.backgroundColor = "white"
@@ -255,42 +256,50 @@
             p_image.style.marginTop = "auto"
             p_image.style.marginBottom = "auto"
             p_image.style.marginLeft = `10px`
+            // p_image.style.flexGrow="1"
 
 
             var p_name = document.createElement("p");
             p_name.innerHTML = product.name;
             p_name.style.marginTop = "auto"
             p_name.style.marginBottom = "auto"
-            p_name.style.padding = `0px 16px`
+            //  p_name.style.padding = `0px 16px`
             p_name.style.fontSize = `14.5px`
+            // p_name.style.flexGrow="1"
 
             var price = document.createElement("p");
             price.style.marginTop = "auto"
             price.style.marginBottom = "auto"
             price.style.fontSize = `14.5px`
+            // price.style.flexGrow="1"
 
             var p_price = document.createElement("span");
             p_price.innerHTML = `₹ ` + product.price;
             p_price.style.color = `#C82506`
-            // p_price.style.marginLeft = `20px`
+            // p_price.style.flexGrow="1"
+        //    p_price.style.marginLeft = `20px`
 
 
             var actualPrice = document.createElement("span");
             actualPrice.innerHTML = product.actualPrice;
             actualPrice.style.textDecoration = "line-through"
-            actualPrice.style.marginLeft = `4px`
+            // actualPrice.style.marginLeft = `4px`
+            // actualPrice.style.flexGrow="1"
 
             var label = document.createElement("label");
             label.innerHTML = "Quantity";
             label.style.marginTop = "auto"
             label.style.marginBottom = "auto"
-            label.style.marginLeft = `30px`
+            label.style.marginRight = `30px`
             label.style.fontSize = `12.5px`
+            // label.style.flexGrow="1"
 
             var quantity = document.createElement("input");
             quantity.type = "number";
             quantity.setAttribute('class', 'select_quan')
             quantity.setAttribute('value', '1')
+            quantity.style.marginLeft=`10px`
+            // quantity.style.flexGrow="1"
 
             var val = quantity.value
             console.log(val);
@@ -309,6 +318,7 @@
             btn.style.height = `30px`
             btn.style.marginTop = "auto"
             btn.style.marginBottom = "auto"
+            // btn.style.flexGrow="1"
 
             btn.onclick = function () {
                 removeItem(product);
@@ -324,7 +334,7 @@
            
         });
       
-       
+        btnDiv();
     }
     show_quantity();
 
@@ -335,6 +345,8 @@
     var cashBack = Math.floor(Number(total_bill * .1))
     var obj = { "totalPrice": total_actual, "totalDiscount": total_discount, "cart_total_price": cartTotal, "cash_back_Earned": cashBack }
     cart_page_arr.push(obj)
+
+    localStorage.setItem("allcartItem", JSON.stringify(cart_page_arr));
 
     //     function btnSection(){
 
@@ -495,6 +507,7 @@
 
 
             var safty = document.createElement("div");
+            safty.style.textAlign="center"
             safty.style.marginTop = `10px`
             safty.style.display = "flex"
             safty.style.fontWeight="lighter"
@@ -593,9 +606,13 @@
 
 
     function removeItem(p) {
-       totalAddedProduct.pop(p)
+        // totalAddedProduct.forEach(function(product){
 
-        
+        //     localStorage.removeItem("cart_arr")
+        //     location.reload();
+        // })
+        localStorage.removeItem("p")
+        location.reload();
     }
 
     function productPrice(product) {
@@ -655,7 +672,7 @@
        
     }
 
-    btnDiv();
+   
 
 </script>
 <script src="https:kit.fontawesome.com/67c66657c7.js"></script>
