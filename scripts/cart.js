@@ -1,6 +1,10 @@
 var cart_obj = JSON.parse(localStorage.getItem('myProducts'));
 
 
+function home(){
+    window.location.href = "index.html"
+}
+
 function CartShow() {
     let left_div_img1 = document.getElementById('img_1');
     let left_div_img2 = document.getElementById('img_2');

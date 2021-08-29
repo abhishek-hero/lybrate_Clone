@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Buy Checkout</title>
     <script src="https://kit.fontawesome.com/b2700ae26b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles/buyCheckout.css">
 </head>
@@ -197,16 +197,15 @@
         var totak_disct=0;
 
 
+
         function showProduct(){
             let heading = document.getElementById('pay_heading');
             let brand = document.getElementById('pay_brand');
             let para = document.getElementById('pay_descr');
             let price = document.getElementById('pay_price');
             let disct = document.getElementById('pay_disct');
-            
-           
 
-           
+            
             
             heading.textContent=checkout_obj.name;
             para.textContent=checkout_obj.details;
@@ -218,6 +217,15 @@
             disct.style.fontSize='12px'
             disct.style.textDecoration='line-through'
             disct.style.marginTop='7px'
+
+
+            let totalobj={
+                totalPrice:total_price,
+                totalDiscount:totak_disct,
+                quantity:counter
+            }
+
+            localStorage.setItem('totalPrice',JSON.stringify(totalobj))
            
         }
 
@@ -243,6 +251,7 @@
             let totalobj={
                 totalPrice:total_price,
                 totalDiscount:totak_disct,
+                quantity:counter
             }
 
             localStorage.setItem('totalPrice',JSON.stringify(totalobj))
@@ -264,6 +273,7 @@
             let totalobj={
                 totalPrice:total_price,
                 totalDiscount:totak_disct,
+                quantity:counter
             }
 
             localStorage.setItem('totalPrice',JSON.stringify(totalobj))
@@ -279,6 +289,7 @@
                 let totalobj={
                 totalPrice:total_price,
                 totalDiscount:totak_disct,
+                quantity:counter
                     }
                     number.textContent=counter;
             localStorage.setItem('totalPrice',JSON.stringify(totalobj))

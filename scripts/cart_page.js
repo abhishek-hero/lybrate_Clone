@@ -5,15 +5,19 @@ var cart_page_arr = [];
 var total_bill = 0;
 var total_actual = 0;
 
+
 function show_quantity() {
+
+    let i = 0;
     var data_div = document.getElementById("details");
     totalAddedProduct.forEach(function (product) {
 
         var showcol1 = document.getElementById("detais_of_product")
 
         var div = document.createElement("div")
-        div.style.display = "flex";
-        div.style.columnGap = `6%`
+        div.style.display = "grid";
+        div.style.gridTemplateColumns = "5% 30% 15% 3% 10% 3% 18%"
+        div.style.columnGap = `2%`
         div.style.width = `100%`;
         div.style.height = `80px`
         div.style.backgroundColor = "white"
@@ -41,10 +45,12 @@ function show_quantity() {
         price.style.marginBottom = "auto"
         price.style.fontSize = `14.5px`
 
+
         var p_price = document.createElement("span");
+        p_price.setAttribute("class", "p-price")
         p_price.innerHTML = `₹ ` + product.price;
         p_price.style.color = `#C82506`
-        // p_price.style.marginLeft = `20px`
+
 
 
         var actualPrice = document.createElement("span");
@@ -57,20 +63,55 @@ function show_quantity() {
         label.style.marginTop = "auto"
         label.style.marginBottom = "auto"
         label.style.marginLeft = `30px`
+        label.style.textAlign = "left"
         label.style.fontSize = `12.5px`
+
+        let sign_m = document.createElement('button')
+        sign_m.innerHTML = "-"
+        sign_m.style.fontWeight = `600`
+        sign_m.style.fontSize = `14px`
+        sign_m.style.height = "30px"
+        sign_m.style.width = "30px"
+        sign_m.style.marginTop = "auto"
+        sign_m.style.marginBottom = "auto"
+        sign_m.style.borderRadius = "50%"
+        let sign_p = document.createElement('button')
+        sign_p.innerHTML = "+"
+        sign_p.style.fontWeight = `600`
+        sign_p.style.fontSize = `14px`
+        sign_p.style.height = "30px"
+        sign_p.style.width = "30px"
+        sign_p.style.marginTop = "auto"
+        sign_p.style.marginBottom = "auto"
+        sign_p.style.borderRadius = "50%"
+        // sign_p.onclick = "plus()"
+        sign_p.setAttribute("onclick", `plus(${i})`)
+        i++
 
         var quantity = document.createElement("input");
         quantity.type = "number";
         quantity.setAttribute('class', 'select_quan')
         quantity.setAttribute('value', '1')
+        quantity.style.marginBottom = "15px"
 
-        var val = quantity.value
-        console.log(val);
+        // var val = quantity.value
 
 
+
+        
         //new array data creation
         total_bill += Number(product.price);
         total_actual += Number(product.actualPrice)
+
+        // function plus(){
+
+        //     let add = document.querySelector(".select_quan")
+        //     add.value = +(add.value) + 1
+        //     let count = +(add.value) + 1
+        //     console.log(count)
+        //     total_bill *= count
+        //     console.log(total_bill)
+        // }
 
 
         productPrice(product);
@@ -89,7 +130,7 @@ function show_quantity() {
         label.append(quantity)
         price.append(p_price, actualPrice);
 
-        div.append(p_image, p_name, price, label, btn)
+        div.append(p_image, p_name, price, sign_m, label, sign_p, btn)
         showcol1.append(div)
         data_div.append(showcol1)
 
@@ -102,31 +143,11 @@ show_quantity();
 
 
 
-total_discount = Number(total_actual - total_bill)
-var cartTotal = Number(total_bill + 40);
-var cashBack = Math.floor(Number(total_bill * .1))
+total_discount = Number(Math.floor((total_actual/ 100) *10))
+var cartTotal = Number((total_actual + 40) - total_discount);
+var cashBack = Math.floor(Number(total_bill * 0.1))
 var obj = { "totalPrice": total_actual, "totalDiscount": total_discount, "cart_total_price": cartTotal, "cash_back_Earned": cashBack }
 cart_page_arr.push(obj)
-
-//     function btnSection(){
-
-// var data_div = document.getElementById("details");
-// var div2=document.createElement("div")
-//     div2.style.width = `100%`;
-//     div2.style.height = `80px`
-//     div2.style.backgroundColor = "white"
-//     div2.style.border = `1px solid #dce0e0`
-
-//     var addproduct=document.createElement("button");
-//     addproduct.innerHTML="Add More Product"
-//     var proceedToPay=document.createElement("button");
-//     proceedToPay.innerHTML="Proceed To Checkout"
-
-//     div2.append(addproduct, proceedToPay);
-//     data_div.append(div2)
-// }
-// btnSection();
-
 
 function showOrderSummary() {
     var data_div = document.getElementById("details");
@@ -157,6 +178,7 @@ function showOrderSummary() {
         grow.style.flexGrow = "1"
 
         var mrp = document.createElement("p")
+        mrp.setAttribute("class", "mrp")
         mrp.innerHTML = `₹ ` + product.totalPrice
 
         total_mrp.append(mrp_tag, grow, mrp)
@@ -189,6 +211,7 @@ function showOrderSummary() {
         grow3.style.flexGrow = "1"
 
         var discount = document.createElement("p");
+        discount.setAttribute("class", "offer")
         discount.innerHTML = `- ₹ ` + product.totalDiscount
 
         discount_section.append(discount_tag, grow3, discount);
@@ -209,6 +232,7 @@ function showOrderSummary() {
         grow4.style.flexGrow = "1"
 
         var cart_total_price = document.createElement("p");
+        cart_total_price.setAttribute("class", "cart_total")
         cart_total_price.innerHTML = `₹ ` + product.cart_total_price;
 
         cart_section.append(cart_total, grow4, cart_total_price);
@@ -226,6 +250,7 @@ function showOrderSummary() {
         grow5.style.flexGrow = "1"
 
         var total_amount = document.createElement("p");
+        total_amount.setAttribute("class", "amount")
         total_amount.innerHTML = `₹ ` + product.cart_total_price
 
         ammount_section.append(amount_tag, grow5, total_amount)
@@ -406,6 +431,10 @@ function btnDiv() {
     proceedToBuy.style.border = `1px solid #c82506`
     proceedToBuy.style.backgroundColor = `#c82506`
     proceedToBuy.style.borderRadius = `2px`
+    proceedToBuy.style.cursor = "pointer"
+    proceedToBuy.onclick = function (){
+        window.location.href = "payment.html"
+    }
 
 
 
@@ -422,9 +451,43 @@ function btnDiv() {
     addToCart.style.color = `#c82506`
     addToCart.style.border = `1px solid #c82506`
     addToCart.style.backgroundColor = `#ffffff`
+    addToCart.style.cursor = "pointer"
+    addToCart.onclick = function (){
+        window.location.href = "product.html"
+    }
 
     btn_div.append(proceedToBuy, addToCart);
 
 }
 
 btnDiv();
+
+
+function plus(a){
+
+    let product100 = document.querySelectorAll(".p-price")
+    let add = document.querySelectorAll(".select_quan")
+    let mrp = document.querySelector(".mrp")
+
+    add[+a].value = +(add[+a].value) + 1
+    let count = +(add[+a].value) + 1
+    let temp = +mrp.innerText.slice(2) + Number(product100[+a].innerText.slice(2)) * count
+
+    mrp.innerText = `₹ ${temp}`
+
+    let offer = document.querySelector(".offer")
+    total_discount = Number(temp - total_bill)
+    offer.innerHTML = `₹ ${(Math.floor(total_discount / 100) * 10)}`
+    let amount = document.querySelector(".amount")
+    amount.innerHTML = `-₹ ${temp - total_discount}`
+
+    let cart_total = document.querySelector(".cart_total")
+    cart_total.innerHTML = `₹ ${temp - total_discount}`
+}
+
+// total_discount = Number(temp - total_bill)
+// console.log(total_discount)
+// var cartTotal = Number(total_bill + 40);
+// var cashBack = Math.floor(Number(total_bill * .1))
+// var obj = { "totalPrice": total_actual, "totalDiscount": total_discount, "cart_total_price": cartTotal, "cash_back_Earned": cashBack }
+// cart_page_arr.push(obj)
