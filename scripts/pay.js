@@ -30,17 +30,3 @@ function applyDisct(){
     if(code==='masai30'){
         let price =orderDetails.totalPrice;
         let disct= (price*20)/100;
-        price= price-disct;
-        let totlap = document.getElementById('totalp');
-        let amt = document.getElementById('amt');
-        amt.textContent= `₹ ${price}`
-        totlap.textContent=`₹ ${price}`
-    }
-}
-
-showprodDetailds()
-
-function checkout(){
-    
-    window.location.href='debit.html'
-}
