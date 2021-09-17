@@ -33,8 +33,8 @@
         </div>
 
         <div class="product_details">
-            <h2>Onelife BCAA ? Green Apple (250 Gram)</h2>
-            <div>By Onelife</div>
+            <h2 id="heading_name"></h2>
+            <div id="brand">By Onelife</div>
 
         </div>
 
@@ -46,15 +46,22 @@
 
         <h3>ORDER SUMMARY</h3>
         <hr />
-        <div>Onelife BCAA ? Green Apple (250 Gram)</div>
+        <div id="full_name"></div>
 
-        <p>Quantity: 1</p>
+        <p id="totalp"></p>
+        
+        <br>
+        <p id="qty"></p>
 
-        <div>Shipping</div>
+        <div id="shipping">Shipping</div>
+        <p id="shipping_num">₹ 0</p>
 
-        <hr />
+       <br>
+       <br>
 
-        <div>Amount Payable</div>
+        <div id="amt_payable">Amount Payable</div>
+        <p id="amt"></p>
+        <br>
         <hr />
 
         <div id="lybrate_cash"><img src="https://assets.lybrate.com/q_auto,f_auto/imgs/product/Homepage/LybrateCash_Icons_100.png" alt=""> LybrateCash to be Earned*
@@ -66,8 +73,8 @@
 
         <div>
             <div id="discount">Discount</div>
-            <input type="text" />
-            <button>Apply Promo</button>
+            <input id="disct_input" type="text" />
+            <button onclick="applyDisct()">Apply Promo</button>
         </div>
     </div>
 
@@ -151,7 +158,11 @@
         </div>
         <div id="third">
             <div class="proceed">
+<<<<<<< HEAD
                 <button id="proceed_button" onclick="proceed()">PROCEED PAYMENT</button>
+=======
+                <button id="proceed_button" onclick="checkout()">PROCEED PAYMENT</button>
+>>>>>>> 7a79e863a1fa1112331a321f29b7d9ee9f37d6e1
             </div>
         </div>
 
@@ -174,4 +185,5 @@
     </div>
 </body>
 
+<script src="../scripts/payment.js"></script>
 </html>

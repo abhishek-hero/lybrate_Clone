@@ -43,7 +43,7 @@ input[type="text"], input[type='password'], input[type='Email']{
     padding: 5px;
     border: none;
     border-bottom: 1px solid rgb(212, 206, 206);
-    background-color: #eee;
+    background-color: transparent;
   }
   
 a{
@@ -62,7 +62,7 @@ a{
       border: none;
       border-bottom: 1px solid rgb(212, 206, 206);
       list-style: none;
-      background-color: #eee;
+      background-color: transparent;
       
   }
 
@@ -72,7 +72,7 @@ a{
       padding: 6px;
       width: 55%;
       font-size: 12px;
-      background-color: #eee;
+      background-color: transparent;
   }
   
   .red{
@@ -276,4 +276,9 @@ a{
     width: 16%;
     height: 40%;
     margin-top: 4%;
+}
+
+input {
+    outline: none;
+    background-color: transparent;
 }

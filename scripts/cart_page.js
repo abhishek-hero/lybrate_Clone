@@ -34,6 +34,7 @@ try {
 
 
 
+
 function show_quantity() {
 
     let i = 0;
@@ -141,10 +142,20 @@ function show_quantity() {
 
 
 
-
+        
         //new array data creation
         total_bill += Number(product.price);
         total_actual += Number(product.actualPrice)
+
+        // function plus(){
+
+        //     let add = document.querySelector(".select_quan")
+        //     add.value = +(add.value) + 1
+        //     let count = +(add.value) + 1
+        //     console.log(count)
+        //     total_bill *= count
+        //     console.log(total_bill)
+        // }
 
 
 
