@@ -8,13 +8,14 @@
     <title>Lybrate.com</title>
     <link rel="stylesheet" href="./styles/style.css">
     <script src="./scripts/main.js"></script>
+    <script src="https:kit.fontawesome.com/67c66657c7.js"></script>
 </head>
 
 <body onload="show()">
     <!-- creating header buttons -->
 
     <header id="header">
-        <button>Login/Sign-up</button>
+        <button onclick="login()">Login/Sign-up</button>
         <button>Health Feed</button>
         <button>For Doctors</button>
         <button>Get the App</button>
@@ -57,7 +58,6 @@
                     <h3>goodkart</h3>
                 </button>
                 <img src="https://image.flaticon.com/icons/png/128/4290/4290854.png" alt="cart" id="cart_icon">
-                <!-- <i class="fas fa-shopping-cart fa-2x" id="cart_icon"></i> -->
 
             </div>
         </div>
@@ -68,7 +68,7 @@
 
             <button>Home</button>
             <button>Health Feed</button>
-            <button>Goodkart</button>
+            <button onclick="goodcart()">Goodkart</button>
             <button>Ask a Question</button>
             <button>Consult Online</button>
             <button>Book Lab Test</button>
@@ -102,7 +102,7 @@
 
             <div class="random_minute">
                 <div>
-                    <p>
+                    <p id="time">
                         time
                     </p>
                 </div>
@@ -126,64 +126,77 @@
         <!-- creating dropdown list at the end of main image -->
 
         <div class="dropdown_div">
-            <div class="dropdown">
-                <div onmouseover="headline()">
-                    <nav>
-                        <ul>
-                            <h4>Diet, Food & Fitness</h4>
-                            <div id="card1">
-                                <li><h5>Weight Management</h5></li>
-                                <li><p>Weight gain</p></li>
-                                <li><p>Weight loss</p></li>
-                                <li><p>Obecity</p></li>
-                            </div>
-                        </ul>
-                    </nav>
-                </div>
-                <div>
-                    <nav>
-                        <ul>
-                            <h4>Skin & Hair Care</h4>
-                        </ul>
-                    </nav>
-                </div>
-                <div>
-                    <nav>
-                        <ul>
-                            <h4>Health Condition</h4>
-                        </ul>
-                    </nav>
-                </div>
-                <div>
-                    <nav>
-                        <ul>
-                            <h4>Pregnancy, kids & Parenting</h4>
-                        </ul>
-                    </nav>
-                </div>
-                <div>
-                    <nav>
-                        <ul>
-                            <h4>Women's Health</h4>
-                        </ul>
-                    </nav>
-                </div>
-                <div>
-                    <nav>
-                        <ul>
-                            <h4>Sexual Wellness</h4>
-                        </ul>
-                    </nav>
-                </div>
-                <div>
-                    <nav>
-                        <ul>
-                            <h4>More</h4>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+            <div class="dropdown"> 
+
+            <div class="diffNav">
+        <div class="diffContainer">
+            <ul>
+                <li style="margin: left 150px;;"><a href="">Diet, Food & Fitness <span style="margin-left: 8px;"
+                            class="fas fa-angle-down"></span></a>
+                    <ul>
+                        <li><a href="">Sexual Wellness</a></li>
+                        <li><a href="">Food & Drink</a></li>
+                        <li><a href="">Vitamin & Supplement</a></li>
+                        <li><a href="">Weight Management</a></li>
+                        <li><a href="">Child Care</a></li>
+                        <li><a href="">Protin & Fitness</a></li>
+                        <li><a href="">Skin & Hair Care</a></li>
+                        <li><a href="">Personal Care</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Skin & Hair Care</a></li>
+                <li><a href="">Health Condition <span style="margin-left: 8px;" class="fas fa-angle-down"></span></a>
+                    <ul>
+                        <li> <a href="">Women Sexual WellNess</a></li>
+                        <li><a href="">Men Performance enhancer</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Pregnancy kids & Parenting <span style="margin-left: 0px;" class="fas fa-angle-down"></span></a>
+                    <ul>
+                        <li><a href="">Healthy Breakfast</a></li>
+                        <li><a href="">Jams, Honey & Spreads</a></li>
+                        <li><a href="">Ready to Eat</a></li>
+                        <li><a href="">Healthy Drinks</a></li>
+                        <li><a href="">Oil & Ghees</a></li>
+                        <li><a href="">Snack Foods</a></li>
+                        <li><a href="">Tea & Coffee</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Women's Health <span style="margin-left: 8px; "
+                            class="fas fa-angle-down" ></span></a>
+                    <ul>
+                        <li><a href="">Live Care</a></li>
+                        <li><a href="">Multivitamin</a></li>
+                        <li><a href="">Gut Care</a></li>
+                        <li><a href="">Bone & Joint Care</a></li>
+                        <li><a href="">Eye Care</a></li>
+                        <li><a href="">Brain Care</a></li>
+                        <li><a href="">Hair & Care</a></li>
+                        <li><a href="">Lung care</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Sexual Wellness <span style="margin-left: 8px;" class="fas fa-angle-down"></span></a>
+                    <ul>
+                        <li><a href="">Drinks for Weight Loss</a></li>
+                        <li><a href="">Fat Burner</a></li>
+                        <li><a href="">Meal Replacement</a></li>
+                    </ul>
+                </li>
+                <li><a href="">More <span style="margin-left: 8px;" class="fas fa-angle-down"></span></a>
+                    <ul>
+                        <li><a href="">Child Skin Product</a></li>
+                        <li><a href="">Child Hair Shampoo</a></li>
+                        <li><a href="">Child Bath Essential</a></li>
+                        <li><a href="">Child Immunity</a></li>
+                        <li><a href="">Child Snack Food</a></li>
+                        <li><a href="">Child Multivitamins</a></li>
+                    </ul>
+                </li>
+
+            </ul>
         </div>
+    </div> 
+    </div>
 
         <!-- creating question and answer division -->
 
@@ -660,6 +673,90 @@
                 questions, consultations and easy appointments. Get your health feed now with Lybrate and ask a doctor
                 what you've always wanted to know!</p>
 
+        </div>
+
+        <div>
+            <section>
+                <div id="footer-div" >
+                   <div id="footer">
+                        <div>
+                           
+                            <ul>
+                                <h5>Search Health Products</h5>
+                                <li> Goodkart</li>
+                                <li>Vitamin and Supplement</li>
+                                <li>Protein and Fitness</li>
+                                <li>Skin and Hair Care</li>
+                                <li>Sexual Wellness</li>
+                                <li>Weight Management</li>
+                                <li>Food and Drink</li>
+                                <li>Personal Care</li>
+                                <li>Child Care</li>
+                                <li>GoodBox</li>
+                            </ul>
+                           
+                        </div>
+                        <div>
+                           
+                            <ul>                    
+                               <h5>Search doctors</h5>
+                                <li> Search doctors by City</li>
+                                <li>Search doctors by City Locality</li>
+                                <li>Search doctors by speciality</li>
+                                <li>Search doctors by city speciality</li>
+                            </ul>
+                           
+                        </div>
+                        <div>
+                           
+                    <ul>
+                                <h5> Read Health Articles</h5>
+                               <li>Health Wiki</li>
+                               <li>Health Tips Index</li>
+                               <li>Health Questions Index</li>
+                               <li>Health Quizzes Index</li>
+                               <li>Health Topics Index</li>
+                               <li>Medicines Index</li>
+                               <li>Ailment Index</li>
+                               <li>Lab Test Details Index</li>
+                            </ul>
+                           
+                        </div>
+                        <div>
+                            <ul>
+                                <h5>Read about Lybrate</h5>
+                                <li>About Us </li>
+                                <li>Contact Us</li>
+                                <li>Careers</li>
+                                <li>Mobile Apps</li>
+                                <li>Blog</li>
+                                <li>Term of Use</li>
+                                <li>Privacy Policy</li>
+                                <li>Editorial Policy</li>
+                                <li>Press</li>
+                              
+                            </ul>
+                           
+                        </div>
+                        <div>
+                            <div class="social">
+    
+                                <h5>Social</h5>
+                                <i class="fab fa-1x fa-facebook-f"></i>
+                                <i class="fab fa-1x fa-twitter"></i>
+                                <i class="fab fa-1x fa-linkedin-in"></i>
+                                <i class="fab fa-1x fa-youtube"></i>
+                                <br>
+                                <h5>Download App</h5>
+                                <img src="https://assets.lybrate.com/q_auto,f_auto/imgs/product/logos/GooglePlay.png">
+                                <img src="https://assets.lybrate.com/q_auto,f_auto/imgs/product/logos/AppStore.png">
+            
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
 
     </div>

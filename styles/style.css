@@ -24,6 +24,8 @@ header button {
     clear: both;
 }
 
+ 
+/* top navbar */
 #top_div {
     width: 100%;
     height: 35rem;
@@ -1117,3 +1119,113 @@ header button {
     margin-bottom: 10px;
     color: #6C6A6A;
 }
+
+
+ /* Navigation End */
+
+ .diffNav{
+    width: 100%;
+    height: 40px;
+    /* background-color: #222222; */
+    text-align: center;
+    font-size: 14px;
+    font-family: "Roboto", Helvetica, sans-serif;
+}
+.diffContainer{
+    width: 80%;
+    /* margin: auto; */
+}
+
+ul{
+    list-style: none;
+    padding: 0px;
+    position: absolute;
+}
+ul li{
+    float: left;
+}
+ul li a{
+    font-family: "Roboto", Helvetica, sans-serif;
+    width: 186px;
+    color: #444444;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    /* padding: 3px; */
+
+}
+ul li:hover ul li a{
+    margin-top: 15px;
+    font-family: "Roboto", Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #444444;
+}
+ul li:hover ul{
+   border: 1px solid white;
+   background-color: #ffffff;
+   border-radius: 6px;
+   /* margin-top:5px; */
+}
+ul li ul li{
+     clear: both;
+}
+ul li ul{
+    display: none;
+}
+ul li:hover ul {            
+    display: block;
+}
+
+
+
+/* Footer Section */
+
+
+#footer-div{
+    background-color: grey;
+
+}
+
+#footer h5{
+    color: #ccc;
+    font-size: 13px;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+  #footer{
+      width: 90vw;
+        display: flex;
+    
+      margin: auto;
+
+  }
+
+  #footer>div{
+      flex: 1;
+      margin: 10px;
+  }
+
+  #footer li{
+      text-decoration: none;
+      list-style: none;
+      margin: 4px;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 800;
+  }
+
+ .social i{
+     color: #ffffff;
+     margin: 5px;
+     padding: 4px;
+     
+ }
+
+ .social h5{
+    margin-left: 50px;
+ }
+
+ .social img{
+     max-width: 70%;
+     margin: auto
+ }

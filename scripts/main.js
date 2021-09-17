@@ -1,3 +1,14 @@
+function login(){
+    window.location.href = "HTML/login.html"
+}
+
+function goodcart(){
+    window.location.href = "HTML/product.html"
+}
+
+
+let random_number = Math.floor(Math.random()*10 + 1)
+
 let left = 1;
 let right = 4;
 
@@ -11,6 +22,12 @@ let bottom_P = 1;
 let bottom_N = 4;
 
 function show() {
+
+    let time = document.getElementById("time")
+    setInterval(function (){
+        time.innerHTML = `${random_number} min ago`
+    }, 2000)
+
     for (let i = left; i <= right; i++) {
         document.getElementById("c" + i).style.display = "inline-block"
     }
@@ -25,8 +42,6 @@ function show() {
     for (let i = bottom_P; i <= bottom_N; i++) {
         document.getElementById("bottom" + i).style.display = "inline-block"
     }
-
-    card1.style.display = "none"
 }
 
 
