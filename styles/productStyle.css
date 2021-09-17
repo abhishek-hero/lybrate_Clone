@@ -34,7 +34,7 @@
         .search_bar  {
             flex-grow: 1;
             margin-left:10vh;
-            margin-right: 2vh;
+            margin-right: 7vh;
             height: 32px;
             color: white;
             background-color: #DEDEDE;
@@ -134,6 +134,7 @@
             color: #222222;
             margin: 0vh 1vh;
             background-color: #ffffff;
+            cursor: pointer;
         }
         .home_btn button{
             background-color: #ffffff;
@@ -228,17 +229,9 @@
            column-gap: 1%;
         }
 
-        #show1, #show2, #show3, #show4, #show5 p{
-            font-weight: bold;
-        }
-
-        .heading2, .heading4, .heading5, .prduct_heading_p{
-            font-weight: 900;
-            text-align: center;
-        }
-
         #show1 {
             display: grid;
+            padding: auto;
             background-color: white;
             grid-template-columns: 50% 50%;
            
@@ -246,21 +239,13 @@
 
         #show2 {
             display: grid;
+            padding: auto;
             grid-template-columns: 50% 50%;
 
         }
         /* .product_heading{
             border-left: 1px solid #E8C9BE;
             background-color: #E8C9BE;
-            padding: 0px 10px;
-            margin-top: 0px;
-          
-        }
-
-        #show1 img{
-           max-width: 100%;
-        }
-
             margin-bottom: 0px;
             font-size: 18px;
         } */
@@ -269,18 +254,6 @@
             background-color:#E8C9BE ;
             color: #222222;
             float: left;
-            padding: 0px 0px 0px;
-           
-        }
-        .viewAll_btn{
-            
-            float: right;
-            font-size: 18px;
-            color: #222222;
-            padding: 20px 0px 4px;
-            text-decoration: none;
-            border-bottom: 1px dotted black;
-            /* margin-top: 50px; */
             padding: 12px 0px 12px 4px;
             font-weight: bold;
             margin-bottom: 0px;
@@ -298,7 +271,6 @@
             color: #222222;
             float: left;
             background-color: white;
-            padding: 12px 120px 12px 5px;
             padding: 12px 191px 12px 4px;
             font-weight: bold;
             margin-bottom: 0px;

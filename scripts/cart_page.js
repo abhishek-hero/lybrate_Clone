@@ -1,22 +1,50 @@
 let totalAddedProduct = JSON.parse(localStorage.getItem('cart_arr'));
 
+let userDetails = JSON.parse(localStorage.getItem("details"))
+
 var cart_page_arr = [];
 
 var total_bill = 0;
 var total_actual = 0;
+var count = 0
+
+let userName = document.querySelector(".top_a")
+try {
+    if (userDetails.length !=null)
+    {
+        userName.innerText = `Hello ${userDetails[0].name} `
+        userName.style.backgroundColor = "white"
+        userName.style.marginTop = `-8% !important`
+        userName.style.fontSize = `14.5px`
+        userName.style.border = "none"
+        userName.style.outLine = "none"
+        userName.style.fontWeight = "200"
+    
+        let aero = document.createElement("span")
+        aero.setAttribute("class", "fas fa-angle-down")
+    
+        userName.append(aero)
+    
+    }
+    
+} catch (error) {
+    console.log("Please login",error);
+}
+
+
 
 
 function show_quantity() {
 
     let i = 0;
+    let j = 0;
     var data_div = document.getElementById("details");
     totalAddedProduct.forEach(function (product) {
-
+        count += 1;
         var showcol1 = document.getElementById("detais_of_product")
-
         var div = document.createElement("div")
         div.style.display = "grid";
-        div.style.gridTemplateColumns = "5% 30% 15% 3% 10% 3% 18%"
+        div.style.gridTemplateColumns = "5% 30% 18% 3% 10% 3% 15%"
         div.style.columnGap = `2%`
         div.style.width = `100%`;
         div.style.height = `80px`
@@ -54,7 +82,8 @@ function show_quantity() {
 
 
         var actualPrice = document.createElement("span");
-        actualPrice.innerHTML = product.actualPrice;
+        actualPrice.setAttribute("class", "a-price")
+        actualPrice.innerHTML = `₹ ` + product.actualPrice;
         actualPrice.style.textDecoration = "line-through"
         actualPrice.style.marginLeft = `4px`
 
@@ -75,6 +104,20 @@ function show_quantity() {
         sign_m.style.marginTop = "auto"
         sign_m.style.marginBottom = "auto"
         sign_m.style.borderRadius = "50%"
+        sign_m.setAttribute("id", "rm_btn")
+        sign_m.setAttribute("onclick", `minus(${j})`)
+        j++
+
+        removeFromCart = function (a) {
+            totalAddedProduct.splice(a, 1)
+            console.log(totalAddedProduct);
+            localStorage.setItem("cart_arr", JSON.stringify(totalAddedProduct))
+            location.reload();
+
+        }
+
+
+
         let sign_p = document.createElement('button')
         sign_p.innerHTML = "+"
         sign_p.style.fontWeight = `600`
@@ -98,20 +141,11 @@ function show_quantity() {
 
 
 
-        
+
         //new array data creation
         total_bill += Number(product.price);
         total_actual += Number(product.actualPrice)
 
-        // function plus(){
-
-        //     let add = document.querySelector(".select_quan")
-        //     add.value = +(add.value) + 1
-        //     let count = +(add.value) + 1
-        //     console.log(count)
-        //     total_bill *= count
-        //     console.log(total_bill)
-        // }
 
 
         productPrice(product);
@@ -123,9 +157,12 @@ function show_quantity() {
         btn.style.marginTop = "auto"
         btn.style.marginBottom = "auto"
 
-        btn.onclick = function () {
-            removeItem(product);
+        btn.onclick = window = function () {
+            let node = btn.parentNode;
+            node.style.display = "none"
+
         }
+
 
         label.append(quantity)
         price.append(p_price, actualPrice);
@@ -143,8 +180,8 @@ show_quantity();
 
 
 
-total_discount = Number(Math.floor((total_actual/ 100) *10))
-var cartTotal = Number((total_actual + 40) - total_discount);
+total_discount = Number(total_actual - total_bill)
+var cartTotal = Number((total_actual + 0) - total_discount);
 var cashBack = Math.floor(Number(total_bill * 0.1))
 var obj = { "totalPrice": total_actual, "totalDiscount": total_discount, "cart_total_price": cartTotal, "cash_back_Earned": cashBack }
 cart_page_arr.push(obj)
@@ -195,7 +232,7 @@ function showOrderSummary() {
         grow2.style.flexGrow = "1"
 
         var shiping_charge = document.createElement("p");
-        shiping_charge.innerHTML = `₹40`
+        shiping_charge.innerHTML = `₹ 0`
 
         shiping_section.append(shiping_tag, grow2, shiping_charge);
 
@@ -432,7 +469,7 @@ function btnDiv() {
     proceedToBuy.style.backgroundColor = `#c82506`
     proceedToBuy.style.borderRadius = `2px`
     proceedToBuy.style.cursor = "pointer"
-    proceedToBuy.onclick = function (){
+    proceedToBuy.onclick = function () {
         window.location.href = "payment.html"
     }
 
@@ -452,7 +489,7 @@ function btnDiv() {
     addToCart.style.border = `1px solid #c82506`
     addToCart.style.backgroundColor = `#ffffff`
     addToCart.style.cursor = "pointer"
-    addToCart.onclick = function (){
+    addToCart.onclick = function () {
         window.location.href = "product.html"
     }
 
@@ -463,31 +500,58 @@ function btnDiv() {
 btnDiv();
 
 
-function plus(a){
+function plus(a) {
 
-    let product100 = document.querySelectorAll(".p-price")
+    let product100 = document.querySelectorAll(".a-price")
+    let totalPrice = document.querySelectorAll(".p-price")
     let add = document.querySelectorAll(".select_quan")
     let mrp = document.querySelector(".mrp")
+    let offer = document.querySelector(".offer")
 
     add[+a].value = +(add[+a].value) + 1
-    let count = +(add[+a].value) + 1
-    let temp = +mrp.innerText.slice(2) + Number(product100[+a].innerText.slice(2)) * count
+    let count = +(add[+a].value)
+    let temp = +mrp.innerText.slice(2) + (Number(product100[+a].innerText.slice(2)))
 
     mrp.innerText = `₹ ${temp}`
 
-    let offer = document.querySelector(".offer")
-    total_discount = Number(temp - total_bill)
-    offer.innerHTML = `₹ ${(Math.floor(total_discount / 100) * 10)}`
+    let tempOffer = (Number(product100[+a].innerText.slice(2))) - Number(totalPrice[+a].innerText.slice(2))
+    let tempDiscount = + offer.innerText.slice(4) + Number(tempOffer)
+    offer.innerText = `- ₹ ${tempDiscount}`
+
+
     let amount = document.querySelector(".amount")
-    amount.innerHTML = `-₹ ${temp - total_discount}`
+    amount.innerHTML = `₹ ${temp - tempDiscount}`
 
     let cart_total = document.querySelector(".cart_total")
-    cart_total.innerHTML = `₹ ${temp - total_discount}`
+    cart_total.innerHTML = `₹ ${temp - tempDiscount}`
 }
 
-// total_discount = Number(temp - total_bill)
-// console.log(total_discount)
-// var cartTotal = Number(total_bill + 40);
-// var cashBack = Math.floor(Number(total_bill * .1))
-// var obj = { "totalPrice": total_actual, "totalDiscount": total_discount, "cart_total_price": cartTotal, "cash_back_Earned": cashBack }
-// cart_page_arr.push(obj)
+function minus(a) {
+    let product100 = document.querySelectorAll(".a-price")
+    let totalPrice = document.querySelectorAll(".p-price")
+    let sub = document.querySelectorAll(".select_quan")
+    let mrp = document.querySelector(".mrp")
+    let offer = document.querySelector(".offer")
+
+
+    sub[+a].value = +(sub[+a].value) - 1
+    let count = +(sub[+a].value)
+    let temp = +mrp.innerText.slice(2) - (Number(product100[+a].innerText.slice(2)))
+
+    mrp.innerText = `₹ ${temp}`
+
+    let tempOffer = (Number(product100[+a].innerText.slice(2))) - Number(totalPrice[+a].innerText.slice(2))
+    let tempDiscount = + offer.innerText.slice(4) - Number(tempOffer)
+    offer.innerText = `- ₹ ${tempDiscount}`
+
+
+    let amount = document.querySelector(".amount")
+    amount.innerHTML = `₹ ${temp - tempDiscount}`
+
+    let cart_total = document.querySelector(".cart_total")
+    cart_total.innerHTML = `₹ ${temp - tempDiscount}`
+
+    if (sub[+a].value < 1) {
+        removeFromCart(a)
+    }
+}

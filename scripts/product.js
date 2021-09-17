@@ -1,4 +1,6 @@
 // crousal Start
+
+
 var slidePosition = 0;
 
 
@@ -196,7 +198,7 @@ function show1() {
         time.style.color = `#259b24`
         time.style.fontSize = `14px`
         // Set the date we're counting down to
-        var countDownDate = new Date("Sep 5, 2021 15:37:25").getTime();
+        var countDownDate = new Date("Sep 5, 2022 15:37:25").getTime();
 
         // Update the count down every 1 second
         var x = setInterval(function () {
@@ -442,3 +444,44 @@ function details(product) {
 
 
 }
+
+
+let userDetails = JSON.parse(localStorage.getItem("details"))
+
+let userName = document.querySelector(".top_a")
+
+try {
+    if (userDetails.length != null) {
+        userName.innerText = `Hello ${userDetails[0].name} `
+        userName.style.backgroundColor = "white"
+        userName.style.marginTop = `-8% !important`
+        userName.style.fontSize = `14.5px`
+        userName.style.marginLeft = `-18%`
+        userName.style.border = "none"
+        userName.style.outLine = "none"
+        userName.style.fontWeight = "200"
+
+        let aero = document.createElement("span")
+        aero.setAttribute("class", "fas fa-angle-down")
+
+        userName.append(aero)
+
+    }
+
+} catch (error) {
+    console.log("Please Login",error);
+}
+
+userName.innerText = `Hello ${userDetails[0].name} `
+userName.style.backgroundColor = "white"
+userName.style.marginTop = `-8% !important`
+userName.style.fontSize = `14.5px`
+userName.style.marginLeft = `-18%`
+userName.style.border = "none"
+userName.style.outLine = "none"
+userName.style.fontWeight = "200"
+
+let aero = document.createElement("span")
+aero.setAttribute("class", "fas fa-angle-down")
+
+userName.append(aero)
