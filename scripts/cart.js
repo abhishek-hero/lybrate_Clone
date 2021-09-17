@@ -1,5 +1,6 @@
 var cart_obj = JSON.parse(localStorage.getItem('myProducts'));
 
+localStorage.setItem("Direct_Buy",JSON.stringify(cart_obj));
 
 function home(){
     window.location.href = "index.html"
