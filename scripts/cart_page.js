@@ -481,7 +481,7 @@ function btnDiv() {
     proceedToBuy.style.borderRadius = `2px`
     proceedToBuy.style.cursor = "pointer"
     proceedToBuy.onclick = function () {
-        window.location.href = "payment.html"
+        window.location.href = "pay.html"
     }
 
 
