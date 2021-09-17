@@ -34,7 +34,7 @@
         .search_bar  {
             flex-grow: 1;
             margin-left:10vh;
-            margin-right: 2vh;
+            margin-right: 7vh;
             height: 32px;
             color: white;
             background-color: #DEDEDE;
@@ -134,6 +134,7 @@
             color: #222222;
             margin: 0vh 1vh;
             background-color: #ffffff;
+            cursor: pointer;
         }
         .home_btn button{
             background-color: #ffffff;
