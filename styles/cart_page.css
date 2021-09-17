@@ -15,14 +15,13 @@ body {
 #container{
     width: 80%;
     margin: auto;
-    /* text-align: center; */
+    text-align: center;
     background-color: #eee;
 }
 #nav_bar {
     display: flex;
     padding: 2vh 0vh;
     height: 36px;
-
     background-color: #ffffff;
 }
 
@@ -150,6 +149,7 @@ body {
     padding: 3px 8px;
     border-radius: 6px;
     margin-top: 8px;
+    cursor: pointer;
 }
 .cart_logo{
     text-decoration: none;
@@ -174,7 +174,7 @@ body {
 }
 
 .select_quan {
-    /* padding: 2px; */
+    padding: 2px;
     height: 20px;
     width: 30px;
     margin-left: 0px;
