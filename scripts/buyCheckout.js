@@ -1,6 +1,6 @@
 var checkout_obj = JSON.parse(localStorage.getItem('Direct_Buy'));
        
-var counter=1;
+var counter=0;
 var total_price=0;
 var totak_disct=0;
 
