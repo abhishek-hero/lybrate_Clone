@@ -47,26 +47,26 @@
 
             <div class="details">
 
-                <form>
+                <form action="../HTML/success.html">
 
                     <div class="input_div">
                         <label for="card_no">Card Number</label><br/>
-                    <input type="text" id="card_no" class="required" placeholder="Enter Card Number" /><br/>
+                    <input type="text" id="card_no" placeholder="Enter Card Number" required="required" /><br/>
                     </div>
 
                    <div class="input_div">
                     <label for="expiry">Expiry</label><br/>
-                    <input type="text" id="expiry" class="required" placeholder="MM/YY" /><br/>
+                    <input type="text" id="expiry" placeholder="MM/YY" required="required" /><br/>
                    </div>
 
                     <div class="input_div">
                         <label for="cvv">CVV</label><br/>
-                    <input type="text" id="cvv" class="required" placeholder="Enter CVV" /><br/>
+                    <input type="text" id="cvv" placeholder="Enter CVV" required="required" /><br/>
                     </div>
 
                    <div class="input_div">
                     <label for="card_name">Name of Card</label><br/>
-                    <input type="text" id="card_name" class="required" placeholder="Enter name as on card"><br/>
+                    <input type="text" id="card_name" placeholder="Enter name as on card" required="required" ><br/>
                    </div>
 
                     <div class="input_div">
@@ -75,10 +75,11 @@
                     </div>
                     <br/>
 
+                    <input id="submit" type="submit" value="Proceed">
                    
                 </form>
 
-                <button id="submit">PROCEED</button>
+<!--                 <button id="submit">PROCEED</button> -->
             </div>
 
         </div>
