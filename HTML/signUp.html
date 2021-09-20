@@ -231,7 +231,7 @@
 
             </div>
             <div>
-                <button id="login-btn"><a href="login.html" onclick="signUp()">LET'S GET STARTED</a></button>
+                <button id="login-btn" onclick="signUp()">LET'S GET STARTED</button>
             </div>
         </div>
         <br>
@@ -362,7 +362,7 @@
                 }
                 detail_data.push(json_obj);
                 localStorage.setItem('details', JSON.stringify(detail_data));
-
+                window.location.href = "login.html"
 
             }
 
