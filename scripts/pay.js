@@ -21,7 +21,7 @@ function showprodDetailds(){
 //     price.textContent= `₹ ${orderDetails.totalPrice}`;
     price.textContent= `₹ ${detail.price}`
     qty.textContent=`Quantity : ${orderDetails.quantity}`
-    amt.textContent= `₹ ${orderDetails.totalPrice}`
+    amt.textContent= `₹ ${detail.price}`
   
 }
 
