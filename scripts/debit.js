@@ -16,8 +16,10 @@ function sucess(){
 let add = JSON.parse(localStorage.getItem("totalPrice"))
 
 function total(){
-    let heading = document.getElementById("total_payable")
-    heading.innerHTML = `Total Payable Amount  - ₹ ${add.totalPrice}`
+    
+    let Price = document.getElementById('total');
+//     let heading = document.getElementById("total_payable")
+    Price.innerHTML = `Total Payable Amount  - ₹ ${add.totalPrice}`
 }
 
 total()
