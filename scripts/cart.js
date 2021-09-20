@@ -6,6 +6,31 @@ function home(){
     window.location.href = "index.html"
 }
 
+let userDetails = JSON.parse(localStorage.getItem("details"))
+let userName = document.querySelector(".top_a")
+try {
+    if (userDetails.length !=null)
+    {
+        userName.innerText = `Hello ${userDetails[0].name} `
+        userName.style.backgroundColor = "white"
+        userName.style.marginTop = `-8% !important`
+        userName.style.fontSize = `14.5px`
+        userName.style.border = "none"
+        userName.style.outLine = "none"
+        userName.style.fontWeight = "200"
+    
+        let aero = document.createElement("span")
+        aero.setAttribute("class", "fas fa-angle-down")
+    
+        userName.append(aero)
+    
+    }
+    
+} catch (error) {
+    console.log("Please login",error);
+}
+
+
 function CartShow() {
     let left_div_img1 = document.getElementById('img_1');
     let left_div_img2 = document.getElementById('img_2');
