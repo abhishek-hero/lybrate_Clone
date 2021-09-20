@@ -6,5 +6,10 @@ let totalDetaild= JSON.parse(localStorage.getItem('totalPrice'));
 Price.textContent=`Total Amount Payable :  ₹${totalDetaild.totalPrice}`;
 
 submit.onclick = function (){
-    window.location.href = "success.html"
+    let data = document.getElementByClass("required").value;
+    if(data.length == 0){
+alert("Fill all credentials")
+    }else {
+window.location.href = "success.html"
+    }
 }
