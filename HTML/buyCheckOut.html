@@ -193,6 +193,8 @@
         var checkout_obj = JSON.parse(localStorage.getItem('Direct_Buy'));
        
         var counter=1;
+//         var total_price=checkout_obj.price;
+//         var totak_disct=checkout_obj.actualPrice;
         var total_price=0;
         var totak_disct=0;
 
@@ -209,6 +211,9 @@
             heading.textContent=checkout_obj.name;
             para.textContent=checkout_obj.details;
             brand.textContent=checkout_obj.brand;
+//             price.textContent=`₹ ${total_price}`;
+//             disct.textContent=`₹ ${totalk_disct}`;
+
             price.textContent=`₹ ${checkout_obj.price}`;
             disct.textContent=`₹ ${checkout_obj.actualPrice}`;
            
@@ -219,9 +224,14 @@
 
 
             let totalobj={
-                totalPrice:total_price,
-                totalDiscount:totak_disct,
-                quantity:counter
+//                 totalPrice:total_price,
+//                 totalDiscount:totak_disct,
+//                 quantity:counter
+                
+                totalPrice:checkout_obj.price,
+                totalDiscount:checkout_obj.actualPrice,
+        quantity:counter
+
             }
 
             localStorage.setItem('totalPrice',JSON.stringify(totalobj))
