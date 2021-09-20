@@ -1,8 +1,10 @@
 var checkout_obj = JSON.parse(localStorage.getItem('Direct_Buy'));
        
 var counter=1;
-var total_price=0;
-var totak_disct=0;
+var total_price=checkout_obj.price;
+var totak_disct=checkout_obj.actualPrice;
+// var total_price=0;
+// var totak_disct=0;
 
 
 function showProduct(){
@@ -19,8 +21,11 @@ function showProduct(){
     heading.textContent=checkout_obj.name;
     para.textContent=checkout_obj.details;
     brand.textContent=checkout_obj.brand;
-    price.textContent=`₹ ${checkout_obj.price}`;
-    disct.textContent=`₹ ${checkout_obj.actualPrice}`;
+    price.textContent=`₹ ${total_price}`;
+    disct.textContent=`₹ ${totalk_disct}`;
+
+//     price.textContent=`₹ ${checkout_obj.price}`;
+//     disct.textContent=`₹ ${checkout_obj.actualPrice}`;
    
     price.style.fontSize='15px'
     disct.style.fontSize='12px'
@@ -29,8 +34,8 @@ function showProduct(){
 
 
     let totalobj={
-        totalPrice:checkout_obj.price,
-        totalDiscount:checkout_obj.actualPrice,
+        totalPrice:total_price,
+        totalDiscount:totalk_disct,
         quantity:counter
     }
 
