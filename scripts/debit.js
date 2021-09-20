@@ -5,6 +5,6 @@ let totalDetaild= JSON.parse(localStorage.getItem('totalPrice'));
 
 Price.textContent=`Total Amount Payable :  ₹${totalDetaild.totalPrice}`;
 
-submit.onclick = function (){
-    window.location.href = "success.html"
-}
+// submit.onclick = function (){
+//     window.location.href = "success.html"
+// }
