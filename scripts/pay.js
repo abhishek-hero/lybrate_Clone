@@ -18,8 +18,8 @@ function showprodDetailds(){
     heading.style.fontSize='15px';
     brand.style.fontSize='12px';
     full_name.textContent=detail.fullName;
-    price.textContent= `₹ ${orderDetails.totalPrice}`;
-//     price.textContent= `₹ ${detail.price}`
+//     price.textContent= `₹ ${orderDetails.totalPrice}`;
+    price.textContent= `₹ ${detail.price}`
     qty.textContent=`Quantity : ${orderDetails.quantity}`
     amt.textContent= `₹ ${orderDetails.totalPrice}`
   
