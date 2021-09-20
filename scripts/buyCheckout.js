@@ -146,7 +146,7 @@ function chechoutClick(){
         }
 
         localStorage.setItem('cust_details',JSON.stringify(cust_detail))
-        window.location.href='payment.html'
+        window.location.href='pay.html'
     }
     
 }
