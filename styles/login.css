@@ -43,7 +43,7 @@ input[type="text"], input[type='password'], input[type='Email']{
     padding: 5px;
     border: none;
     border-bottom: 1px solid rgb(212, 206, 206);
-    background-color: #eee;
+    background-color: transparent;
   }
   
 a{
@@ -62,7 +62,7 @@ a{
       border: none;
       border-bottom: 1px solid rgb(212, 206, 206);
       list-style: none;
-      background-color: #eee;
+      background-color: transparent;
       
   }
 
@@ -72,7 +72,7 @@ a{
       padding: 6px;
       width: 55%;
       font-size: 12px;
-      background-color: #eee;
+      background-color: transparent;
   }
   
   .red{
@@ -162,3 +162,123 @@ a{
      max-width: 70%;
      margin: auto
  }
+
+
+/* top navbar */
+#top_div {
+    width: 100%;
+    height: 35rem;
+    margin-top: 2px;
+    background-color: white;
+
+
+}
+
+.navbar_container {
+    display: grid;
+    grid-template-columns: 30% 12% 12% 12% 12% 24%;
+    justify-content: center;
+    margin-bottom: 0%;
+    width: 100%;
+    height: 3.4rem;
+    background-color: white;
+}
+
+.navbar_container div {
+    height: 100%;
+}
+
+.lybrate_logo {
+    width: 24%;
+    height: 45%;
+    text-align: center;
+    margin-left: 40%;
+    margin-top: 2%;
+}
+
+#msg_icon {
+    width: 12%;
+    height: 21%;
+    margin-left: 0%;
+    margin-top: 11%;
+    float: left;
+    margin-right: 4%;
+
+}
+
+#pill_icon {
+    width: 13%;
+    height: 24%;
+    margin-top: 11%;
+    margin-left: 4%;
+    float: left;
+    margin-right: 2%;
+}
+
+#lab_icon {
+    width: 15%;
+    height: 25%;
+    margin-top: 10%;
+    float: left;
+    margin-right: 4%;
+}
+
+#cal_icon {
+    width: 10%;
+    height: 22%;
+    margin-top: 10%;
+    margin-left: -3%;
+    float: left;
+    margin-right: 3%;
+}
+
+.navbar_div h4 {
+    font-size: 17px;
+    font-family: "Roboto", Helvetica, sans-serif;
+    color: #444444;
+    margin-top: 11%;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+#cart_button {
+    padding: 0%;
+    background-color: #C82506;
+    color: black;
+    font-family: "Roboto", Helvetica, sans-serif;
+    width: 31%;
+    height: 47%;
+    padding: 2px;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 3%;
+    margin-left: 0%;
+    margin-right: 7px;
+    border: none;
+    float: left;
+}
+
+#cart_button h5 {
+    font-size: 10px;
+    margin: 0%;
+    font-weight: normal;
+    color: white;
+}
+
+#cart_button h3 {
+    font-size: 18px;
+    margin: 0%;
+    color: white;
+    font-weight: 600;
+}
+
+#cart_icon {
+    width: 16%;
+    height: 40%;
+    margin-top: 4%;
+}
+
+input {
+    outline: none;
+    background-color: transparent;
+}
