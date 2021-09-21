@@ -1176,56 +1176,43 @@ ul li:hover ul {
     display: block;
 }
 
+/* My footer section */
 
-
-/* Footer Section */
-
-
-#footer-div{
+#footer {
+    width: 100%;
+    height: 330px;
     background-color: grey;
-
 }
 
-#footer h5{
+.footer-div {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 21% 21% 21% 21% 16%;
+}
+
+.footer-div div {
+    height: 100%;
+}
+
+.footer-div div p {
+    line-height: 8px;
+    font-family: "Roboto", Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.footer-div div h5 {
+    font-family: "Roboto", Helvetica, sans-serif;
     color: #ccc;
     font-size: 13px;
     margin-bottom: 15px;
-    font-weight: 800;
 }
-  #footer{
-      width: 90vw;
-        display: flex;
-    
-      margin: auto;
 
-  }
-
-  #footer>div{
-      flex: 1;
-      margin: 10px;
-  }
-
-  #footer li{
-      text-decoration: none;
-      list-style: none;
-      margin: 4px;
-      color: #ffffff;
-      font-size: 13px;
-      font-weight: 800;
-  }
-
- .social i{
-     color: #ffffff;
-     margin: 5px;
-     padding: 4px;
-     
- }
-
- .social h5{
-    margin-left: 50px;
- }
-
- .social img{
-     max-width: 70%;
-     margin: auto
- }
+.footer-div div i {
+    font-size: 20px;
+    margin-right: 5px;
+    color: white;
+}
