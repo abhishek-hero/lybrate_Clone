@@ -1,4 +1,4 @@
-# lybrate_Clone
+# lybrate Clone
 We will be cloning the Lybrate website.
 
 ## Description About Project
