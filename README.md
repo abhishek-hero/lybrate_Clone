@@ -17,7 +17,7 @@ Lybrate is the best way to seek medical help. To make it seamless and smooth, we
 - Colors refered from "https://www.lybrate.com/" & colors picked using "color-picker chrome extension"
 
 ## Contributor - (git-hub IDs as follow)
-(1) abhishek-hero
+(1) abhishek-hero https://github.com/abhishek-hero
 (2) Krakash06   https://github.com/Krakash06
 (3) shikha-max  https://github.com/shikha-max
 (4) avinashpanchal123
