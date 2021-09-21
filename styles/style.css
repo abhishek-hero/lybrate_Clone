@@ -117,6 +117,7 @@ header button {
     margin-right: 7px;
     border: none;
     float: left;
+    cursor: pointer;
 }
 
 #cart_button h5 {
@@ -151,6 +152,7 @@ header button {
     font-size: 14px;
     color: #444444;;
     font-family: "Roboto", Helvetica, sans-serif;
+    cursor: pointer;
 }
 
 #main_image {
