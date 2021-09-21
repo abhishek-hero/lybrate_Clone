@@ -52,5 +52,6 @@ Lybrate is the best way to seek medical help. To make it seamless and smooth, we
 ![payment](https://user-images.githubusercontent.com/88572701/134175706-b65499bf-e70a-4b60-a615-6e3cb2063cbe.jpeg)
 
 ### Success
-![Success](https://user-images.githubusercontent.com/88572701/134176950-13103035-3f43-4ab8-a695-cf7c090fc4da.png)
+![sucess](https://user-images.githubusercontent.com/88572701/134182023-8bcbf7ea-929c-4626-b70b-d7cd89202855.jpeg)
+
 
