@@ -32,13 +32,6 @@ To run, follow these steps:
 - Open the file in visual code and run the files using live server
 
 
-## Built with 
-
-- HTML 5
-- CSS 3
-- Advance JavaScript (ES6)
-- Chrome DevTools
-
 
 Home page
 
