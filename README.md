@@ -19,8 +19,25 @@ Lybrate is the best way to seek medical help. To make it seamless and smooth, we
 ## Contributor - (git-hub IDs as follow)
  - abhishek-hero https://github.com/abhishek-hero
  - Krakash06     https://github.com/Krakash06
- - shikha-max   https://github.com/shikha-max
+ - shikha-max    https://github.com/shikha-max
 
+## [Getting Started]
+
+### Execution..
+Want to run in your local Machine? Great!
+
+To run, follow these steps:
+
+- Clone my repository (`git clone https://github.com/abhishek-hero/lybrate_Clone.git`)
+- Open the file in visual code and run the files using live server
+
+
+## Built with 
+
+- HTML 5
+- CSS 3
+- Advance JavaScript (ES6)
+- Chrome DevTools
 
 
 Home page
