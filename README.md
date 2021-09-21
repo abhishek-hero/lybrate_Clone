@@ -19,21 +19,38 @@ Lybrate is the best way to seek medical help. To make it seamless and smooth, we
 ## Contributor - (git-hub IDs as follow)
  - abhishek-hero https://github.com/abhishek-hero
  - Krakash06     https://github.com/Krakash06
- - shikha-max    https://github.com/shikha-max
-
-## [Getting Started]
-
-### Execution..
-Want to run in your local Machine? Great!
-
-To run, follow these steps:
-
-- Clone my repository (`git clone https://github.com/abhishek-hero/lybrate_Clone.git`)
-- Open the file in visual code and run the files using live server
+ - shikha-max   https://github.com/shikha-max
 
 
 
-Home page
+### Home
 
+![home](https://user-images.githubusercontent.com/88572701/134174142-d66b96d6-8ee3-4e9f-a310-ea6b4025c696.jpeg)
 
-![WhatsApp Image 2021-08-29 at 8 05 52 PM](https://user-images.githubusercontent.com/88572701/134170654-068b977f-9e96-4935-b292-7e21c7a413c9.jpeg)
+### Sign Up
+![SignUp](https://user-images.githubusercontent.com/88572701/134174533-eb418c01-219e-454b-bba7-f0cceb172a52.jpeg)
+
+### SignIn
+![signin](https://user-images.githubusercontent.com/88572701/134174728-b9341eb0-4862-431e-9ad3-290b3e85f0dd.jpeg)
+
+### Product 
+![product](https://user-images.githubusercontent.com/88572701/134174830-5da4b01e-60e8-40a3-8327-18c8d2395301.jpeg)
+
+### Detail Of Product 
+![details](https://user-images.githubusercontent.com/88572701/134175013-0a46fe4a-6ed3-44a8-9a29-7221ff282c55.jpeg)
+
+### Cart
+![cart](https://user-images.githubusercontent.com/88572701/134175117-9e3e0788-1f65-4b6e-8262-b249e2d55f91.jpeg)
+
+### Add Address
+![address](https://user-images.githubusercontent.com/88572701/134175572-2d3d9cde-3534-4dc4-b042-0aeb0738f9eb.jpeg)
+
+### CheckOut
+![buyCheckout](https://user-images.githubusercontent.com/88572701/134175315-fc9b389c-98a2-40f3-99d7-48cd23d61307.jpeg)
+
+### Payment
+![payment](https://user-images.githubusercontent.com/88572701/134175706-b65499bf-e70a-4b60-a615-6e3cb2063cbe.jpeg)
+
+### Success
+![Success](https://user-images.githubusercontent.com/88572701/134176950-13103035-3f43-4ab8-a695-cf7c090fc4da.png)
+
