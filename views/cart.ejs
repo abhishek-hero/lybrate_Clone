@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="https://nu.lybcdn.com/img/lybrate_icon_325x325.png"/>
+    <title>Cart</title>
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+
+    <!-- font Awsome -->
+    <script src="https://kit.fontawesome.com/b2700ae26b.js" crossorigin="anonymous"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../styles/cart.css">
+
+</head>
+
+<body>
+    
+
+    <!-- Navigatin Start -->
+    <div id="navContainer">
+        <div id="container">
+            <div id="nav_bar">
+                <a href=""><img src="../image/Lybrate-Goodkart-Logo.png" alt=""></a>
+                <div class="search_bar">
+                    <input type="text" class="search_product" placeholder="Search For Health Products">
+                    <a href=""><button class="search_btn"><span class="fa fa-search"></span></button></a>
+                </div>
+                <div class="select">
+                    <ul class="top_ul">
+                        <li class="top_li"><a href=""><button class="top_a"> Hello, Sign in<span
+                                        style="margin-left: 8px;" class="fas fa-angle-down"></span></button></a>
+                            <ul class="ul">
+                                <li class="li"><a class="a" href="">Orders</a></li>
+                                <li class="li"><a class="a" href="">Buy Again</a></li>
+                                <li class="li"><a class="a" href="">DownLoad App</a></li>
+                                <li class="li"><a class="a" href="">Browse Health</a></li>
+                                <li class="li"><a class="a" href="">My Orders</a></li>
+                                <li class="li"><a class="a" href="">My Offers</a></li>
+                                <li class="li"><a class="a" href="">Health Feed</a></li>
+                                <li class="li"><a class="a" href="">Login/Signin</a></li>
+                                <li class="li"><a class="a" href="">For Doctors</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <a href="" style="margin: 0vh 2vh; margin-top: 10px;"><span id="pluslogo"
+                            class="fas fa-plus-square"></span><button class="lybrate_cash">LybrateCash</button></a>
+                    <a href="" class="home_btn" onclick="home()"><button>Home</button> </a>
+                    <a href="" class="cart_logo"><span class="fas fa-cart-arrow-down"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- mid section -->
+
+    <div id="main_container">
+        <div id="left_div">
+            <div id="img_1"></div>
+            <div id="img_2"></div>
+            <div id="img_3"></div>
+            <div id="img_4"></div>
+        </div>
+        <div id="mid_div">
+            <div id='mid_img_div'>
+                <img src="" alt="" id="mid-img">
+            </div>
+            <div id="mid_btn">
+                <button class="red" id="cart">Add To Cart</button>
+                <button id="green">Buy Now</button>
+            </div>
+        </div>
+        <div id="right_div">
+            <h2 id="head_grey"></h2>
+            <h1 id="heading1"></h1>
+            <h3 id="heading2"></h3>
+
+            <p id="special_para">Special Price</p>
+            <h1 id="price"></h1>
+            <h5 id="actual_price"></h5>
+            <p id="price_off"></p>
+            <div id="gold_div">
+                <h1 id="gold_para"> Become <span class="gold">Gold Member</span> and you get this for <span
+                        id="red">Free</span> using bonus LybrateCash</h1>
+                <p id="gold_para2">Also get ₹1125 LybrateCash for your future purchases.</p>
+            </div>
+            <br>
+            <div id="decription">
+                <p id="details"></p>
+                <p id="date"></p>
+                <p id="descrption_para"><i class="fas fa-truck-moving"></i>Free Shipping Applicable</p>
+                <p id="shipping_details"><i class="fas fa-wallet"></i>Cash on delivery available</p>
+                <p></p>
+            </div>
+            <br>
+            <div id="addr_div">
+
+                <label for="deliver_addr" class="grey" id="deliver_to">Deliver To</label>
+                <input type="text" placeholder="Enter Delivery Pincode">
+                <button class="grey">Check</button>
+            </div>
+            <br>
+            <div id="lybrate_cash">
+                <div id="plus_img">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto,h_24,w_24/imgs/product/Homepage/LybrateCash_Icons_100.png" alt="">
+                </div>
+                <div id="lybrate">
+                   <h3>LybrateCash</h3>
+                   <p>Get 10% of paid amount back as LybrateCash.</p>
+                </div>
+            </div>
+            <div id="prod_authentication">
+                <div>
+                   <div ><i class="fas org_red fa-check-circle"></i></div>
+                    <p>100% authentic product</p>
+                </div>
+                <div id="cash">
+                   <div> <i class="fas gren fa-money-bill"></i></div>
+                    <p>Safe and Secure Payments</p>
+                </div>
+                <div>
+                    <div ><i class="fas purple fa-hand-holding-usd"></i></div>
+                    <p>Assured Best Price</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Description of products -->
+
+    <br>
+    <br>
+    <div class="prod_descr_1">
+        <h1 id="descr_heading1"></h1>
+        <div>
+            <p>PowerUs weight gainer is a protein powder that helps you to fuel your muscle and lead you to your
+                targeted weight gain goal. It is enriched with essential nutrients and helps in boosting athletic
+                performances.
+                The product has the goodness of 23 key vitamins and minerals which help in boosting immunity and bone
+                health.</p>
+            <br>
+            <p>PowerUs mass gainer is a combination of three premium forms of protein which are Whey Protein
+                Concentrate, Micellar Casein and Calcium Caseinate which help in keeping the body in the
+                nitrogen-positive state for a longer run. You can consume PowerUs mass gainer post-breakfast by mixing
+                it in milk.
+                You can also drink it in the form of the smoothie by adding your favorite fruits and dry fruits.</p>
+        </div>
+    </div>
+
+    <div class="prod_descr_2">
+        <h1 id="descr_heading2"></h1>
+        <div>
+            <p>Each serving (100g) of Powerus Mass Gainer has Protein to Carbohydrate ratio of 1:5 that will not only
+                fuel your body, but also help you reach your target weight.</p>
+        </div>
+    </div>
+
+    <div class="prod_descr_3">
+        <h1 id="descr_heading3"></h1>
+        <div>
+           <p>1. The branched-chain amino acid (BCAA) promotes protein synthesis as it activates the key enzymes involved in protein synthesis after physical exercise.</p>
+            <p>2. BCAA supplementation reduces delayed-onset muscle soreness (DOMS) and muscle fatigue.</p>
+            <p>3. Added Electrolytes enhances cellular rehydration rate.</p>
+            <p>4. It helps in lean mass growth and enhances exercise performance.</p>
+            <p>5. Increases post-workout recovery.</p>
+            <p>6. Aids build-up stronger and better muscles.</p>
+        
+        
+        </div>
+    </div>
+
+
+    <!-- footer section -->
+
+    <section>
+        <div id="footer-div" >
+           <div id="footer">
+                <div>
+                   
+                    <ul>
+                        <h5>Search Health Products</h5>
+                        <li> Goodkart</li>
+                        <li>Vitamin and Supplement</li>
+                        <li>Protein and Fitness</li>
+                        <li>Skin and Hair Care</li>
+                        <li>Sexual Wellness</li>
+                        <li>Weight Management</li>
+                        <li>Food and Drink</li>
+                        <li>Personal Care</li>
+                        <li>Child Care</li>
+                        <li>GoodBox</li>
+                    </ul>
+                   
+                </div>
+                <div>
+                   
+                    <ul>                    
+                       <h5>Search doctors</h5>
+                        <li> Search doctors by City</li>
+                        <li>Search doctors by City Locality</li>
+                        <li>Search doctors by speciality</li>
+                        <li>Search doctors by city speciality</li>
+                    </ul>
+                   
+                </div>
+                <div>
+                   
+            <ul>
+                        <h5> Read Health Articles</h5>
+                       <li>Health Wiki</li>
+                       <li>Health Tips Index</li>
+                       <li>Health Questions Index</li>
+                       <li>Health Quizzes Index</li>
+                       <li>Health Topics Index</li>
+                       <li>Medicines Index</li>
+                       <li>Ailment Index</li>
+                       <li>Lab Test Details Index</li>
+                    </ul>
+                   
+                </div>
+                <div>
+                    <ul>
+                        <h5>Read about Lybrate</h5>
+                        <li>About Us </li>
+                        <li>Contact Us</li>
+                        <li>Careers</li>
+                        <li>Mobile Apps</li>
+                        <li>Blog</li>
+                        <li>Term of Use</li>
+                        <li>Privacy Policy</li>
+                        <li>Editorial Policy</li>
+                        <li>Press</li>
+                      
+                    </ul>
+                   
+                </div>
+                <div>
+                    <div class="social">
+
+                        <h5>Social</h5>
+                        <i class="fab fa-1x fa-facebook-f"></i>
+                        <i class="fab fa-1x fa-twitter"></i>
+                        <i class="fab fa-1x fa-linkedin-in"></i>
+                        <i class="fab fa-1x fa-youtube"></i>
+                        <br>
+                        <h5>Download App</h5>
+                        <img src="https://assets.lybrate.com/q_auto,f_auto/imgs/product/logos/GooglePlay.png">
+                        <img src="https://assets.lybrate.com/q_auto,f_auto/imgs/product/logos/AppStore.png">
+    
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+  
+
+   <script>
+       
+var cart_obj = JSON.parse(localStorage.getItem('myProducts'));
+
+
+function CartShow() {
+    let left_div_img1 = document.getElementById('img_1');
+    let left_div_img2 = document.getElementById('img_2');
+    let left_div_img3 = document.getElementById('img_3');
+    let left_div_img4 = document.getElementById('img_4');
+    let head2 = document.getElementById('heading2');
+    let price = document.getElementById('price');
+    let details = document.getElementById('details');
+    let date = document.getElementById('date');
+    let prod_desc_1 = document.getElementById("descr_heading1");
+    let prod_desc_2 = document.getElementById("descr_heading2");
+    let prod_desc_3 = document.getElementById("descr_heading3");
+    let act_price = document.getElementById('actual_price')
+    let off_price = document.getElementById('price_off');
+    let h_1 = document.getElementById('head_grey')
+  
+
+
+
+    
+    let img1 = document.createElement('img');
+    let img2 = document.createElement('img');
+    let img3 = document.createElement('img');
+    let img4 = document.createElement('img');
+    head2.textContent = cart_obj.name;
+    price.textContent = `₹ ${cart_obj.price}`;
+    details.textContent = cart_obj.details;
+    date.textContent = cart_obj.expiery;
+    prod_desc_1.textContent=`What is ${cart_obj.name}`
+    prod_desc_2.textContent=`Why Choose ${cart_obj.name}`
+    prod_desc_3.textContent=`What are key benefits of ${cart_obj.name}?`;
+    act_price.textContent=`₹ ${cart_obj.actualPrice}`;
+    off_price.textContent=cart_obj.off
+    h_1.textContent= cart_obj.brand
+   
+  
+
+   
+
+    img1.src = cart_obj.image1;
+    img2.src = cart_obj.image2;
+    img3.src = cart_obj.image3;
+    img4.src = cart_obj.image4;
+
+
+    left_div_img1.onclick=function(){
+        imageChange(cart_obj.image1)
+    }
+
+    
+    left_div_img2.onclick=function(){
+        imageChange(cart_obj.image2)
+    }
+
+    
+    left_div_img3.onclick=function(){
+        imageChange(cart_obj.image3)
+    }
+
+    
+    left_div_img4.onclick=function(){
+        imageChange(cart_obj.image4)
+    }
+
+    left_div_img1.appendChild(img1);
+    left_div_img2.appendChild(img2);
+    left_div_img3.appendChild(img3);
+    left_div_img4.appendChild(img4);
+
+    let mid = document.getElementById('mid-img')
+    let mid_img_div = document.getElementById('mid_img_div');
+
+
+    mid.src = cart_obj.image1;
+
+}
+
+
+CartShow()
+
+function imageChange(img){
+    let mid_img = document.getElementById('mid-img');
+    mid_img.src= img;
+}
+
+
+
+// for payment all the obj in this page would move to this JSON array
+
+if (localStorage.getItem('cart_arr') === null) {
+    localStorage.setItem('cart_arr', JSON.stringify([]));
+}
+
+
+function buyProd_1() {
+    let arr = JSON.parse(localStorage.getItem('cart_arr'));
+
+    arr.push(cart_obj);
+  
+    localStorage.setItem('cart_arr', JSON.stringify(arr));
+    window.location.href='cart_page.html'
+
+}
+
+
+function buyProd_2(){
+   
+    cart_btn.textContent='Proceed to Buy'
+    cart_btn.style.width='100%';
+    cart_btn.style.backgroundColor='#259b24 '
+    cart_btn.style.color='#ffff'
+    cart_btn.style.border='none'
+    buy_btn.style.display='none'
+    cart_btn.style.fontSize='17px' 
+    cart_btn.addEventListener('click',buyProd_1);
+    // cart_btn.appendChild(a)
+}
+
+
+let cart_btn = document.getElementById('cart');
+let buy_btn = document.getElementById('green')
+
+function buyCheckout() {
+    localStorage.setItem("Direct_Buy",JSON.stringify(cart_obj)); 
+    window.location.href='buyCheckOut.html'
+}
+cart_btn.addEventListener('click',buyProd_2);
+
+buy_btn.addEventListener('click',buyCheckout)
+
+
+   </script>
+</body>
+<script src="../scripts/cart.js"></script>
+</html>

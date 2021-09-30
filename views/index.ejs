@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="https://nu.lybcdn.com/img/lybrate_icon_325x325.png"/>
+    <title>Lybrate.com</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <!-- <script src="./scripts/main.js"></script> -->
+    <script src="/script/main.js"></script>
+    <script src="https:kit.fontawesome.com/67c66657c7.js"></script>
+</head>
+
+<body onload="show()">
+    <!-- creating header buttons -->
+    <!-- <a href="../lybrate_Clone/HTML/signUp.html"></a> -->
+    <header id="header">
+        <button onclick="login()">Login/Sign-up</button>
+        <button>Health Feed</button>
+        <button>For Doctors</button>
+        <button>Get the App</button>
+    </header>
+
+    <div class="clear"></div>
+
+    <!-- creating navigation bar  -->
+
+    <div id="top_div">
+
+        <div class="navbar_container">
+            <div>
+                <img src="https://assets.lybrate.com/q_auto,f_auto//imgs/product/logos/Lybrate-Logo.png"
+                    alt="Lybrate-logo" class="lybrate_logo">
+
+            </div>
+
+            <div class="navbar_div">
+                <img src="https://image.flaticon.com/icons/png/128/3721/3721775.png" alt="msg" id="msg_icon">
+
+                <h4>Ask A Question</h4>
+
+            </div>
+            <div class="navbar_div">
+                <img src="https://image.flaticon.com/icons/png/128/5431/5431603.png" alt="cal" id="cal_icon">
+                <h4>Book Appointment</h4>
+            </div>
+            <div class="navbar_div">
+                <img src="https://image.flaticon.com/icons/png/128/991/991884.png" alt="pills" id="pill_icon">
+                <h4>Consult Online</h4>
+            </div>
+            <div class="navbar_div">
+                <img src="https://image.flaticon.com/icons/png/128/5376/5376665.png" alt="lab" id="lab_icon">
+                <h4>Book Lab Test</h4>
+            </div>
+            <div class="navbar_div">
+                <button id="cart_button">
+                    <h5>Lybrate</h5>
+                    <h3>goodkart</h3>
+                </button>
+                <img src="https://image.flaticon.com/icons/png/128/4290/4290854.png" alt="cart" id="cart_icon">
+
+            </div>
+        </div>
+        <hr />
+
+        <!-- creating buttons at the bottom of navigation bar -->
+        <div id="navbar_bottom">
+
+            <button>Home</button>
+            <button>Health Feed</button>
+            <button onclick="goodcart()">Goodkart</button>
+            <button>Ask a Question</button>
+            <button>Consult Online</button>
+            <button>Book Lab Test</button>
+            <button>Gold Membership</button>
+        </div>
+
+        <!-- putting main image -->
+        <div id="main_image">
+            <h1>Stay at Home. Consult Doctors Online. #IndiaFightsCorona.</h1>
+            <div class="search_div">
+                <input type="search" placeholder="Search for any health keywords" id="search_input" />
+                <button id="search_button">Search</button>
+            </div>
+
+            <div class="image_links">
+                <p>
+                    Trending Topic: <span>
+                        <a href=""> COVID-19</a>
+                        <a href=""> Black Fungus</a>
+                        <a href=""> Dengue Fever</a>
+                        <a href=""> Asthma</a>
+                        <a href=""> Infertility</a>
+                        <a href=""> Diabetes</a>
+                        <a href=""> Dehydration</a>
+                    </span>
+                </p>
+
+            </div>
+
+            <!-- creting random question on main image -->
+
+            <div class="random_minute">
+                <div>
+                    <p id="time">
+                        time
+                    </p>
+                </div>
+                <div>
+                    <h4>27 year old Female from Gurgaon just asked about Swelling</h4>
+                </div>
+            </div>
+
+            <!-- creating image footer -->
+
+            <div class="main_image_footer">
+                <p>Coronavirus - Know all about it, watch doctors videos and track numbers across the world
+                    <span>
+                        <button>KNOW MORE</button>
+                    </span>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- creating dropdown list at the end of main image -->
+
+        <div class="dropdown_div">
+            <div class="dropdown"> 
+
+            <div class="diffNav">
+        <div class="diffContainer">
+            <ul>
+                <li style="margin: left 150px;;"><a href="">Diet, Food & Fitness <span style="margin-left: 8px;"
+                            class="fas fa-angle-down"></span></a>
+                    <ul>
+                        <li><a href="">Sexual Wellness</a></li>
+                        <li><a href="">Food & Drink</a></li>
+                        <li><a href="">Vitamin & Supplement</a></li>
+                        <li><a href="">Weight Management</a></li>
+                        <li><a href="">Child Care</a></li>
+                        <li><a href="">Protin & Fitness</a></li>
+                        <li><a href="">Skin & Hair Care</a></li>
+                        <li><a href="">Personal Care</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Skin & Hair Care</a></li>
+                <li><a href="">Health Condition <span style="margin-left: 8px;" class="fas fa-angle-down"></span></a>
+                    <ul>
+                        <li> <a href="">Women Sexual WellNess</a></li>
+                        <li><a href="">Men Performance enhancer</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Pregnancy kids & Parenting <span style="margin-left: 0px;" class="fas fa-angle-down"></span></a>
+                    <ul>
+                        <li><a href="">Healthy Breakfast</a></li>
+                        <li><a href="">Jams, Honey & Spreads</a></li>
+                        <li><a href="">Ready to Eat</a></li>
+                        <li><a href="">Healthy Drinks</a></li>
+                        <li><a href="">Oil & Ghees</a></li>
+                        <li><a href="">Snack Foods</a></li>
+                        <li><a href="">Tea & Coffee</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Women's Health <span style="margin-left: 8px; "
+                            class="fas fa-angle-down" ></span></a>
+                    <ul>
+                        <li><a href="">Live Care</a></li>
+                        <li><a href="">Multivitamin</a></li>
+                        <li><a href="">Gut Care</a></li>
+                        <li><a href="">Bone & Joint Care</a></li>
+                        <li><a href="">Eye Care</a></li>
+                        <li><a href="">Brain Care</a></li>
+                        <li><a href="">Hair & Care</a></li>
+                        <li><a href="">Lung care</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Sexual Wellness <span style="margin-left: 8px;" class="fas fa-angle-down"></span></a>
+                    <ul>
+                        <li><a href="">Drinks for Weight Loss</a></li>
+                        <li><a href="">Fat Burner</a></li>
+                        <li><a href="">Meal Replacement</a></li>
+                    </ul>
+                </li>
+                <li><a href="">More <span style="margin-left: 8px;" class="fas fa-angle-down"></span></a>
+                    <ul>
+                        <li><a href="">Child Skin Product</a></li>
+                        <li><a href="">Child Hair Shampoo</a></li>
+                        <li><a href="">Child Bath Essential</a></li>
+                        <li><a href="">Child Immunity</a></li>
+                        <li><a href="">Child Snack Food</a></li>
+                        <li><a href="">Child Multivitamins</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div> 
+    </div>
+
+        <!-- creating question and answer division -->
+
+        <div class="main_grid">
+            <h2>QUETIONS & ANSWERS</h2>
+            <div>
+                <h4>10 million+ <span>
+                        <p>questions answered by doctors</p>
+                    </span></h4>
+            </div>
+        </div>
+
+        <div class="main_grid_div">
+            <div>
+                <h3>Last 25 days I have taking ovacare forte a+b tablet & folmet tablet which is ...</h3>
+                <img src="https://assets.lybrate.com/q_auto,f_auto,h_80,w_120,c_fill,g_auto/imgs/tic/having-a-healthy-pregnancy/female/having-a-healthy-pregnancy-07.jpg"
+                    alt="">
+                <div class="clear"></div>
+                <div id="profile_div">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/88ae3b464413d6519f5fc17a6afb8661/Gynaecology-SangeetaRaodeo-Mumbai-7a1df5"
+                        alt="" id="profile_image">
+                    <a href="">Dr.Moniks Dani</a>
+                    <h6>Gynaecologist, Mumbai</h6>
+                </div>
+                <p>Only when Regesterone taken for 5 or more days is effective so you are either late or at very dicey
+                    stage. Safer to use hormones to post-pond period now.</p>
+            </div>
+            <div>
+                <h3>Sir meri wife ko aaj 20 april ko period aya hai .last 25 march ko aya tha. 25...</h3>
+                <img src="https://assets.lybrate.com/q_auto,f_auto,h_80,w_120,c_fill,g_auto/imgs/tic/trying-to-conceive/female/trying-to-conceive-02.jpg"
+                    alt="">
+                <div class="clear"></div>
+                <div id="profile_div">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/43a1c90f3d927c4438b76d2ed8a176a5/Psychology-HemalSanjayKunte-Bangalore-3ce31f.jpg"
+                        alt="" id="profile_image">
+                    <a href="">Dr.Anandi Shah</a>
+                    <h6>Psychologist, Palakkad</h6>
+                </div>
+                <p>Hi. PCOD is curable and if take proper treatment your wt will reduce gradually with PCOD. For more
+                    information you can go through my profile.</p>
+            </div>
+            <div>
+                <h3>I am 23 year old female I want to know that can I wear a reshape belt after c...</h3>
+                <img src="https://assets.lybrate.com/q_auto,f_auto,h_80,w_120,c_fill,g_auto/imgs/tic/living-healthy-man/male/Living-Healthy---Man-male-02.jpg"
+                    alt="">
+                <div class="clear"></div>
+                <div id="profile_div">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/a89760b24fda906dc07107087efc9d53/Gynaecology-GirishDani-Mumbai-052fa8.jpg"
+                        alt="" id="profile_image">
+                    <a href="">Dr.Girish patil</a>
+                    <h6>Pediatrician, Jaipur</h6>
+                </div>
+                <p>Possibly you are suffering from colitis. You should avoid fatty and oily food articles. Curd and
+                    buttermilk are very beneficial for you. You should take Bilw...</p>
+            </div>
+            <div>
+                <h3>Due to fear of corona virus my husband is taking multivitamin tablets and vit...</h3>
+                <img src="https://assets.lybrate.com/q_auto,f_auto,h_80,w_120,c_fill,g_auto/imgs/tic/trying-to-conceive/female/trying-to-conceive-02.jpg"
+                    alt="">
+                <div class="clear"></div>
+                <div id="profile_div">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/7245dc6a995eba381483fdff0a891e17/Psychology-UrmilBishnoi-Jaipur-8c79cc"
+                        alt="" id="profile_image">
+                    <a href="">Dr.Priya Sheth</a>
+                    <h6>Endocrinologist, Dharwad</h6>
+                </div>
+                <p>After taking unwanted also pregnancy can happen. But it can be confirmed only once you miss your
+                    period and do urine pregnancy test. So wait for your periods... </p>
+            </div>
+
+            <div id="last_div1">
+                <h3>Sir I want to renal my tubes I want another baby my age is 29 n already have ...</h3>
+                <img src="https://assets.lybrate.com/q_auto,f_auto,h_80,w_120,c_fill,g_auto/imgs/tic/trying-to-conceive/female/trying-to-conceive-05.jpg"
+                    alt="">
+                <div class="clear"></div>
+                <div id="profile_div2">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/6e4410898a66b45943af1230b4b6d377/Obstetrics-MonikaSingh-Ghaziabad-476053"
+                        alt="" id="profile_image2">
+                    <a href="">Dr.Payal Rastogi</a>
+                    <h6>Gynaecologist, Mumbai</h6>
+                </div>
+                <p>Use cool or lukewarm water only while showering or bathing. Limit showers to 10 minutes maximum. Do
+                    not bathe more than once a day. Add baby oil or oatmeal s...</p>
+                <button class="more_Questions_div">View More Questions & Answers</button>
+            </div>
+
+            <div id="last_div2">
+                <h2>Ask a Question</h2>
+                <p>Get FREE multiple opinions from Doctors</p>
+                <input type="text"
+                    placeholder="Enter questions for you or someone else. E.g. My left eye is red and swollen" />
+                <div class="clear"></div>
+                <div>
+                    <p>Submit Anonymously <span>
+                            <button>Submit</button>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- creating health tips container -->
+
+        <div id="middle_container">
+            <div class="middle_top">
+                <h2>HEALTH TIPS</h2>
+                <h6>Prevent and manage health issues better</h6>
+            </div>
+
+            <div class="middle_image">
+                <div class="first_half">
+                    <div class="first_top">
+                        <img src="https://assets.lybrate.com/q_auto,f_auto,h_400,w_700,g_auto,c_fill/eagle/uploads/cca97c80d89ae5468547088748abbee7/b8559b.jpg"
+                            alt="">
+                    </div>
+                    <div class="first_bottom">
+                        <h3>Breast Cancer - Risk Factors Associated With It!</h3>
+                        <a href="">Detecting a lump on your breasts can be stressful for any women. Breast cancer is a
+                            common type of cancer and is said to affect primarily affect women though 1% of breast
+                            cancer cases affect</a>
+                        <button>READ MORE</button>
+
+                    </div>
+                </div>
+                <div class="second_half"></div>
+                <div class="third_half">
+                    <div id="third_half_slider">
+                        <div id="third_slides_1">
+                            <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/f2340480f9894daaba13b44bab221c14/Endocrinology-MuditSabharwal-c579d4.jpg"
+                                alt="">
+                            <h3>Risk Factors and Symptoms of Oral Cancer</h3>
+                            <p>Dr.Sanjaya Mishra, Oncologist</p>
+                        </div>
+                        <div id="third_slides_2">
+                            <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/3f5999b41c5c32c2e44a5ec1c089a070/Ophthalmology-AmitSolanki-Indore-f6c03e"
+                                alt="">
+                            <h3>Is Dandruff the Cause of Your Skin Problems?</h3>
+                            <p>Dr.Pankaj Tiwary, Dermatologist</p>
+                        </div>
+                        <div id="third_slides_3">
+                            <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/358da522336a29e9f7e5444ec4306ff0/Neurosurgery-PradyotKumarGovil-Ghaziabad-7cea47"
+                                alt="">
+                            <h3>What Is Hair Prosthesis And How It Is Done?</h3>
+                            <p>Dr.Venu Kumar, Dermatologist</p>
+                        </div>
+                        <div id="third_slides_4">
+                            <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/75f852bb53cce4768a9f9fe6337f2dc8/Pediatrics-JPSingh-new-delhi-56546f.jpg"
+                                alt="">
+                            <h3>Rules for Successful Living</h3>
+                            <p>Dr.Rajpal Kaushik, Psychologist</p>
+                        </div>
+                        <div id="third_slides_5">
+                            <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/da25d235a913aff5f5b914bcf8f6fe1a/Dermatology-PankajTiwary-92ad30.jpg"
+                                alt="">
+                            <h3>Ovarian Cysts - How Different Type of Cysts Can Affect Fertility?</h3>
+                            <p>Dr.Prabha Singla, Gynaecologist</p>
+                        </div>
+                    </div>
+                    <div id="third_half_button">
+                        <button>View More Health Tips</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- creating video division -->
+
+        <div id="videos">
+            <div class="video_top">
+                <h2>VIDEOS</h2>
+                <h6>Top doctors explain complex health issues</h6>
+            </div>
+
+            <div class="video_frames">
+
+                <div id="video_previous">
+                    <button onclick="video_previous()">&lt;</button>
+                </div>
+
+                <div class="slider-video" id="video1">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,w_300,h_300,c_fill,g_auto/eagle/uploads/b0bd7ee92bd699324916ff8041c8ef95/811539.png"
+                        alt="">
+                </div>
+                <div class="slider-video" id="video2">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,w_300,h_300,c_fill,g_auto/eagle/uploads/af6adc78786f5296fd61a27d094c3ede/197b53.png"
+                        alt="">
+                </div>
+                <div class="slider-video" id="video3">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,w_300,h_300,c_fill,g_auto/eagle/uploads/d615954c0ef61a584bbe095ad2428c97/61bf91.png"
+                        alt="">
+                </div>
+                <div class="slider-video" id="video4">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,w_300,h_300,c_fill,g_auto/eagle/uploads/ffedd3d77afdfc14bb99b1ae322a559e/e45525.png"
+                        alt="">
+                </div>
+                <div class="slider-video" id="video5">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,w_300,h_300,c_fill,g_auto/eagle/uploads/b0bd7ee92bd699324916ff8041c8ef95/c6012d.png"
+                        alt="">
+                </div>
+                <div class="slider-video" id="video6">
+                    <h3>View More Videos</h3>
+                </div>
+
+                <div id="video_next">
+                    <button onclick="video_next()">&gt;</button>
+                </div>
+
+            </div>
+
+            <!-- creating video division indide video division -->
+            <!-- created slider and relative details cards -->
+
+            <div class="quiz">
+                <h2>QUIZES</h2>
+                <h6>18 million+ times people busted their healthcare myths</h6>
+            </div>
+
+            <div class="bottom_frames">
+                <div id="bottom_previous">
+                    <button onclick="bottom_previous()">&lt;</button>
+                </div>
+
+                <div class="bottom_pic" id="bottom1">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,w_400,h_240,c_fill,g_auto/img/documents/quiz/d615954c0ef61a584bbe095ad2428c97/d1a3b1.jpg"
+                        alt="">
+
+                    <div class="page">
+
+                        <div class="page_top">
+                            <h3>
+                                Piles - What Are The Treatments Available?
+                            </h3>
+                        </div>
+
+                        <div class="page_bottom">
+                            <div id="page_profile">
+                                <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/da25d235a913aff5f5b914bcf8f6fe1a/Dermatology-PankajTiwary-92ad30.jpg"
+                                    alt="">
+                            </div>
+
+                            <div id="page_details">
+                                <h3>Dr. Prabhjyot Machanda</h3>
+                                <p>Gastroenterologist, Mumbai</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="bottom_pic" id="bottom2">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,w_400,h_240,c_fill,g_auto/img/documents/quiz/b872cd8115f732ed63eef5258919d932/3376e4.jpg"
+                        alt="">
+
+                    <div class="page">
+                        <div class="page_top">
+                            <h3>
+                                Back Surgery - How To Prevent Constipation Post...
+                            </h3>
+                        </div>
+                        <div class="page_bottom">
+                            <div id="page_profile">
+                                <img src="https://assets.lybrate.com/q_auto,f_auto,w_150,h_150,c_fill,g_auto/img/documents/doctor/dp/900b5a93d8b4bfd7185e701fbdb014ae/General-Physician-SanjeevKulkarni-Bangalore-7b8c6f"
+                                    alt="">
+                            </div>
+
+                            <div id="page_details">
+                                <h3>Dr. Prabhjyot Machanda</h3>
+                                <p>Gastroenterologist, Mumbai</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bottom_pic" id="bottom3">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,w_400,h_240,c_fill,g_auto/img/documents/quiz/cb6ea52363ec691b161c265d6d1855b2/b731a3.jpg"
+                        alt="">
+
+                    <div class="page">
+
+                        <div class="page_top">
+                            <h3>
+                                Lack Of Calcium And Its Effect On Your Joints!
+                            </h3>
+                        </div>
+
+                        <div class="page_bottom">
+                            <div id="page_profile">
+                                <img src="https://assets.lybrate.com/q_auto,f_auto,w_150,h_150,c_fill,g_auto/img/documents/doctor/dp/6ac02ede4ff8cf68f90685f893fa7584/Urology-PrabashNayak-Cuttack-d54617"
+                                    alt="">
+                            </div>
+
+                            <div id="page_details">
+                                <h3>Dr. Prabhjyot Machanda</h3>
+                                <p>Gastroenterologist, Mumbai</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bottom_pic" id="bottom4">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,w_400,h_240,c_fill,g_auto/img/documents/quiz/cb6ea52363ec691b161c265d6d1855b2/70fd72.jpg"
+                        alt="">
+
+                    <div class="page">
+
+                        <div class="page_top">
+                            <h3>
+                                Breast Cancer - Things You Must Be Careful About!
+                            </h3>
+                        </div>
+
+                        <div class="page_bottom">
+                            <div id="page_profile">
+                                <img src="https://assets.lybrate.com/q_auto,f_auto,w_150,h_150,c_fill,g_auto/img/documents/doctor/dp/d4132e9acbea67cd8ae9a362b4270f79/Pulmonology-MoolChandGupta-Faridabad-52d2cb.png"
+                                    alt="">
+                            </div>
+
+                            <div id="page_details">
+                                <h3>Dr. Prabhjyot Machanda</h3>
+                                <p>Gastroenterologist, Mumbai</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_pic" id="bottom5">
+                    <img src="https://assets.lybrate.com/q_auto:eco,f_auto,w_400,h_240,c_fill,g_auto/img/documents/quiz/ffedd3d77afdfc14bb99b1ae322a559e/e15e76.jpg"
+                        alt="">
+
+                    <div class="page">
+
+                        <div class="page_top">
+                            <h3>
+                                Blood In Urine - A Common Urological Condition!
+                            </h3>
+                        </div>
+
+                        <div class="page_bottom">
+                            <div id="page_profile">
+                                <img src="https://assets.lybrate.com/q_auto:eco,f_auto,h_50,w_50,c_fill,g_auto/img/documents/doctor/dp/da25d235a913aff5f5b914bcf8f6fe1a/Dermatology-PankajTiwary-92ad30.jpg"
+                                    alt="">
+                            </div>
+
+                            <div id="page_details">
+                                <h3>Dr. Prabhjyot Machanda</h3>
+                                <p>Gastroenterologist, Mumbai</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_pic" id="bottom6">
+                    <h3>Play More Quizes</h3>
+                </div>
+
+                <div id="bottom_next">
+                    <button onclick="bottom_next()">&gt;</button>
+                </div>
+
+                <br />
+
+            </div>
+
+        </div>
+
+        <!-- creating division named for doctors -->
+
+        <div id="details">
+            <div class="details_top">
+                <h2>Are you a Doctor?</h2>
+                <h6>Be a part of the next big thing in healthcare. Join us in our journey of revolutionizing healthcare
+                    delivery by harnessing technology to help millions lead healthier lives.</h6>
+                <button>Know More</button>
+            </div>
+        </div>
+
+        <!-- creating sliders for category division -->
+
+        <div class="categories">
+            <div>
+                <h2>TOP CATEGORIES</h2>
+            </div>
+            <div class="slider_diet">
+
+                <div id="diet_previous">
+                    <button onclick="previous()">&lt;</button>
+                </div>
+
+                <div class="slider_child" id="c1">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/dietitian-nutritionist.jpg" alt="">
+                </div>
+                <div class="slider_child" id="c2">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/gynaecologist.jpg" alt="">
+                </div>
+                <div class="slider_child" id="c3">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/psychologist.jpg" alt="">
+                </div>
+                <div class="slider_child" id="c4">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/dermatologist.jpg" alt="">
+                </div>
+                <div class="slider_child" id="c5">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/sexologist.jpg" alt="">
+                </div>
+                <div class="slider_child" id="c6">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/ayurveda.jpg" alt="">
+                </div>
+                <div class="slider_child" id="c7">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/homeopath.jpg" alt="">
+                </div>
+
+                <div id="diet_next">
+                    <button onclick="next()">&gt;</button>
+                </div>
+
+            </div>
+
+            <!-- creating slider for cities division -->
+            <div>
+                <h2>TOP CITIES</h2>
+            </div>
+            <div class="slider_city">
+
+                <div id="city_previous">
+                    <button onclick="city_previous()">&lt;</button>
+                </div>
+
+                <div class="city_child" id="d1">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/cities/delhi_city.jpg" alt="">
+                </div>
+                <div class="city_child" id="d2">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/cities/bangalore_city.jpg" alt="">
+                </div>
+                <div class="city_child" id="d3">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/cities/mumbai_city.jpg" alt="">
+                </div>
+                <div class="city_child" id="d4">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/cities/kolkata_city.jpg" alt="">
+                </div>
+                <div class="city_child" id="d5">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto/code/img/cities/chennai_city.jpg" alt="">
+                </div>
+
+                <div id="city_next">
+                    <button onclick="city_next()">&gt;</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- creating about lybrate division -->
+
+        <div class="about_lybrate">
+            <h3>About Lybrate</h3>
+            <p>Are you looking for a simple way to get the best medical care available? Lybrate.com innovative online
+                doctor database gives you access to over 150,000 highly trained medical experts. So you can ask a doctor
+                anything you want, simple with a touch of a finger. You can save as much as 70% of your time and money
+                at your next visit to the doctor and with the assurance that the medical professional you are seeing is
+                highly trained and experienced. We use a stringent verification process to ensure you are 100% satisfied
+                every time. Subscribe to the Lybrate Online Doctor network today to get the very best access to free
+                questions, consultations and easy appointments. Join today!</p>
+            <p>Looking to ask a doctor questions about your health online? Lybrate offers a fast, easy and friendly way
+                to gain access to general practitioners, dieticians, nutritionists, gynaecologists, psychologist,
+                dermatologist, sexologist, ayurveda, homeopathy and more. You can get in touch with online doctors 24
+                hours a day, 7 days a week with this simple application. No matter what your condition, Lybrate can get
+                you in touch with a doctor online straight away. To find out more, subscribe to our ask a doctor service
+                online or download the app and get access to doctors on the go!</p>
+            <p>Not only does Lybrate give you access to online medical professionals, we also have regular blogs from
+                respected experts that give you tips and advice on health and well being. Our doctors discuss a range of
+                topics from everyday living, parenting, pregnancy and how to manage your conditions, all online and
+                accessible from your computer, phone or tablet. Simply download the app and get access to free
+                questions, consultations and easy appointments. Get your health feed now with Lybrate and ask a doctor
+                what you've always wanted to know!</p>
+
+        </div>
+
+        <div id="footer">
+
+                <div class="footer-div">
+
+                    <div>
+                        <h5>Delhi</h5>
+                        <p> Goodkart</p>
+                        <p>Vitamin and Supplement</p>
+                        <p>Protein and Fitness</p>
+                        <p>Skin and Hair Care</p>
+                        <p>Sexual Wellness</p>
+                        <p>Weight Management</p>
+                        <p>Food and Drink</p>
+                        <p>Personal Care</p>
+                        <p>Child Care</p>
+                        <p>GoodBox</p>
+                    </div>
+
+                    <div>
+                        <h5>Mumbai</h5>
+                        <p>Health Wiki</p>
+                        <p>Health Tips Index</p>
+                        <p>Health Questions Index</p>
+                        <p>Health Quizzes Index</p>
+                        <p>Health Topics Index</p>
+                        <p>Medicines Index</p>
+                        <p>Ailment Index</p>
+                        <p>Lab Test Details Index</p>
+                    </div>
+
+                    <div>
+                        <h5>Chennai</h5>
+                        <p>Health Wiki</p>
+                        <p>Health Tips Index</p>
+                        <p>Health Questions Index</p>
+                        <p>Health Quizzes Index</p>
+                        <p>Health Topics Index</p>
+                        <p>Medicines Index</p>
+                        <p>Ailment Index</p>
+                        <p>Lab Test Details Index</p>
+                    </div>
+
+                    <div>
+                        <h5>Bangalore</h5>
+                        <p>Health Wiki</p>
+                        <p>Health Tips Index</p>
+                        <p>Health Questions Index</p>
+                        <p>Health Quizzes Index</p>
+                        <p>Health Topics Index</p>
+                        <p>Medicines Index</p>
+                        <p>Ailment Index</p>
+                        <p>Lab Test Details Index</p>
+                    </div>
+
+                    <div>
+                        <h5>Lybrate.com</h5>
+                        <p>About Us </p>
+                        <p>Contact Us</p>
+                        <p>Careers</p>
+                        <p>Mobile Apps</p>
+                        <p>Blog</p>
+                        <p>Term of Use</p>
+                        <p>Privacy Policy</p>
+                        <p>Editorial Policy</p>
+                        <p>Press</p>
+                        <i class="fab fa-1x fa-facebook-f"></i>
+                        <i class="fab fa-1x fa-twitter"></i>
+                        <i class="fab fa-1x fa-linkedin-in"></i>
+                        <i class="fab fa-1x fa-youtube"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+    </div>
+
+</body>
+
+</html>

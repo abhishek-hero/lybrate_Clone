@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="https://nu.lybcdn.com/img/lybrate_icon_325x325.png"/>
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="../styles/payment.css">
+</head>
+
+<body>
+    <!-- created header -->
+    <div class="top">
+        <img src="https://www.lybrate.com/img/lybrate-logo-pure-white-small.png" alt="">
+    </div>
+
+    <!-- created covid warning div -->
+
+    <div class="warning">
+        <p>We are experiencing a delay in the shipment as we are managing our teams and delivery partner for COVID-19
+            measures. Many thanks for cooperating.</p>
+    </div>
+
+    <!-- creted product details div -->
+
+    <div class="details">
+
+        <div class="product_image">
+
+            <img src="https://assets.lybrate.com/rio/onelife/onelife.png" alt="">
+        </div>
+
+        <div class="product_details">
+            <h2 id="heading_name"></h2>
+            <div id="brand">By Onelife</div>
+
+        </div>
+
+    </div>
+
+    <!-- creted order detail div -->
+
+    <div class="order">
+
+        <h3>ORDER SUMMARY</h3>
+        <hr />
+        <div id="full_name"></div>
+
+        <p id="totalp"></p>
+        
+        <br>
+        <p id="qty"></p>
+
+        <div id="shipping">Shipping</div>
+        <p id="shipping_num">₹ 0</p>
+
+       <br>
+       <br>
+
+        <div id="amt_payable">Amount Payable</div>
+        <p id="amt"></p>
+        <br>
+        <hr />
+
+        <div id="lybrate_cash"><img src="https://assets.lybrate.com/q_auto,f_auto/imgs/product/Homepage/LybrateCash_Icons_100.png" alt=""> LybrateCash to be Earned*
+        </div>
+        <p id="note">*Note: LybrateCash of ₹87 will be credited to your account upon product delivery</p>
+    </div>
+
+    <div class="promo">
+
+        <div>
+            <div id="discount">Discount</div>
+            <input id="disct_input" type="text" />
+            <button onclick="applyDisct()">Apply Promo</button>
+        </div>
+    </div>
+
+    <div class="payment">
+
+        <div id="first">
+
+            <div class="first_h3">
+                <h3>PAYMENT OPTIONS</h3>
+            </div>
+
+            <div class="first_p">
+                <p>(Choose Any One)</p>
+            </div>
+        </div>
+
+        <div id="second">
+            <div>
+                <input type="radio" />
+                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/Credit+and+debit+card.png" alt="">
+                <h3>Debit Card/Credit Card/Net Banking</h3>
+            </div>
+            <div>
+                <input type="radio" />
+                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/Paytm_logo.png" alt="">
+                <h3>PayTM Wallet</h3>
+            </div>
+            <div>
+                <input type="radio" />
+                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/paypal.png" alt="">
+                <h3>PayPal</h3>
+            </div>
+            <div>
+                <input type="radio" />
+                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/olamoney.png" alt="">
+                <h3>OlaMoney Postpaid</h3>
+            </div>
+            <div>
+                <input type="radio" />
+                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/freecharge.png" alt="">
+                
+                <h3>Freecharge</h3>
+            </div>
+            <div>
+                <input type="radio" />
+                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/airtelmoney.png" alt="">
+                <h3>Airtel Money</h3>
+            </div>
+            <div>
+                <input type="radio" />
+                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/amazonpay.png" alt="">
+                
+                <h3>Amazon Pay</h3>
+            </div>
+            <div>
+                <input type="radio" />
+                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/phonepe.png" alt="">
+               
+                <h3>PhonePe</h3>
+            </div>
+            <div>
+                <input type="radio" />
+                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/mobikwik.png" alt="">
+               
+                <h3>Mobikwik Wallet</h3>
+            </div>
+            <div>
+                <input type="radio" />
+                <img src="https://assets.lybrate.com/q_auto,f_auto/rio/800x800/COD_Prime_Icon.png" alt="">
+                <h3>COD Prime</h3>
+            </div>
+            <div>
+                <input type="radio" />
+                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/cod.png" alt="">
+                <h3>Cash On Delivery (COD)</h3>
+            </div>
+
+            <div id="warn_final">
+                <p>We urge you to consider online payment as cash notes can be a carrier for coronavirus infection.</p>
+            </div>
+        </div>
+        <div id="third">
+            <div class="proceed">
+                <button id="proceed_button" onclick="checkout()">PROCEED PAYMENT</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="contact">
+        <p>Need Help? Call us at</p>
+        <p id="red">+91.901.555.9900</p>
+        <p>or write to us at</p>
+        <p id="red">hello@lybrate.com</p>
+    </div>
+
+    <div id="clear"></div>
+
+    <div class="sec_image">
+        <img src="https://nu.lybcdn.com/img/rapid-ssl.png" alt="">
+        <img src="https://nu.lybcdn.com/img/payu-money.png" alt="">
+        <img src="https://assets.lybrate.com/q_auto,f_auto/imgs/product/icons/PayPal_logo.png" alt="">
+
+    </div>
+</body>
+
+<script src="../scripts/payment.js"></script>
+</html>
