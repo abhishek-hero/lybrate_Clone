@@ -1218,3 +1218,505 @@ ul li:hover ul {
     margin-right: 5px;
     color: white;
 }
+@media only screen and (max-width: 720px) {
+    .top_div {
+        width: 100%;
+    }
+    header > button {
+        float: right;
+    }
+    .navbar_container {
+        display: grid;
+        grid-template-columns: 90%;
+        width: 100%;
+        height: 340px;
+        justify-content: left;
+
+    }
+    .lybrate_logo {
+        width: 120px;
+        height: 45px;
+        justify-content: left; 
+        margin-left: -0.01%;
+         
+    }
+    .navbar_div{
+        margin-top: -15% !important;
+        margin-bottom: 0%;
+    }
+    #cart_button {
+        height: 50px;
+        width: 140px;
+        margin-top: 60px;
+        margin-left: 20px;
+    }
+    #msg_icon, #cal_icon, #pill_icon, #lab_icon{
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+    }
+    #cart_icon {
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+        margin-top: 60px;
+    }
+    
+    
+    #navbar_bottom {
+        width: 70%;
+        margin-left: 15%;
+        overflow: auto;
+        white-space: nowrap;
+        
+
+    }
+    
+    #navbar_bottom button {
+        display: inline-block;
+        text-decoration: none;
+        
+    }
+    #main_image {
+        width: 100%;
+        height: 300px;
+        background-image: url("https://assets.lybrate.com/q_auto,f_auto/imgs/product/Homepage/Web_Home-Page_Banner_03.jpg");
+        background-attachment: local;
+        background-size: cover;
+    }
+    #main_image h1 {
+       
+        font-size: 21px;
+        line-height: 1.5;
+        
+    }
+    .image_links a {
+        font-size: 14px;   
+    }
+    .random_minute h4 {
+        font-size: 14px;
+        margin-left: 10px;   
+    }
+    .main_image_footer {
+        width: 99.8%;
+        height: 100px;
+        background-color: #333333;
+        text-align: center;
+        align-items: center;
+        margin-top: -3%;
+        padding: 2px;
+    }
+    
+    .main_image_footer p {
+        font-size: 17px;
+        word-spacing: 2px;
+        margin-top: 5px;
+    
+    }
+    .diffContainer{
+        width: 70%;
+        margin-left: 15%;
+        line-height: 2; 
+    }
+    
+    .diffNav{
+        width: 100%;
+        height: 60px;
+    }
+    .dropdown_div {
+        background-color: white;
+        margin: auto;
+        margin-top: 0.6%;
+        width: 99.9%;
+        height: 100px;
+    }
+    
+    .dropdown {
+        display: flex;
+        margin: auto;
+        width: 80%;
+        height: 40px;
+    }
+    .main_grid {
+        width: 100%;
+        margin-top: 100px;
+        
+    }
+    
+    .main_grid div {
+        width: 100%;
+        margin-left: -5%;
+        margin-top: -15px;
+    }
+    
+    .main_grid h2 {
+        line-height: 0;
+        font-size: 28px;
+        text-align: left;
+    }
+    .main_grid_div {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 99%;    
+    }
+    
+    .main_grid_div > div {
+        height: 250px;
+        margin-bottom: -2%;
+    }
+    #middle_container {
+        width: 100%;
+        height: 740px;
+        margin-top: 150px
+
+    }
+    
+    .middle_top {
+        width: 80%;
+        margin-left: -0.1%;
+    }
+    .middle_image {
+        display: grid;
+        grid-template-columns: 55% 1% 44%;
+        width: 100%;
+        height: 77%;
+        margin: auto;
+    }
+    .first_bottom {
+        margin-top: 0.8%;
+        width: 100%;
+        height: 25.6%;
+        background-color: #444444;
+        padding-top: 0%;
+    }
+    
+    .first_bottom h3{
+        font-size: 17px;
+    }
+    
+    .first_bottom a {
+        font-size: 14px;
+    }
+
+    
+    .video_top {
+        width: 80%;
+        margin-left: 0.5%;
+    }
+    .quiz{
+        margin-left: 0.5%;
+    }
+    #page_details {
+        display: none;
+    }
+    .page_top h3 {
+        font-size: 12px;
+    }
+    #footer {
+        margin-top: 100px;
+    }
+    .footer-div div {
+        margin-left: 10px;
+        
+    }
+    .footer-div div p {
+        line-height: 10px;
+        font-weight: 400;
+    }
+    .footer-div div i {
+        display:none;
+    }
+}    
+@media only screen and (max-width: 360px) {
+    header{
+        display: grid;
+        grid-template-columns: 30% 30%;
+        font-size: 10px;
+        grid-gap: 10px;
+        margin-left: 20px;
+        
+    }
+    header > button {
+        width: 100px;
+    }
+    .navbar_container {
+        display: grid;
+        grid-template-columns: 90%;
+       
+        width: 100%;
+        height: 380px;
+        justify-content: left;
+
+    }
+    .lybrate_logo {
+        width: 120px;
+        height: 45px;
+        justify-content: left; 
+        margin-left: -0.01%;
+         
+    }
+    .navbar_div{
+        margin-top: -15% !important;
+        margin-bottom: 0%;
+    }
+    #cart_button {
+        height: 50px;
+        width: 140px;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    #msg_icon, #cal_icon, #pill_icon, #lab_icon{
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+    }
+    
+    #cart_icon {
+        width: 50px;
+        height: 50px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    #navbar_bottom {
+        width: 70%;
+        margin-left: 15%;
+        overflow: auto;
+        white-space: nowrap;
+        
+
+    }
+    
+    #navbar_bottom button {
+        display: inline-block;
+        text-decoration: none;
+        
+    }
+    #main_image {
+        width: 100%;
+        height: 350px;
+        background-image: url("https://assets.lybrate.com/q_auto,f_auto/imgs/product/Homepage/Web_Home-Page_Banner_03.jpg");
+        background-attachment: local;
+        background-size: cover;
+        margin-bottom: 100px;
+    }
+    #main_image h1 {
+       
+        font-size: 21px;
+        line-height: 1.5;
+        
+    }
+    .image_links a {
+        font-size: 12px;   
+    }
+    #search_input{
+        width: 230px;
+        margin-bottom: 2%;    
+    }
+    #search_button {
+        width: 100px;
+    }
+    .random_minute h4 {
+        font-size: 12px;
+        margin-left: 10px;   
+    }
+    .main_image_footer {
+        width: 99.8%;
+        height: 200px;
+        margin-top: 0%;
+        margin-bottom: 1000px;
+    }
+    
+    .main_image_footer p {
+        font-size: 20px;
+    }
+    .dropdown_div{
+        height: 210px;
+    }
+    .main_grid{
+        margin-top: 300px;
+    }
+    .main_grid {
+
+        margin-top: 190px;
+    }
+    
+    .main_grid div {
+        width: 100%;
+    }
+    
+    .main_grid h2 {
+        font-size: 18px;
+    }
+    
+    .main_grid h4 {
+        font-size: 15px;
+        margin-left: 15px;
+        line-height: 4%;
+        margin-top: 8%;
+    }
+    .main_grid p {
+        font-size: 15px;
+        margin-top:0.2%;
+        margin-left: 5px;
+    }
+    .main_grid_div {
+        width: 95%;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    
+    .main_grid_div > div {
+        height: 310px;
+    }
+    
+    .main_grid_div p {
+        margin-left: 10%;
+        font-size: 15px;
+        margin-top: 7%;
+    }
+    .more_Questions_div {
+        margin-top: 1%;    
+    }
+    #last_div2 div {
+        margin-top: -7%;
+        width: 93%;
+        background-color: #F7F7F7;
+        margin: auto;
+    }
+
+    
+    #last_div2 button {
+        width: 30%;
+    }
+    .third_half {
+        display : none;
+        margin: -10%;
+    }
+    .first_top img {
+        width: 180%;
+        height: 200px;
+    }
+    .first_bottom{
+        margin-top: -40%;
+        width: 180%;
+        height: 170px;
+        margin-right: 100px;
+    }
+    #middle_container {
+
+        height: 500px;   
+    }
+    .video_top{
+        margin-top: 17px;
+    }
+    .video_top h2 {
+        font-size: 20px;
+    }
+    .video_top h6 {
+        font-size: 15px;
+        margin-top: -4%;
+    }
+    .quiz {
+        margin-top: 20px;
+    }
+    .quiz h2 {
+        font-size: 20px;
+    }
+    .quiz h6{
+        margin-top: -4%;
+        font-size: 15px;
+    }
+    #details {
+        margin-top: -34%;
+    }
+    .details_top h2 {
+        font-size: 20px;
+    
+        
+    }
+    .details_top h6 {
+        font-size: 18px;
+        text-align: justify;
+    }
+    .details_top button {
+        width: 100px;
+        margin-left: 50px;
+    }
+    .categories h2 {
+        font-size: 20px;
+        margin-bottom: 0%;
+        margin-left: -8%;
+    }
+    .slider_diet {
+        display: flex;
+        width: 100%;
+        height: 38%;
+
+    }
+    
+    .slider_child {
+        width: 25%;
+        height: 40%;    
+    }
+    
+    .slider_child img {
+        width: 200%;
+        height: 100%;
+        margin: 5%;
+    }
+    .slider_city{
+        display: flex;
+        width: 100%;
+        height: 38%;
+    }
+    .city_child{
+        width: 25%;
+        height: 40%;
+    }
+    .city_child img {
+        width: 200%;
+        height: 100%;
+        margin: 5%;
+    }
+    .about_lybrate {
+        display: none;
+    }
+    #footer {
+        width: 100%;
+        height: 1300px;
+        background-color: grey;
+        margin-top: -20%;
+    }
+    
+    .footer-div {
+        width: 80%;
+        height: 100%;
+        
+        display: grid;
+        grid-template-columns: 47% 47%;
+        grid-gap: 5%;
+      
+    }
+    
+    .footer-div div {
+        height: 100%;
+       
+        
+    }
+    
+    .footer-div div p {
+        line-height: 15px;
+    }
+    
+    .footer-div div i {
+        display: none;
+    }
+
+
+
+    
+   
+    
+    
+    
+}
