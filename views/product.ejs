@@ -13,16 +13,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap"
         rel="stylesheet">
 
+     
 
 </head>
 
-<body>
+<body onload="show1(<%= JSON.stringify(productarr1) %>),show2(<%= JSON.stringify(productarr2) %>),banner(<%= JSON.stringify(banner) %>),show4(<%= JSON.stringify(productarr4) %>),show5(<%= JSON.stringify(productarr5) %>)">
+
 
     <!-- Navigatin Start -->
     <div id="navContainer">
         <div id="container">
             <div id="nav_bar">
-                <a href=""><img src="../image/Lybrate-Goodkart-Logo.png" alt=""></a>
+                <a href=""><img src="https://assets.lybrate.com/q_auto,f_auto//imgs/product/logos/Lybrate-Logo.png" alt=""></a>
                 <div class="search_bar">
                     <input type="text" class="search_product" placeholder="Search For Health Products">
                     <a href=""><button class="search_btn"><span class="fa fa-search"></span></button></a>
@@ -49,7 +51,7 @@
                 <div>
                     <a href="" style="margin: 0vh 2vh; margin-top: 10px;"><span id="pluslogo"
                             class="fas fa-plus-square"></span><button class="lybrate_cash">LybrateCash</button></a>
-                    <a href="/home" class="home_btn"><button>Home</button> </a>
+                    <a href="../index.html" class="home_btn"><button>Home</button> </a>
                     <a href="cart_page.html" class="cart_logo"><span class="fas fa-cart-arrow-down"></span></a>
                 </div>
             </div>
@@ -160,7 +162,8 @@
 
             <div class="product_heading2">
                 <p class="heading2">Best In Protein & Fitness - Your Workout Buddies</p>
-                <div id="show2"></div>
+                <div id="show2">
+                </div>
             </div>
         </div>
 
@@ -346,7 +349,7 @@
 
 </body>
 
-<script src="../scripts/product.js"></script>
+<script src="/script/product.js"></script>
 
 <script src="https:kit.fontawesome.com/67c66657c7.js"></script>
 
