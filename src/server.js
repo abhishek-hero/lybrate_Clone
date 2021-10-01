@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
     email: { type: String, reuired: true },
     mobileNo: { type: Number, required: true },
     password: { type: String, required: true },
-    cart: [{type: mongoose.Schema.Types.ObjectId, ref: "#", required: false}]
+    cart: [{ type: mongoose.Schema.Types.ObjectId, ref: "#", required: false }]
 }, {
     versionKey: false
 })
@@ -34,6 +34,7 @@ app.get("/signup", async (req, res) => {
 
 
 app.get("/login", async (req, res) => {
+    // res.sendFile()
     res.render("login.ejs")
 })
 
@@ -59,6 +60,32 @@ app.post("", async (req, res) => {
     res.redirect("/login")
 
 })
+
+
+
+let logged_user;
+
+app.post("/login", async (req, res) => {
+    // Insert Login Code Here
+    let mobileNo = req.body.mobileNo;
+    let password = req.body.password;
+
+
+    logged_user = await User.find({ mobileNo: mobileNo, password: password })
+
+    if (logged_user.length == 0) {
+
+        // alert("Invalid Credentials")
+        res.redirect("/login")
+
+    } else {
+
+        res.redirect("/home")
+        // res.send(`Username: ${mobileNo} Password: ${password}`);
+        // console.log(mobileNo, password)
+    }
+
+});
 
 
 
