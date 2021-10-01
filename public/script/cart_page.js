@@ -1,4 +1,4 @@
-let totalAddedProduct = JSON.parse(localStorage.getItem('cart_arr'));
+
 
 let userDetails = JSON.parse(localStorage.getItem("details"))
 
@@ -32,10 +32,11 @@ try {
 }
 
 
+// let totalAddedProduct = JSON.parse(localStorage.getItem('cart_arr'));
 
 
 
-function show_quantity() {
+function show_quantity(totalAddedProduct) {
 
     let i = 0;
     let j = 0;
@@ -187,7 +188,7 @@ function show_quantity() {
 
 
 }
-show_quantity();
+// show_quantity();
 
 
 

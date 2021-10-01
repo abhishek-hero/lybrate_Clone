@@ -8,25 +8,26 @@
     <link rel="shortcut icon" type="image/png" href="https://nu.lybcdn.com/img/lybrate_icon_325x325.png"/>
     <title>Cart</title>
 
+     <!-- Stylesheet -->
+      <link rel="stylesheet" href="../style/cart.css">
+    
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 
     <!-- font Awsome -->
     <script src="https://kit.fontawesome.com/b2700ae26b.js" crossorigin="anonymous"></script>
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="../styles/cart.css">
 
 </head>
 
-<body>
+<body onload="CartShow(<%= JSON.stringify(product) %>)">
     
 
     <!-- Navigatin Start -->
     <div id="navContainer">
         <div id="container">
             <div id="nav_bar">
-                <a href=""><img src="../image/Lybrate-Goodkart-Logo.png" alt=""></a>
+                <a href=""><img src="https://assets.lybrate.com/q_auto,f_auto//imgs/product/logos/Lybrate-Logo.png" alt=""></a>
                 <div class="search_bar">
                     <input type="text" class="search_product" placeholder="Search For Health Products">
                     <a href=""><button class="search_btn"><span class="fa fa-search"></span></button></a>
@@ -76,8 +77,10 @@
                 <img src="" alt="" id="mid-img">
             </div>
             <div id="mid_btn">
-                <button class="red" id="cart">Add To Cart</button>
-                <button id="green">Buy Now</button>
+                <form action="/products/cart/<%= product._id %>" method="POST">
+                    <button class="red" type="submit" id="cart" onclick="buyProd_2(<%=JSON.stringify(product) %>)">Add To Cart</button></form>
+               
+                <button id="green" onclick="buyCheckout(<%= JSON.stringify(product) %>)">Buy Now</button>
             </div>
         </div>
         <div id="right_div">
@@ -269,10 +272,11 @@
 
    <script>
        
-var cart_obj = JSON.parse(localStorage.getItem('myProducts'));
+// var cart_obj = JSON.parse(localStorage.getItem('myProducts'));
 
 
-function CartShow() {
+
+function CartShow(cart_obj) {
     let left_div_img1 = document.getElementById('img_1');
     let left_div_img2 = document.getElementById('img_2');
     let left_div_img3 = document.getElementById('img_3');
@@ -306,9 +310,6 @@ function CartShow() {
     act_price.textContent=`₹ ${cart_obj.actualPrice}`;
     off_price.textContent=cart_obj.off
     h_1.textContent= cart_obj.brand
-   
-  
-
    
 
     img1.src = cart_obj.image1;
@@ -347,10 +348,11 @@ function CartShow() {
 
     mid.src = cart_obj.image1;
 
+    // buyProd_2(cart_obj)
 }
 
 
-CartShow()
+// CartShow()
 
 function imageChange(img){
     let mid_img = document.getElementById('mid-img');
@@ -366,44 +368,45 @@ if (localStorage.getItem('cart_arr') === null) {
 }
 
 
-function buyProd_1() {
+function buyProd_1(product) {
     let arr = JSON.parse(localStorage.getItem('cart_arr'));
-
-    arr.push(cart_obj);
-  
-    localStorage.setItem('cart_arr', JSON.stringify(arr));
-    window.location.href='cart_page.html'
+    arr.push(product);
+    //  localStorage.setItem('cart_arr', JSON.stringify(arr));
+    //   window.location.href=`http://localhost:3000/products/cart/${product._id}`
+    // console.log(product._id);
 
 }
 
 
-function buyProd_2(){
+function buyProd_2(product){
    
     cart_btn.textContent='Proceed to Buy'
     cart_btn.style.width='100%';
-    cart_btn.style.backgroundColor='#259b24 '
+    cart_btn.style.backgroundColor='#259b24'
     cart_btn.style.color='#ffff'
     cart_btn.style.border='none'
     buy_btn.style.display='none'
     cart_btn.style.fontSize='17px' 
-    cart_btn.addEventListener('click',buyProd_1);
+    cart_btn.addEventListener('click',buyProd_1(product));
+    
     // cart_btn.appendChild(a)
 }
+
 
 
 let cart_btn = document.getElementById('cart');
 let buy_btn = document.getElementById('green')
 
-function buyCheckout() {
-    localStorage.setItem("Direct_Buy",JSON.stringify(cart_obj)); 
-    window.location.href='buyCheckOut.html'
+function buyCheckout(product) {
+    // localStorage.setItem("Direct_Buy",JSON.stringify(product)); 
+    window.location.href=`http://localhost:3000/products/checkout/${product._id}`
 }
-cart_btn.addEventListener('click',buyProd_2);
+// cart_btn.addEventListener('click',buyProd_2);
 
-buy_btn.addEventListener('click',buyCheckout)
+// buy_btn.addEventListener('click',buyCheckout(product))
 
 
    </script>
 </body>
-<script src="../scripts/cart.js"></script>
+<!-- //<script src="../scripts/cart.js"> -->
 </html>
