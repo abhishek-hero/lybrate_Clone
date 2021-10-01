@@ -1,13 +1,13 @@
-function login(){
+function login() {
     window.location.href = "/login"
 }
 
-function goodcart(){
+function goodcart() {
     window.location.href = "/products"
 }
 
 
-let random_number = Math.floor(Math.random()*10 + 1)
+let random_number = Math.floor(Math.random() * 10 + 1)
 
 let left = 1;
 let right = 4;
@@ -24,7 +24,7 @@ let bottom_N = 4;
 function show() {
 
     let time = document.getElementById("time")
-    setInterval(function (){
+    setInterval(function () {
         time.innerHTML = `${random_number} min ago`
     }, 2000)
 
@@ -57,7 +57,7 @@ function next() {
             document.getElementById("c" + i).style.display = "inline-block"
         }
 
-    }else {
+    } else {
 
         return;
 
@@ -77,10 +77,10 @@ function previous() {
             document.getElementById("c" + i).style.display = "inline-block"
         }
 
-    }else {
+    } else {
 
         return;
-        
+
     }
 
 }
@@ -98,7 +98,7 @@ function city_next() {
             document.getElementById("d" + i).style.display = "inline-block"
         }
 
-    }else {
+    } else {
 
         return;
 
@@ -118,10 +118,10 @@ function city_previous() {
             document.getElementById("d" + i).style.display = "inline-block"
         }
 
-    }else {
+    } else {
 
         return;
-        
+
     }
 
 }
@@ -143,7 +143,7 @@ function video_next() {
             document.getElementById("video" + i).style.display = "inline-block"
         }
 
-    }else {
+    } else {
 
         return;
 
@@ -163,10 +163,10 @@ function video_previous() {
             document.getElementById("video" + i).style.display = "inline-block"
         }
 
-    }else {
+    } else {
 
         return;
-        
+
     }
 
 }
@@ -186,7 +186,7 @@ function bottom_next() {
             document.getElementById("bottom" + i).style.display = "inline-block"
         }
 
-    }else {
+    } else {
 
         return;
 
@@ -206,10 +206,10 @@ function bottom_previous() {
             document.getElementById("bottom" + i).style.display = "inline-block"
         }
 
-    }else {
+    } else {
 
         return;
-        
+
     }
 
 }

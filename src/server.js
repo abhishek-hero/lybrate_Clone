@@ -88,18 +88,7 @@ app.post("/login", async (req, res) => {
 });
 
 
-
-
 app.listen(3000, async (req, res) => {
     await connect()
     console.log("Listening to post 3000")
 })
-
-
-
-// // app.get("/users/:id/:password", async (req, res) => {
-// //     const user = await User.find({$and: [{mobileNo: req.params.id}, {password: req.params.password}]}).lean().exec()
-// //     res.send({user})
-
-// // })
-
