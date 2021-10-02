@@ -81,7 +81,7 @@
         <br>
         
         <div>
-            <form action="/" method="POST">
+            <form method="POST" action="/login">
                
                 <br>
     <select  id="countryCode">
@@ -213,11 +213,11 @@
 <body >
  
 
-<input type="number"  id="phone" placeholder="Phone*" >
+<input type="number" id="phone" name="mobileNo" placeholder="Phone*" required="true" >
 <br>
 <br>
 
-<input type="password" id="password" placeholder="Password*" >
+<input type="password" id="password" name="password" placeholder="Password*" required="true">
 <br>
 <br>
 <p ><span class="red"> Forget Password ?</span></p>
@@ -331,24 +331,29 @@
           
             let count = 0;
 
-            data.forEach(function (details) {
-                let phone = document.getElementById('phone').value;
-                let passw = document.getElementById('password').value;
+            // data.forEach(function (details) {
+            //     let phone = document.getElementById('phone').value;
+            //     let passw = document.getElementById('password').value;
 
             
-                if (details.mobileNo == phone && details.password == passw) {
+            //     if (details.mobileNo == phone && details.password == passw) {
                    
-                    alert('Successfull Login');
+            //         alert('Successfull Login');
                 
-                  window.location.href=`http://localhost:3000`
+            //       window.location.href=`http://localhost:3000`
 
-                  count++;
-                }
-            });
+            //       count++;
+            //     }
+            // });
 
-            if (count == 0) {
-                alert('Invalid Phone or Paaword')
+            // if (count == 0) {
+            //     alert('Invalid Phone or Paaword')
+            // }
+
+            if(data.length==0){
+                alert('unseuccess')
             }
+            
         }
 
     

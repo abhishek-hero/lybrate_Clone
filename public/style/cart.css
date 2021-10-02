@@ -664,10 +664,95 @@ border-radius: 9px;
 }
 
 
+@media only screen and (max-width: 600px ) {
+    
+    #left_div{
+        
+        display: none;
+        padding: 2px;
+    }
+
+    #main_container{
+        display:block;
+        padding: 20px;
+    }
+
+    #mid_div{
+        display:flex;
+        width: 90%;
+        margin: auto;
+    }
+    #mid_img{
+        max-width: 100%;
+    }
+    #right_div{
+        width: 90%;
+        margin: auto;
+    }
+    #mid_btn{
+        max-width: 100%;
+        padding: 0px;
+    }
+    #nevabralogo{
+        display: none;
+    }
+    .search_btn{
+        display: none;
+    }
+    
+}
 
 
 
 
+@media only screen and (min-width:600px) {
+    #nevabralogo{
+        display: none;
+    }
+    .search_btn{
+        display: none;
+    }
+    #nevabralogo{
+        display: none;
+    }
+    
+    #left_div{
+        
+        display: none;
+    }
+
+    #main_container{
+        display: flex;
+        padding: 20px;
+    }
+
+    #mid_div{
+        display:inline;
+        width: 50%;
+    }
+    #mid_img{
+        max-width: 100%;
+    }
+    #right_div{
+        width: 60%;
+    }
+    #mid_btn{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width:960px) {
+    #left_div{
+        
+        display: block;
+    }
+    #nevabralogo{
+        display:block;
+    }
+    .search_btn{
+        display: block;
+    }
 
 
- 
+    
+}

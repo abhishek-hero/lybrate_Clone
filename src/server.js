@@ -8,18 +8,20 @@ const connect = () => {
 }
 
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.json())
 
 app.set('view engine', 'ejs')
 
 app.use(express.static("public"))
 
-
+//----------------------------signup--------------------------///
 const userSchema = new mongoose.Schema({
     userName: { type: String, required: true },
     email: { type: String, reuired: true },
     mobileNo: { type: Number, required: true },
     password: { type: String, required: true },
-    cart: [{type: mongoose.Schema.Types.ObjectId, ref: "#", required: false}]
+    cart: [{type: mongoose.Schema.Types.ObjectId, ref: "#", required: false}],
+    checkout:[{type:mongoose.Schema.Types.ObjectId,ref:"",required:false}]
 }, {
     versionKey: false
 })
@@ -38,9 +40,7 @@ app.get("/home", async (req, res) => {
     res.render("index.ejs")
 })
 
-// app.get("/products", async (req, res) => {
-//     res.render("product.ejs")
-// })
+
 
 
 
@@ -72,6 +72,30 @@ app.get("/login",async(req,res)=>{
 
 })
 
+let logged_user;
+
+app.post("/login", async (req, res) => {
+    // Insert Login Code Here
+    let mobileNo = req.body.mobileNo;
+    let password = req.body.password;
+
+
+    logged_user = await User.find({ mobileNo: mobileNo, password: password })
+
+    if (logged_user.length == 0) {
+
+        // alert("Invalid Credentials")
+      // res.send(logged_user)
+        res.redirect("/login")
+
+    } else {
+
+        res.redirect("/home")
+        // res.send(`Username: ${mobileNo} Password: ${password}`);
+        // console.log(mobileNo, password)
+    }
+
+});
 
 
 
@@ -79,6 +103,7 @@ app.get("/login",async(req,res)=>{
 
 
 
+//-----------------------products---------------------------------------//
 
 
 
@@ -134,12 +159,21 @@ const product5Schema= new mongoose.Schema({
 
 const Product5 = mongoose.model("productarr5", product5Schema);
 
+app.get('/getproduct',async(req,res)=>{
+   const user = await User.find().lean().exec()
+   
+  res.send(user)
+
+})
+
+
+
  app.get("/products", async (req, res) => {
-     const productarr1 = await Product1.find()
-     const productarr2=await Product2.find()
-     const banner=await Banner.find()
-     const productarr4=await Product4.find()
-     const productarr5=await Product5.find()
+     const productarr1 = await Product1.find({}).lean().exec()
+     const productarr2=await Product2.find({}).lean().exec()
+     const banner=await Banner.find().lean({}).exec()
+     const productarr4=await Product4.find({}).lean().exec()
+     const productarr5=await Product5.find({}).lean().exec()
          
 //   console.log(productarr5);
    res.render('product.ejs',{productarr1,productarr2,productarr4,banner,productarr5})
@@ -159,6 +193,7 @@ const AllProduct = mongoose.model("all_product_datas", allProductSchema);
 
 app.get("/products/:id",async(req,res)=>{
    const product1=await Product1.findById(req.params.id)
+   const banner = await Banner.findById(req.params.id)
    const product2=await Product2.findById(req.params.id)
    const product4=await Product4.findById(req.params.id)
    const product5=await Product5.findById(req.params.id)
@@ -168,6 +203,13 @@ app.get("/products/:id",async(req,res)=>{
     //    res.render()
     //    console.log(product1);
      const product=product1
+    res.render('cart.ejs',{product})
+   }
+   if(banner !=null)
+   {
+    //    res.render()
+    //    console.log(product1);
+     const product=banner
     res.render('cart.ejs',{product})
    }
    if(product2 !=null)
@@ -197,11 +239,54 @@ app.get("/products/:id",async(req,res)=>{
 
 //-------------------buycheckout page-------------///
 
-app.get("/products/cart/:id",async(req,res)=>{
-    res.render('buyCheckOut.ejs',{
-
-    })
+app.get("/products/checkout/:id",async(req,res)=>{
+    
+    const product1=await Product1.findById(req.params.id)
+    const product2=await Product2.findById(req.params.id)
+    const product4=await Product4.findById(req.params.id)
+    const product5=await Product5.findById(req.params.id)
+ 
+    if(product1 !=null)
+    {
+     //    res.render()
+     //    console.log(product1);
+      const product=product1
+     res.render('buyCheckOut.ejs',{product})
+    }
+    if(product2 !=null)
+    {
+     //    console.log(product2);
+     const product=product2
+       res.render('buyCheckOut.ejs',{product})
+    }
+     if(product4 !=null)
+    {
+     //    console.log(product4);
+     const product=product4
+       res.render('buyCheckOut.ejs',{product})
+    }
+     if(product5 !=null)
+    {
+     //    console.log(product5);
+       const product=product5
+        res.render('buyCheckOut.ejs',{product})
+        
+    }
+ 
 })
+
+const cartSchema = mongoose.Schema({
+    product_id:{type:Object,required:true}
+},{
+    versionKey:false
+})
+
+const cart = mongoose.model('cart',cartSchema)
+
+
+
+
+
 
 app.listen(3000, async (req, res) => {
     await connect()

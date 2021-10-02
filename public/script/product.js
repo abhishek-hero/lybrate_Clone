@@ -166,6 +166,8 @@ function show2(productShow2_arr) {
 }
 
 
+
+
 //Show the bannner
 
 function banner(Product_banner) {
@@ -349,3 +351,13 @@ function details(id) {
 // aero.setAttribute("class", "fas fa-angle-down")
 
 // userName.append(aero)
+
+async function dummy(){
+    const res = await fetch('http://localhost:3000/getproduct')
+ 
+    const and = await res
+    console.log(and);
+}
+
+
+dummy()

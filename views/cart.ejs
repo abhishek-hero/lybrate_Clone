@@ -50,7 +50,7 @@
                     </ul>
                 </div>
 
-                <div>
+                <div id="nevabralogo">
                     <a href="" style="margin: 0vh 2vh; margin-top: 10px;"><span id="pluslogo"
                             class="fas fa-plus-square"></span><button class="lybrate_cash">LybrateCash</button></a>
                     <a href="" class="home_btn" onclick="home()"><button>Home</button> </a>
@@ -76,8 +76,10 @@
                 <img src="" alt="" id="mid-img">
             </div>
             <div id="mid_btn">
-                <button class="red" id="cart" onclick="buyProd_2(<%=JSON.stringify(product) %>)">Add To Cart</button>
-                <button id="green" onclick="buyCheckout(<%= JSON.stringify(product) %>)">Buy Now</button>
+                <button class="red" id="cart" onclick="buyProd_2(<%=JSON.stringify(product) %>)" type="submit">Add To Cart</button>
+               <!-- <form action="/products/:id/checkout" method="POST"> -->
+                <button id="green" onclick="buyCheckout(<%= JSON.stringify(product) %>)" type="submit">Buy Now</button>
+               <!-- </form> -->
             </div>
         </div>
         <div id="right_div">
@@ -393,7 +395,7 @@ let buy_btn = document.getElementById('green')
 function buyCheckout(product) {
     localStorage.setItem("Direct_Buy",JSON.stringify(product));
   //  console.log(product.id+""+product._id);
-   window.location.href=`http://localhost:3000/products/cart/${product._id}`
+   window.location.href=`http://localhost:3000/products/checkout/${product._id}`
 }
 cart_btn.addEventListener('click',buyProd_2);
 
