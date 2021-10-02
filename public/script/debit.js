@@ -13,13 +13,13 @@ function sucess(){
     window.location.href = "success.html"
 }
 
-let add = JSON.parse(localStorage.getItem("totalPrice"))
+let add = JSON.parse(localStorage.getItem("payable"))
 
 function total(){
     
     let Price = document.getElementById('total');
 //     let heading = document.getElementById("total_payable")
-    Price.innerHTML = `Total Payable Amount  - ₹ ${add.totalPrice}`
+    Price.innerHTML = `Total Payable Amount  - ₹ ${add.price}`
 }
 
 total()

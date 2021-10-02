@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="https://nu.lybcdn.com/img/lybrate_icon_325x325.png"/>
+    <link rel="shortcut icon" type="image/png" href="https://nu.lybcdn.com/img/lybrate_icon_325x325.png" />
     <title>Buy Checkout</title>
+    <link rel="stylesheet" href="/style/buyCheckout.css">
+
     <script src="https://kit.fontawesome.com/b2700ae26b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../styles/buyCheckout.css">
 </head>
-<body>
+
+<body onload="showProduct(<%= JSON.stringify(cart_Items) %>)">
 
     <section>
 
@@ -41,10 +44,11 @@
                                 </li>
                             </ul>
                         </div>
-        
+
                         <div>
                             <a href="" style="margin: 0vh 2vh; margin-top: 10px;"><span id="pluslogo"
-                                    class="fas fa-plus-square"></span><button class="lybrate_cash">LybrateCash</button></a>
+                                    class="fas fa-plus-square"></span><button
+                                    class="lybrate_cash">LybrateCash</button></a>
                             <a href="" class="home_btn"><button>Home</button> </a>
                             <a href="" class="cart_logo"><span class="fas fa-cart-arrow-down"></span></a>
                         </div>
@@ -61,303 +65,135 @@
             <h1 id="pay_heading"></h1>
             <p id="pay_brand"></p>
             <p id="pay_descr"></p>
-           <p id="pay_price"></p>
-           <p id="pay_disct"></p>
-           <br>
+            <p id="pay_price"></p>
+            <p id="pay_disct"></p>
+            <br>
 
-           <div id="disct_info">
-            <div id="disct_para">
-                <p>₹71 cashback would be credited to your account after delivery</p>
+            <div id="disct_info">
+                <div id="disct_para">
+                    <p>₹71 cashback would be credited to your account after delivery</p>
+                </div>
+                <div id="addminus_icon">
+                    <i class="fas fa-minus-circle" id="minus_icon"  onclick="subtraction(<%= JSON.stringify(cart_Items) %>)"></i><span id="number">1</span><i
+                        class="fas fa-plus-circle" id="plus_icon" onclick="addtion(<%= JSON.stringify(cart_Items) %>)"></i>
+
+                </div>
             </div>
-            <div id="addminus_icon">
-                <i class="fas fa-minus-circle" id="minus_icon"></i><span id="number">1</span><i class="fas fa-plus-circle" id="plus_icon"></i>
-              
-            </div>
-           </div>
-           
+
         </div>
     </div>
-    
+
 
     <div id="row_2_cont">
         <p>1</p>
         <h3>Express Checkout</h3>
-        
+
     </div>
-   
-        <div id="row_3_cont">
-            <div id="row_3_cont_1">
-                <input type="text" name="" id="name" placeholder="Name*">
-                <input type="number" name="" id="phone" placeholder="Mobile*">
-                <input type="email" name="" id="mail" placeholder="Email*">
-                <br>
-                <input type="text" name="" id="city" placeholder="City*">
-                <input type="text" name="" id="code" placeholder="Pincode*">
-                <input type="text"  id="address" placeholder="Complete-Address" onmouseleave="lengths()">
-                <p>Min 20 Char <span id="char_length">0 / 200</span></p>
-                <div id="checkout_btn">
-                    <button id="check_btn">Checkout</button>
+
+    <div id="row_3_cont">
+        <div id="row_3_cont_1">
+            <input type="text" name="" id="name" placeholder="Name*">
+            <input type="number" name="" id="phone" placeholder="Mobile*">
+            <input type="email" name="" id="mail" placeholder="Email*">
+            <br>
+            <input type="text" name="" id="city" placeholder="City*">
+            <input type="text" name="" id="code" placeholder="Pincode*">
+            <input type="text" id="address" placeholder="Complete-Address" onmouseleave="lengths()">
+            <p>Min 20 Char <span id="char_length">0 / 200</span></p>
+            <div id="checkout_btn">
+                <button id="check_btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- section Footer -->
+
+
+    <section>
+        <div id="footer-div">
+            <div id="footer">
+                <div>
+
+                    <ul>
+                        <h5>Search Health Products</h5>
+                        <li> Goodkart</li>
+                        <li>Vitamin and Supplement</li>
+                        <li>Protein and Fitness</li>
+                        <li>Skin and Hair Care</li>
+                        <li>Sexual Wellness</li>
+                        <li>Weight Management</li>
+                        <li>Food and Drink</li>
+                        <li>Personal Care</li>
+                        <li>Child Care</li>
+                        <li>GoodBox</li>
+                    </ul>
+
+                </div>
+                <div>
+
+                    <ul>
+                        <h5>Search doctors</h5>
+                        <li> Search doctors by City</li>
+                        <li>Search doctors by City Locality</li>
+                        <li>Search doctors by speciality</li>
+                        <li>Search doctors by city speciality</li>
+                    </ul>
+
+                </div>
+                <div>
+
+                    <ul>
+                        <h5> Read Health Articles</h5>
+                        <li>Health Wiki</li>
+                        <li>Health Tips Index</li>
+                        <li>Health Questions Index</li>
+                        <li>Health Quizzes Index</li>
+                        <li>Health Topics Index</li>
+                        <li>Medicines Index</li>
+                        <li>Ailment Index</li>
+                        <li>Lab Test Details Index</li>
+                    </ul>
+
+                </div>
+                <div>
+                    <ul>
+                        <h5>Read about Lybrate</h5>
+                        <li>About Us </li>
+                        <li>Contact Us</li>
+                        <li>Careers</li>
+                        <li>Mobile Apps</li>
+                        <li>Blog</li>
+                        <li>Term of Use</li>
+                        <li>Privacy Policy</li>
+                        <li>Editorial Policy</li>
+                        <li>Press</li>
+
+                    </ul>
+
+                </div>
+                <div>
+                    <div class="social">
+
+                        <h5>Social</h5>
+                        <i class="fab fa-1x fa-facebook-f"></i>
+                        <i class="fab fa-1x fa-twitter"></i>
+                        <i class="fab fa-1x fa-linkedin-in"></i>
+                        <i class="fab fa-1x fa-youtube"></i>
+                        <br>
+                        <h5>Download App</h5>
+                        <img src="https://assets.lybrate.com/q_auto,f_auto/imgs/product/logos/GooglePlay.png">
+                        <img src="https://assets.lybrate.com/q_auto,f_auto/imgs/product/logos/AppStore.png">
+
+                    </div>
+
                 </div>
             </div>
         </div>
-
-
-
-        <!-- section Footer -->
-
-
-        <section>
-            <div id="footer-div" >
-               <div id="footer">
-                    <div>
-                       
-                        <ul>
-                            <h5>Search Health Products</h5>
-                            <li> Goodkart</li>
-                            <li>Vitamin and Supplement</li>
-                            <li>Protein and Fitness</li>
-                            <li>Skin and Hair Care</li>
-                            <li>Sexual Wellness</li>
-                            <li>Weight Management</li>
-                            <li>Food and Drink</li>
-                            <li>Personal Care</li>
-                            <li>Child Care</li>
-                            <li>GoodBox</li>
-                        </ul>
-                       
-                    </div>
-                    <div>
-                       
-                        <ul>                    
-                           <h5>Search doctors</h5>
-                            <li> Search doctors by City</li>
-                            <li>Search doctors by City Locality</li>
-                            <li>Search doctors by speciality</li>
-                            <li>Search doctors by city speciality</li>
-                        </ul>
-                       
-                    </div>
-                    <div>
-                       
-                <ul>
-                            <h5> Read Health Articles</h5>
-                           <li>Health Wiki</li>
-                           <li>Health Tips Index</li>
-                           <li>Health Questions Index</li>
-                           <li>Health Quizzes Index</li>
-                           <li>Health Topics Index</li>
-                           <li>Medicines Index</li>
-                           <li>Ailment Index</li>
-                           <li>Lab Test Details Index</li>
-                        </ul>
-                       
-                    </div>
-                    <div>
-                        <ul>
-                            <h5>Read about Lybrate</h5>
-                            <li>About Us </li>
-                            <li>Contact Us</li>
-                            <li>Careers</li>
-                            <li>Mobile Apps</li>
-                            <li>Blog</li>
-                            <li>Term of Use</li>
-                            <li>Privacy Policy</li>
-                            <li>Editorial Policy</li>
-                            <li>Press</li>
-                          
-                        </ul>
-                       
-                    </div>
-                    <div>
-                        <div class="social">
-
-                            <h5>Social</h5>
-                            <i class="fab fa-1x fa-facebook-f"></i>
-                            <i class="fab fa-1x fa-twitter"></i>
-                            <i class="fab fa-1x fa-linkedin-in"></i>
-                            <i class="fab fa-1x fa-youtube"></i>
-                            <br>
-                            <h5>Download App</h5>
-                            <img src="https://assets.lybrate.com/q_auto,f_auto/imgs/product/logos/GooglePlay.png">
-                            <img src="https://assets.lybrate.com/q_auto,f_auto/imgs/product/logos/AppStore.png">
-        
-                        </div>
-                       
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-    <script>
-        var checkout_obj = JSON.parse(localStorage.getItem('Direct_Buy'));
-       
-        var counter=1;
-//         var total_price=checkout_obj.price;
-//         var totak_disct=checkout_obj.actualPrice;
-        var total_price=0;
-        var totak_disct=0;
-
-
-        function showProduct(){
-            let heading = document.getElementById('pay_heading');
-            let brand = document.getElementById('pay_brand');
-            let para = document.getElementById('pay_descr');
-            let price = document.getElementById('pay_price');
-            let disct = document.getElementById('pay_disct');
-
-            
-            
-            heading.textContent=checkout_obj.name;
-            para.textContent=checkout_obj.details;
-            brand.textContent=checkout_obj.brand;
-//             price.textContent=`₹ ${total_price}`;
-//             disct.textContent=`₹ ${totalk_disct}`;
-
-            price.textContent=`₹ ${checkout_obj.price}`;
-            disct.textContent=`₹ ${checkout_obj.actualPrice}`;
-           
-            price.style.fontSize='15px'
-            disct.style.fontSize='12px'
-            disct.style.textDecoration='line-through'
-            disct.style.marginTop='7px'
-
-
-            let totalobj={
-//                 totalPrice:total_price,
-//                 totalDiscount:totak_disct,
-//                 quantity:counter
-                
-                totalPrice:checkout_obj.price,
-                totalDiscount:checkout_obj.actualPrice,
-        quantity:counter
-
-            }
-
-            localStorage.setItem('totalPrice',JSON.stringify(totalobj))
-           
-        }
-
-
-        showProduct()
-
-        let add = document.getElementById('plus_icon');
-        let minus = document.getElementById('minus_icon');
-
-        function addtion(){
-            counter++;
-            let number = document.getElementById('number');
-            let price = document.getElementById('pay_price');
-            let disct = document.getElementById('pay_disct');
-            total_price=Number(checkout_obj.price)*counter;
-            totak_disct=Number(checkout_obj.actualPrice)*counter;
-            price.textContent=`₹ ${total_price}`;
-            disct.textContent= `₹ ${totak_disct}`
-            localStorage.setItem('totalPrice',(total_price))
-
-            number.textContent=counter;
-
-            let totalobj={
-                totalPrice:total_price,
-                totalDiscount:totak_disct,
-                quantity:counter
-            }
-
-            localStorage.setItem('totalPrice',JSON.stringify(totalobj))
-            
-        }
-
-   
-        function subtraction(){
-            counter--;
-            let number = document.getElementById('number');
-            let price = document.getElementById('pay_price');
-            let disct = document.getElementById('pay_disct');
-            total_price=Number(checkout_obj.price)*counter;
-            totak_disct=Number(checkout_obj.actualPrice)*counter;
-            price.textContent=`₹ ${total_price}`;
-            disct.textContent= `₹ ${totak_disct}`
-            minus.style.color='black';
-            number.textContent=counter;
-            let totalobj={
-                totalPrice:total_price,
-                totalDiscount:totak_disct,
-                quantity:counter
-            }
-
-            localStorage.setItem('totalPrice',JSON.stringify(totalobj))
-            
-           
-            if(counter==0){
-                counter=1;
-                total_price=Number(checkout_obj.price)*counter;
-                totak_disct=Number(checkout_obj.actualPrice)*counter;
-                price.textContent=`₹ ${total_price}`;
-                disct.textContent= `₹ ${totak_disct}`;
-            
-                let totalobj={
-                totalPrice:total_price,
-                totalDiscount:totak_disct,
-                quantity:counter
-                    }
-                    number.textContent=counter;
-            localStorage.setItem('totalPrice',JSON.stringify(totalobj))
-                minus.style.color='grey'
-            }
-
-            
-        }
-
-       
-
-        add.addEventListener('click',addtion);
-        minus.addEventListener('click',subtraction);
-
-        let addr_div= document.getElementById('address');
-
-      
-        function lengths(){
-           let len = document.getElementById('address').value;
-          len = len.length;
-          let char = document.getElementById('char_length');
-          char.textContent=`${len} / 200`
-        }
-
-
-        function chechoutClick(){
-            let Name = document.getElementById('name').value;
-            let phone = document.getElementById('phone').value;
-            let City = document.getElementById('city').value;
-            let code = document.getElementById('code').value;
-            let adr = document.getElementById('address').value;
-
-
-            if(Name==="" || phone==="" || City==="" || phone.length!==10 || code ==="" || code.length!==6 || adr==="" || adr.length<20){
-                alert('Please fill The Required Fields')
-                
-            }
-            else{
-                let cust_detail={
-                    name:Name,
-                    number:phone,
-                    city:City,
-                    pincode:code,
-                    adress:adr
-                }
-
-                localStorage.setItem('cust_details',JSON.stringify(cust_detail))
-                window.location.href='pay.html'
-            }
-            
-        }
-
-
-        let btn = document.getElementById('check_btn');
-        btn.addEventListener('click',chechoutClick)
-
-        
-        
+    </section>
+    <script src="/script/buyCheckout.js">
     </script>
 </body>
+
 </html>

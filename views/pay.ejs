@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="https://nu.lybcdn.com/img/lybrate_icon_325x325.png"/>
+    <link rel="shortcut icon" type="image/png" href="https://nu.lybcdn.com/img/lybrate_icon_325x325.png" />
     <title>Payment Page</title>
-    <link rel="stylesheet" href="../styles/payment.css">
+    <link rel="stylesheet" href="/style/pay.css">
+    
 </head>
 
-<body>
+<body onload="showprodDetailds(<%= JSON.stringify(product) %>)">
     <!-- created header -->
     <div class="top">
         <img src="https://www.lybrate.com/img/lybrate-logo-pure-white-small.png" alt="">
@@ -49,22 +50,24 @@
         <div id="full_name"></div>
 
         <p id="totalp"></p>
-        
+
         <br>
         <p id="qty"></p>
 
         <div id="shipping">Shipping</div>
         <p id="shipping_num">₹ 0</p>
 
-       <br>
-       <br>
+        <br>
+        <br>
 
         <div id="amt_payable">Amount Payable</div>
         <p id="amt"></p>
         <br>
         <hr />
 
-        <div id="lybrate_cash"><img src="https://assets.lybrate.com/q_auto,f_auto/imgs/product/Homepage/LybrateCash_Icons_100.png" alt=""> LybrateCash to be Earned*
+        <div id="lybrate_cash"><img
+                src="https://assets.lybrate.com/q_auto,f_auto/imgs/product/Homepage/LybrateCash_Icons_100.png" alt="">
+            LybrateCash to be Earned*
         </div>
         <p id="note">*Note: LybrateCash of ₹87 will be credited to your account upon product delivery</p>
     </div>
@@ -93,51 +96,60 @@
         <div id="second">
             <div>
                 <input type="radio" />
-                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/Credit+and+debit+card.png" alt="">
+                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/Credit+and+debit+card.png"
+                    alt="">
                 <h3>Debit Card/Credit Card/Net Banking</h3>
             </div>
             <div>
                 <input type="radio" />
-                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/Paytm_logo.png" alt="">
+                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/Paytm_logo.png"
+                    alt="">
                 <h3>PayTM Wallet</h3>
             </div>
             <div>
                 <input type="radio" />
-                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/paypal.png" alt="">
+                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/paypal.png"
+                    alt="">
                 <h3>PayPal</h3>
             </div>
             <div>
                 <input type="radio" />
-                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/olamoney.png" alt="">
+                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/olamoney.png"
+                    alt="">
                 <h3>OlaMoney Postpaid</h3>
             </div>
             <div>
                 <input type="radio" />
-                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/freecharge.png" alt="">
-                
+                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/freecharge.png"
+                    alt="">
+
                 <h3>Freecharge</h3>
             </div>
             <div>
                 <input type="radio" />
-                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/airtelmoney.png" alt="">
+                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/airtelmoney.png"
+                    alt="">
                 <h3>Airtel Money</h3>
             </div>
             <div>
                 <input type="radio" />
-                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/amazonpay.png" alt="">
-                
+                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/amazonpay.png"
+                    alt="">
+
                 <h3>Amazon Pay</h3>
             </div>
             <div>
                 <input type="radio" />
-                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/phonepe.png" alt="">
-               
+                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/phonepe.png"
+                    alt="">
+
                 <h3>PhonePe</h3>
             </div>
             <div>
                 <input type="radio" />
-                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/mobikwik.png" alt="">
-               
+                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/mobikwik.png"
+                    alt="">
+
                 <h3>Mobikwik Wallet</h3>
             </div>
             <div>
@@ -147,7 +159,8 @@
             </div>
             <div>
                 <input type="radio" />
-                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/cod.png" alt="">
+                <img src="https://assets.lybrate.com/q_auto,f_auto,w_46,h_46,c_pad/imgs/product/Homepage/cod.png"
+                    alt="">
                 <h3>Cash On Delivery (COD)</h3>
             </div>
 
@@ -157,7 +170,7 @@
         </div>
         <div id="third">
             <div class="proceed">
-                <button id="proceed_button" onclick="checkout()">PROCEED PAYMENT</button>
+                <button id="proceed_button" onclick="debit()">PROCEED PAYMENT</button>
             </div>
         </div>
 
@@ -180,5 +193,9 @@
     </div>
 </body>
 
-<script src="../scripts/payment.js"></script>
+<script src="/script/pay.js">
+   
+
+</script>
+
 </html>

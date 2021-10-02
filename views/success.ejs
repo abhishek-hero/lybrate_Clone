@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="https://nu.lybcdn.com/img/lybrate_icon_325x325.png"/>
-    <title>Payment Successful</title>
-    <link rel="stylesheet" href="../styles/success.css">
-</head>
-<body>
-    <div class="main">
-        <img src="https://t3.ftcdn.net/jpg/03/30/46/64/240_F_330466419_yToDBe6a1a9l0VYRpGYvYJ4J817WxfZl.jpg" alt="">
-        <h3>Thank You... For Shopping With</h3>
-        <h2>LYBRATE</h2>
-        
-        <div id="order"></div>
-    </div>
-</body>
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/success.css">
     
-    <script>
-        
-        let order = document.getElementById("order")
-        let p_track = document.createElement("p")
+</head>
 
-        let random = Math.floor(Math.random() * 1000000) + 1000000;
+<body>
+    <div>
+        <img src="https://cdn.dribbble.com/users/1735807/screenshots/4290582/media/580d17098258a9455826077142caa395.gif"
+            alt="">
+    </div>
+    <h1 id="head">Payment is successfull</h1>
+    <div id="order">
+    </div>
 
-        p_track.innerHTML = `Order Tracking Id - ${random} AzYxd`
-        order.append(p_track)
-        
-        
-        
-        </script>
+    <div><button onclick="continueShopping()">Continue Shopping</button></div>
+    
+</body>
+
 </html>
+
+<script>
+    let order = document.getElementById("order")
+    let p_track = document.createElement("h3")
+    let random = Math.floor(Math.random() * 1000000) + 1000000;
+    p_track.innerHTML = `Order Tracking Id - ${random} AzYxd`
+    order.prepend(p_track)
+
+
+ function continueShopping(){
+     window.location.href=`http://localhost:3000/products`
+ }
+</script>

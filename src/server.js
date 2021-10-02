@@ -229,6 +229,7 @@ app.post("/products/cart/:id", async (req, res) => {
             )
             let cart_Items = user.cart
             res.render('cart_page.ejs', { cart_Items })
+            // res.redirect("/products/cart/addeditem")
         }
         if (product2 != null) {
             const product = product2
@@ -236,6 +237,10 @@ app.post("/products/cart/:id", async (req, res) => {
                 { $push: { cart: product } },
                 { new: true }
             )
+            // res.redirect("/products/cart/addeditem")
+            // console.log(user._id);
+            // res.send("added")
+            // res.status(200)
             let cart_Items = user.cart
             res.render('cart_page.ejs', { cart_Items })
 
@@ -246,6 +251,8 @@ app.post("/products/cart/:id", async (req, res) => {
                 { $push: { cart: product } },
                 { new: true }
             )
+            // res.redirect("/products/cart/addeditem")
+            // // res.status(200)
             let cart_Items = user.cart
             res.render('cart_page.ejs', { cart_Items })
 
@@ -256,6 +263,8 @@ app.post("/products/cart/:id", async (req, res) => {
                 { $push: { cart: product } },
                 { new: true }
             )
+            // res.redirect("/products/cart/addeditem")
+            // // res.status(200)
              let cart_Items =user.cart
              res.render('cart_page.ejs', { cart_Items })
             // res.send(user.cart)
@@ -264,46 +273,122 @@ app.post("/products/cart/:id", async (req, res) => {
     }
 })
 
+//remove Item from cart from
 
-// app.get("/products/checkout/:id", async (req, res) => {
-//     const product1 = await Product1.findById(req.params.id)
-//     const product2 = await Product2.findById(req.params.id)
-//     const product4 = await Product4.findById(req.params.id)
-//     const product5 = await Product5.findById(req.params.id)
-
-    //user find krna h ====
-
-
-
-//     if (logged_user === undefined) {
-//         res.redirect("/login")
-//     }
-//     else {
-//         if (product1 != null) {
-//             const product = product1
-//             logged_user[0].cart.push(product);
-//             res.send(logged_user)
-//             //   console.log(logged_user);
-//         }
-//         if (product2 != null) {
-//             const product = product2
-//             logged_user[0].cart.push(product);
-//             res.send(logged_user)
-//         }
-//         if (product4 != null) {
-//             const product = product4
-//             logged_user[0].cart.push(product);
-//             res.send(logged_user)
-//         }
-//         if (product5 != null) {
-//             const product = product5
-//             logged_user[0].cart.push(product);
-//             res.send(logged_user)
-//         }
-
-//     }
+// app.get("//products/cart/remove/addeditem",async(req,res)=>{
+//     let rm=await 
 // })
 
+
+// cart added items ==============================
+
+// app.get("/products/cart/addeditem",async(req,res)=>{
+//     console.log("hello items");
+
+// })
+
+
+app.post("/products/cart/checkout/:id", async (req, res) => {
+    const product1 = await Product1.findById(req.params.id)
+    const product2 = await Product2.findById(req.params.id)
+    const product4 = await Product4.findById(req.params.id)
+    const product5 = await Product5.findById(req.params.id)
+
+    if (logged_user === undefined) {
+        res.redirect("/login")
+    }
+    else {
+        if (product1 != null) {
+            const product = product1
+            let user = await User.findByIdAndUpdate(logged_user[0]._id,
+                { $push: { cart: product } },
+                { new: true }
+            )
+            let cart_Items = user.cart[user.cart.length-1]
+            res.render('buyCheckOut.ejs', { cart_Items })
+            // res.send(cart_Items)
+        }
+        if (product2 != null) {
+            const product = product2
+            let user = await User.findByIdAndUpdate(logged_user[0]._id,
+                { $push: { cart: product } },
+                { new: true }
+            )
+            let cart_Items = user.cart[user.cart.length-1]
+            res.render('buyCheckOut.ejs', { cart_Items })
+            // res.send(cart_Items)
+
+        }
+        if (product4 != null) {
+            const product = product4
+            let user = await User.findByIdAndUpdate(logged_user[0]._id,
+                { $push: { cart: product } },
+                { new: true }
+            )
+            let cart_Items = user.cart[user.cart.length-1]
+            res.render('buyCheckOut.ejs', { cart_Items })
+            // res.send(cart_Items)
+
+        }
+        if (product5 != null) {
+            const product = product5
+            let user = await User.findByIdAndUpdate(logged_user[0]._id,
+                { $push: { cart: product } },
+                { new: true }
+            )
+            let cart_Items = user.cart[user.cart.length-1]
+            res.render('buyCheckOut.ejs', { cart_Items })
+            // res.send(cart_Items)
+
+        }
+    }
+})
+
+
+//go for payment from direct buy=============================================================
+
+app.get("/products/cart/checkout/payfromdirect/:id",async(req,res)=>{
+    const product1 = await Product1.findById(req.params.id)
+    const product2 = await Product2.findById(req.params.id)
+    const product4 = await Product4.findById(req.params.id)
+    const product5 = await Product5.findById(req.params.id)
+
+    if (product1 != null) {
+        const product = product1
+        res.render('pay.ejs', {product})
+    }
+    if (product2 != null) {
+        const product = product2
+        res.render('pay.ejs', {product})
+
+    }
+    if (product4 != null) {
+        const product = product4
+        res.render('pay.ejs', {product})
+
+    }
+    if (product5 != null) {
+        const product = product5
+        res.render('pay.ejs', {product})
+    }
+
+})
+
+app.get("/products/cart/checkout/buyfromcart",async(req,res)=>{
+    
+    const product=""
+    res.render('pay.ejs',{product})
+
+})
+
+
+app.get("/products/cart/checkout/debit",async(req,res)=>{
+    res.render('debit.ejs')
+})
+
+app.get("/products/cart/checkout/success",async(req,res)=>{
+    res.render('success.ejs')
+})
 
 
 //===================================================================

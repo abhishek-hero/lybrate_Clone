@@ -1,37 +1,6 @@
-var cart_obj = JSON.parse(localStorage.getItem('myProducts'));
-
-localStorage.setItem("Direct_Buy",JSON.stringify(cart_obj));
-
-function home(){
-    window.location.href = "index.html"
-}
-
-let userDetails = JSON.parse(localStorage.getItem("details"))
-let userName = document.querySelector(".top_a")
-try {
-    if (userDetails.length !=null)
-    {
-        userName.innerText = `Hello ${userDetails[0].name} `
-        userName.style.backgroundColor = "white"
-        userName.style.marginTop = `-8% !important`
-        userName.style.fontSize = `14.5px`
-        userName.style.border = "none"
-        userName.style.outLine = "none"
-        userName.style.fontWeight = "200"
-    
-        let aero = document.createElement("span")
-        aero.setAttribute("class", "fas fa-angle-down")
-    
-        userName.append(aero)
-    
-    }
-    
-} catch (error) {
-    console.log("Please login",error);
-}
 
 
-function CartShow() {
+function CartShow(cart_obj) {
     let left_div_img1 = document.getElementById('img_1');
     let left_div_img2 = document.getElementById('img_2');
     let left_div_img3 = document.getElementById('img_3');
@@ -56,18 +25,15 @@ function CartShow() {
     let img3 = document.createElement('img');
     let img4 = document.createElement('img');
     head2.textContent = cart_obj.name;
-    price.textContent = cart_obj.price;
+    price.textContent = `₹ ${cart_obj.price}`;
     details.textContent = cart_obj.details;
     date.textContent = cart_obj.expiery;
     prod_desc_1.textContent=`What is ${cart_obj.name}`
     prod_desc_2.textContent=`Why Choose ${cart_obj.name}`
     prod_desc_3.textContent=`What are key benefits of ${cart_obj.name}?`;
-    act_price.textContent=cart_obj.actualPrice;
+    act_price.textContent=`₹ ${cart_obj.actualPrice}`;
     off_price.textContent=cart_obj.off
     h_1.textContent= cart_obj.brand
-   
-  
-
    
 
     img1.src = cart_obj.image1;
@@ -106,10 +72,11 @@ function CartShow() {
 
     mid.src = cart_obj.image1;
 
+    // buyProd_2(cart_obj)
 }
 
 
-CartShow()
+// CartShow()
 
 function imageChange(img){
     let mid_img = document.getElementById('mid-img');
@@ -120,43 +87,47 @@ function imageChange(img){
 
 // for payment all the obj in this page would move to this JSON array
 
-if (localStorage.getItem('cart_arr') === null) {
-    localStorage.setItem('cart_arr', JSON.stringify([]));
-}
+// if (localStorage.getItem('cart_arr') === null) {
+//     localStorage.setItem('cart_arr', JSON.stringify([]));
+// }
 
 
 function buyProd_1() {
-    let arr = JSON.parse(localStorage.getItem('cart_arr'));
+    // let arr = JSON.parse(localStorage.getItem('cart_arr'));
+    // arr.push(product);
+    //  localStorage.setItem('cart_arr', JSON.stringify(arr));
+    // console.log("why click me");
+    // window.location.href =`http://localhost:3000/products/cart/addeditem`;
+    // console.log(product._id);
 
-    arr.push(cart_obj);
-  
-    localStorage.setItem('cart_arr', JSON.stringify(arr));
-    window.location.href='cart_page.html'
+    // 
 
 }
 
 
-function buyProd_2(){
+function buyProd_2(product){
    
     cart_btn.textContent='Proceed to Buy'
     cart_btn.style.width='100%';
-    cart_btn.style.backgroundColor='#259b24 '
+    cart_btn.style.backgroundColor='#259b24'
     cart_btn.style.color='#ffff'
     cart_btn.style.border='none'
     buy_btn.style.display='none'
     cart_btn.style.fontSize='17px' 
     cart_btn.addEventListener('click',buyProd_1);
+    
     // cart_btn.appendChild(a)
 }
+
 
 
 let cart_btn = document.getElementById('cart');
 let buy_btn = document.getElementById('green')
 
-function buyCheckout() {
-    localStorage.setItem("Direct_Buy",JSON.stringify(cart_obj)); 
-    window.location.href='buyCheckOut.html'
+function buyCheckout(product) {
+    // localStorage.setItem("Direct_Buy",JSON.stringify(product)); 
+    //  window.location.href=`http://localhost:3000/products/checkout/${product._id}`
 }
-cart_btn.addEventListener('click',buyProd_2);
+// cart_btn.addEventListener('click',buyProd_2);
 
-buy_btn.addEventListener('click',buyCheckout)
+// buy_btn.addEventListener('click',buyCheckout(product))

@@ -107,7 +107,7 @@ body {
 
 .order hr {
     color: rgb(255, 253, 253);
-    
+
     width: 99%;
 }
 
@@ -120,9 +120,10 @@ body {
     box-shadow: 0 0 2px grey;
 }
 
-.promo input{
+.promo input {
     outline: none;
 }
+
 #lybrate_cash {
     margin-left: 0px;
     color: #C82506;
@@ -280,17 +281,21 @@ body {
 }
 
 
-#full_name, #shipping, #amt_payable{
+#full_name,
+#shipping,
+#amt_payable {
     float: left;
 }
 
-#totalp, #shipping_num, #amt{
+#totalp,
+#shipping_num,
+#amt {
     float: right;
     margin-right: 10px;
     font-size: 13px;
 }
 
 
-input{
+input {
     outline: none;
 }
