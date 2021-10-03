@@ -1,5 +1,5 @@
 # lybrate Clone
-We will be cloning the Lybrate website.
+We have cloned e-commerce section of lybrate.com
 
 ## Description About Project
 
@@ -30,6 +30,7 @@ Lybrate is the best way to seek medical help. To make it seamless and smooth, we
  - abhishek-hero https://github.com/abhishek-hero
  - Krakash06     https://github.com/Krakash06
  - shikha-max   https://github.com/shikha-max
+ - shubhamdobhal05  https://github.com/shubhamdobhal05
 
 
 
