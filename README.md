@@ -16,6 +16,16 @@ Lybrate is the best way to seek medical help. To make it seamless and smooth, we
 - Images imported from "https://www.lybrate.com/"
 - Colors refered from "https://www.lybrate.com/" & colors picked using "color-picker chrome extension"
 
+## npm packages used
+- express.js
+- node.js
+- mongoose
+- ejs view engine
+- body-parser
+
+## Database used
+-mongodb atlas
+
 ## Contributor - (git-hub IDs as follow)
  - abhishek-hero https://github.com/abhishek-hero
  - Krakash06     https://github.com/Krakash06
@@ -52,6 +62,5 @@ Lybrate is the best way to seek medical help. To make it seamless and smooth, we
 ![payment](https://user-images.githubusercontent.com/88572701/134175706-b65499bf-e70a-4b60-a615-6e3cb2063cbe.jpeg)
 
 ### Success
-![sucess](https://user-images.githubusercontent.com/88572701/134182023-8bcbf7ea-929c-4626-b70b-d7cd89202855.jpeg)
-
+![Screenshot (216)](https://user-images.githubusercontent.com/88572701/135746323-e6d30553-8974-4e8e-9ba1-aae6c5c9428b.png)
 
