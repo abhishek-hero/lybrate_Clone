@@ -50,19 +50,32 @@ app.get("/home", async (req, res) => {
 // })
 
 
+let signing_user;
 
 app.post("", async (req, res) => {
-    let newUser = new User({
-        userName: req.body.userName,
-        email: req.body.email,
-        mobileNo: req.body.mobileNo,
-        password: req.body.password
-    });
 
-    newUser.save();
-    res.redirect("/login")
+    signing_user = await User.find({ email: req.body.email })
+    if(signing_user.length === 0){
+
+        let newUser = new User({
+            userName: req.body.userName,
+            email: req.body.email,
+            mobileNo: req.body.mobileNo,
+            password: req.body.password
+        });
+    
+        newUser.save();
+        res.redirect("/login")
+    }else {
+        res.redirect("/signup")
+        // res.render("alert user already exists")
+        console.log("User already exists")
+    }
 
 })
+
+
+
 
 //=========================
 //login section
@@ -265,8 +278,8 @@ app.post("/products/cart/:id", async (req, res) => {
             )
             // res.redirect("/products/cart/addeditem")
             // // res.status(200)
-             let cart_Items =user.cart
-             res.render('cart_page.ejs', { cart_Items })
+            let cart_Items = user.cart
+            res.render('cart_page.ejs', { cart_Items })
             // res.send(user.cart)
 
         }
@@ -304,7 +317,7 @@ app.post("/products/cart/checkout/:id", async (req, res) => {
                 { $push: { cart: product } },
                 { new: true }
             )
-            let cart_Items = user.cart[user.cart.length-1]
+            let cart_Items = user.cart[user.cart.length - 1]
             res.render('buyCheckOut.ejs', { cart_Items })
             // res.send(cart_Items)
         }
@@ -314,7 +327,7 @@ app.post("/products/cart/checkout/:id", async (req, res) => {
                 { $push: { cart: product } },
                 { new: true }
             )
-            let cart_Items = user.cart[user.cart.length-1]
+            let cart_Items = user.cart[user.cart.length - 1]
             res.render('buyCheckOut.ejs', { cart_Items })
             // res.send(cart_Items)
 
@@ -325,7 +338,7 @@ app.post("/products/cart/checkout/:id", async (req, res) => {
                 { $push: { cart: product } },
                 { new: true }
             )
-            let cart_Items = user.cart[user.cart.length-1]
+            let cart_Items = user.cart[user.cart.length - 1]
             res.render('buyCheckOut.ejs', { cart_Items })
             // res.send(cart_Items)
 
@@ -336,7 +349,7 @@ app.post("/products/cart/checkout/:id", async (req, res) => {
                 { $push: { cart: product } },
                 { new: true }
             )
-            let cart_Items = user.cart[user.cart.length-1]
+            let cart_Items = user.cart[user.cart.length - 1]
             res.render('buyCheckOut.ejs', { cart_Items })
             // res.send(cart_Items)
 
@@ -347,7 +360,7 @@ app.post("/products/cart/checkout/:id", async (req, res) => {
 
 //go for payment from direct buy=============================================================
 
-app.get("/products/cart/checkout/payfromdirect/:id",async(req,res)=>{
+app.get("/products/cart/checkout/payfromdirect/:id", async (req, res) => {
     const product1 = await Product1.findById(req.params.id)
     const product2 = await Product2.findById(req.params.id)
     const product4 = await Product4.findById(req.params.id)
@@ -355,38 +368,38 @@ app.get("/products/cart/checkout/payfromdirect/:id",async(req,res)=>{
 
     if (product1 != null) {
         const product = product1
-        res.render('pay.ejs', {product})
+        res.render('pay.ejs', { product })
     }
     if (product2 != null) {
         const product = product2
-        res.render('pay.ejs', {product})
+        res.render('pay.ejs', { product })
 
     }
     if (product4 != null) {
         const product = product4
-        res.render('pay.ejs', {product})
+        res.render('pay.ejs', { product })
 
     }
     if (product5 != null) {
         const product = product5
-        res.render('pay.ejs', {product})
+        res.render('pay.ejs', { product })
     }
 
 })
 
-app.get("/products/cart/checkout/buyfromcart",async(req,res)=>{
-    
-    const product=""
-    res.render('pay.ejs',{product})
+app.get("/products/cart/checkout/buyfromcart", async (req, res) => {
+
+    const product = ""
+    res.render('pay.ejs', { product })
 
 })
 
 
-app.get("/products/cart/checkout/debit",async(req,res)=>{
+app.get("/products/cart/checkout/debit", async (req, res) => {
     res.render('debit.ejs')
 })
 
-app.get("/products/cart/checkout/success",async(req,res)=>{
+app.get("/products/cart/checkout/success", async (req, res) => {
     res.render('success.ejs')
 })
 
