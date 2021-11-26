@@ -41,7 +41,7 @@ app.get("/login", async (req, res) => {
     res.render("login.ejs")
 })
 
-app.get("/home", async (req, res) => {
+app.get("/", async (req, res) => {
     res.render("index.ejs")
 })
 
