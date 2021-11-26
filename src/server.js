@@ -55,7 +55,7 @@ let signing_user;
 app.post("", async (req, res) => {
 
     signing_user = await User.find({ email: req.body.email })
-    if(signing_user.length === 0){
+    if (signing_user.length === 0) {
 
         let newUser = new User({
             userName: req.body.userName,
@@ -63,10 +63,10 @@ app.post("", async (req, res) => {
             mobileNo: req.body.mobileNo,
             password: req.body.password
         });
-    
+
         newUser.save();
         res.redirect("/login")
-    }else {
+    } else {
         res.redirect("/signup")
         // res.render("alert user already exists")
         console.log("User already exists")
@@ -405,7 +405,7 @@ app.get("/products/cart/checkout/success", async (req, res) => {
 
 
 //===================================================================
-app.listen(3000, async (req, res) => {
+app.listen(process.env.PORT || 3000, async (req, res) => {
     await connect()
     console.log("Listening to post 3000")
 })
