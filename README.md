@@ -1,6 +1,6 @@
 # lybrate Clone
-We have cloned e-commerce section of lybrate.com
-
+This is the clone of e-commerce section in lybrate.com
+Lybrate is the best way to seek medical help. To make it seamless and smooth, we beat onerous challenges every day to ensure easy access to doctors for billion people, creating an experience that is truly magical for both healthcare experts and users.
 ## Description About Project
 
 Lybrate is the best way to seek medical help. To make it seamless and smooth, we beat onerous challenges every day to ensure easy access to doctors for billion people, creating an experience that is truly magical for both healthcare experts and users.
